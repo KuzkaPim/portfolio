@@ -1,6 +1,8 @@
 import { Container } from '@/src/shared/ui';
 import Image from 'next/image';
 import Link from 'next/link';
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io';
+import { RiTelegramFill } from 'react-icons/ri';
 
 export const PromoBlock = () => {
   return (
@@ -31,6 +33,17 @@ export const PromoBlock = () => {
                 Резюме
               </Link>
             </div>
+          </div>
+          <div className="flex gap-2 mt-8 border-b-2 pb-2 w-max">
+            <a href="#">
+              <IoLogoGithub className="size-8 hover:text-secondary" />
+            </a>
+            <a href="#">
+              <IoLogoLinkedin className="size-8 hover:text-secondary" />
+            </a>
+            <a href="#">
+              <RiTelegramFill className="size-8 hover:text-secondary" />
+            </a>
           </div>
         </div>
         <Image
