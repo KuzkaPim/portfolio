@@ -1,4 +1,4 @@
-import { AboutMeBlock, PromoBlock, SkillsBlock } from './blocks';
+import { AboutMeBlock, ContactsBlock, PromoBlock, SkillsBlock } from './blocks';
 
 export const HomePage = () => {
   return (
@@ -6,6 +6,7 @@ export const HomePage = () => {
       <PromoBlock />
       <SkillsBlock />
       <AboutMeBlock />
+      <ContactsBlock />
     </>
   );
 };
