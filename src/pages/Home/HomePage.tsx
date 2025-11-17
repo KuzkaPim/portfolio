@@ -1,5 +1,4 @@
-import { PromoBlock } from './blocks';
-import { SkillsBlock } from './blocks/SkillsBlock';
+import { PromoBlock, SkillsBlock } from './blocks';
 
 export const HomePage = () => {
   return (
