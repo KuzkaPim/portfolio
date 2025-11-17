@@ -1,10 +1,11 @@
-import { PromoBlock, SkillsBlock } from './blocks';
+import { AboutMeBlock, PromoBlock, SkillsBlock } from './blocks';
 
 export const HomePage = () => {
   return (
     <>
       <PromoBlock />
       <SkillsBlock />
+      <AboutMeBlock />
     </>
   );
 };
