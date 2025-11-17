@@ -6,7 +6,7 @@ import { RiTelegramFill } from 'react-icons/ri';
 
 export const PromoBlock = () => {
   return (
-    <section className="bg-primary shadow-md overflow-hidden">
+    <section className="bg-primary overflow-hidden">
       <Container className="text-gray-200 flex flex-col sm:flex-row items-center justify-between relative pb-16 pt-12 md:py-12">
         <div className="z-10 sm:w-sm lg:w-auto">
           <h1 className="text-4xl font-bold">Привет, я Кузьма</h1>
