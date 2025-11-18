@@ -8,12 +8,14 @@ export const PromoBlock = () => {
   return (
     <section
       id="promo"
-      className="bg-primary shadow-md overflow-hidden scroll-mt-16"
+      className="bg-secondary overflow-hidden scroll-mt-16 text-dark"
     >
-      <Container className="text-gray-200 flex flex-col sm:flex-row items-center justify-between relative pb-16 pt-12 md:py-12">
+      <Container className="flex flex-col sm:flex-row items-center justify-between relative pb-16 pt-12 md:py-12">
         <div className="z-10 sm:w-sm lg:w-auto">
-          <h1 className="text-4xl font-bold">Привет, я Кузьма</h1>
-          <p className="mt-8 text-2xl font-bold">Фронтенд разработчик</p>
+          <h1 className="text-4xl sm:text-6xl font-bold">Привет, я Кузьма</h1>
+          <p className="mt-8 text-xl sm:text-2xl font-bold">
+            Фронтенд разработчик
+          </p>
           <p
             className="mt-2
              text-lg"
@@ -22,35 +24,35 @@ export const PromoBlock = () => {
           </p>
           <div className="flex gap-4 mt-8 items-start lg:items-center flex-col lg:flex-row w-max sm:w-auto">
             <Link
-              className="px-4 py-2 border border-gray-200 bg-gray-200 text-primary font-bold rounded-4xl transition hover:bg-white hover:border-white hover:-translate-y-0.5 hover:shadow-sm hover:shadow-white text-center w-full lg:w-auto"
+              className="px-4 py-2 border text-white border-accent bg-accent font-bold rounded-4xl transition hover:-translate-y-0.5 text-center w-full lg:w-auto"
               href="/projects"
             >
               Мои проекты
             </Link>
             <div className="flex gap-4 flex-col sm:flex-row sm:w-full lg:w-auto">
               <Link
-                className="px-4 py-2 bg-primary text-gray-200 font-bold rounded-4xl border border-gray-200 hover:border-white hover:text-white hover:-translate-y-0.5 transition sm:flex-2 lg:flex-initial text-center"
+                className="px-4 py-2 bg-secondary font-bold rounded-4xl text-accent border border-accent hover:-translate-y-0.5 transition sm:flex-2 lg:flex-initial text-center"
                 href="/contacts"
               >
                 Связяться со мной
               </Link>
               <Link
-                className="px-4 py-2 bg-primary text-gray-200 font-bold rounded-4xl border border-gray-200 hover:border-white hover:text-white hover:-translate-y-0.5 transition sm:flex-1 lg:flex-initial text-center w-max"
+                className="px-4 py-2 bg-secondary font-bold rounded-4xl text-accent border border-accent hover:-translate-y-0.5 transition sm:flex-1 lg:flex-initial text-center w-max"
                 href="/resume"
               >
                 Резюме
               </Link>
             </div>
           </div>
-          <div className="flex gap-2 mt-8 border-b-2 pb-2 w-max">
+          <div className="flex gap-2 mt-8 w-max text-dark">
             <a href="#">
-              <IoLogoGithub className="size-8 hover:text-secondary" />
+              <IoLogoGithub className="size-8 hover:text-accent" />
             </a>
             <a href="#">
-              <IoLogoLinkedin className="size-8 hover:text-secondary" />
+              <IoLogoLinkedin className="size-8 hover:text-accent" />
             </a>
             <a href="#">
-              <RiTelegramFill className="size-8 hover:text-secondary" />
+              <RiTelegramFill className="size-8 hover:text-accent" />
             </a>
           </div>
         </div>
