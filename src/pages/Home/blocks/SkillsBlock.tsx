@@ -3,7 +3,7 @@ import { Skills } from '../components';
 
 export const SkillsBlock = () => {
   return (
-    <section className="text-gray-800">
+    <section id="skills" className="text-gray-800 scroll-mt-16">
       <Container className="py-12">
         <h2 className="text-4xl font-bold">Мой стек / технологии</h2>
         <div className="mt-8">

@@ -4,7 +4,7 @@ import { RiTelegramFill } from 'react-icons/ri';
 
 export const ContactsBlock = () => {
   return (
-    <section className="bg-primary text-white">
+    <section id="contacts" className="bg-primary text-white scroll-mt-16">
       <Container className="py-12">
         <h2 className="text-4xl font-bold text-center">
           Готов к новым задачам и сотрудничеству!

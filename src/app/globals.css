@@ -4,3 +4,7 @@
   --color-primary: #6a223a;
   --color-secondary: #758bcd;
 }
+
+html {
+  scroll-behavior: smooth;
+}
