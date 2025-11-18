@@ -46,13 +46,13 @@ export const PromoBlock = () => {
           </div>
           <div className="flex gap-2 mt-8 w-max text-dark">
             <a href="#">
-              <IoLogoGithub className="size-8 hover:text-accent" />
+              <IoLogoGithub className="size-8 hover:text-accent transition" />
             </a>
             <a href="#">
-              <IoLogoLinkedin className="size-8 hover:text-accent" />
+              <IoLogoLinkedin className="size-8 hover:text-accent transition" />
             </a>
             <a href="#">
-              <RiTelegramFill className="size-8 hover:text-accent" />
+              <RiTelegramFill className="size-8 hover:text-accent transition" />
             </a>
           </div>
         </div>
