@@ -4,7 +4,7 @@ import { RiTelegramFill } from 'react-icons/ri';
 
 export const ContactsBlock = () => {
   return (
-    <section id="contacts" className="bg-primary text-white scroll-mt-16">
+    <section id="contacts" className="bg-accent text-white scroll-mt-16">
       <Container className="py-12">
         <h2 className="text-4xl font-bold text-center">
           Готов к новым задачам и сотрудничеству!
@@ -15,19 +15,19 @@ export const ContactsBlock = () => {
         </p>
         <a
           href="mailto:kuzken.prod@gmail.com?subject=Вопрос по сотрудничеству с Кузьмой"
-          className="mt-4 bg-white text-primary py-2 px-8 rounded-xl block mx-auto w-max shadow-md font-bold hover:bg-secondary hover:text-white hover:-translate-y-0.5 transition"
+          className="mt-4 bg-white text-accent py-2 px-8 rounded-xl block mx-auto w-max shadow-md font-bold hover:-translate-y-0.5 transition"
         >
           kuzken.prod@gmail.com
         </a>
         <div className="flex gap-2 mt-16 w-max mx-auto">
           <a href="#">
-            <IoLogoGithub className="size-8 hover:text-secondary" />
+            <IoLogoGithub className="size-8 hover:scale-110 transition" />
           </a>
           <a href="#">
-            <IoLogoLinkedin className="size-8 hover:text-secondary" />
+            <IoLogoLinkedin className="size-8 hover:scale-110 transition" />
           </a>
           <a href="#">
-            <RiTelegramFill className="size-8 hover:text-secondary" />
+            <RiTelegramFill className="size-8 hover:scale-110 transition" />
           </a>
         </div>
       </Container>
