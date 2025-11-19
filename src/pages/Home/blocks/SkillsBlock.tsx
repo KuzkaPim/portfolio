@@ -5,7 +5,7 @@ export const SkillsBlock = () => {
   return (
     <section id="skills" className="text-dark sm:scroll-mt-16">
       <Container className="py-12">
-        <h2 className="text-4xl font-bold">Мой стек / технологии</h2>
+        <h2 className="text-4xl font-bold">Технологии</h2>
         <div className="mt-8">
           <h3 className="font-bold text-2xl">Языки</h3>
           <Skills catagory="languages" />

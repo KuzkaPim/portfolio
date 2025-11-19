@@ -68,7 +68,7 @@ export const Actions = () => {
                   className="flex items-center gap-2 px-4 py-2 hover:bg-white hover:text-accent transition"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Мой стек / технологии
+                  Технологии
                 </a>
               </li>
               <li role="none">

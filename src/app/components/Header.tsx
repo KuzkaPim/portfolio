@@ -19,7 +19,7 @@ export const Header = () => {
                 href="#skills"
                 className="transition border-accent hover:border-b-2"
               >
-                Мой стек / технологии
+                Технологии
               </a>
             </li>
             <li>
