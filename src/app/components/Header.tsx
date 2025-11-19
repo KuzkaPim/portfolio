@@ -2,8 +2,8 @@ import { Container } from '@/src/shared/ui';
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 bg-primary z-20 shadow-sm h-16 text-gray-800 text-lg">
-      <Container className="h-full flex items-center">
+    <header className="sticky top-0 bg-primary z-20 shadow-sm h-16 text-gray-800 text-lg hidden sm:block">
+      <Container className="h-full items-center flex">
         <nav>
           <ul className="flex items-center gap-8">
             <li>

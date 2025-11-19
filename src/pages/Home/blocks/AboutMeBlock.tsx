@@ -2,7 +2,7 @@ import { Container } from '@/src/shared/ui';
 
 export const AboutMeBlock = () => {
   return (
-    <section id="about-me" className="bg-secondary text-dark scroll-mt-16">
+    <section id="about-me" className="bg-secondary text-dark sm:scroll-mt-16">
       <Container className="py-12">
         <h2 className="text-4xl font-bold">Обо мне</h2>
         <div className="text-lg leading-7 grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-8">

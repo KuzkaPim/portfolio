@@ -8,7 +8,7 @@ export const PromoBlock = () => {
   return (
     <section
       id="promo"
-      className="bg-secondary overflow-hidden scroll-mt-16 text-dark"
+      className="bg-secondary overflow-hidden sm:scroll-mt-16 text-dark"
     >
       <Container className="flex flex-col sm:flex-row items-center justify-between relative pb-16 pt-12 md:py-12">
         <div className="z-10 sm:w-sm lg:w-auto">
