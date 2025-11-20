@@ -1,8 +1,9 @@
 import { Container } from '@/src/shared/ui';
 import Image from 'next/image';
 import Link from 'next/link';
-import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io';
+import { IoLogoGithub } from 'react-icons/io';
 import { RiTelegramFill } from 'react-icons/ri';
+import { AiFillInstagram } from 'react-icons/ai';
 
 export const PromoBlock = () => {
   return (
@@ -22,34 +23,42 @@ export const PromoBlock = () => {
           <div className="flex gap-4 mt-8 items-start lg:items-center flex-col lg:flex-row w-max sm:w-auto">
             <Link
               className="px-4 py-2 border text-white border-accent bg-accent font-bold rounded-4xl transition hover:-translate-y-0.5 text-center w-full lg:w-auto"
-              href="/projects"
+              href="/"
             >
               Мои проекты
             </Link>
             <div className="flex gap-4 flex-col sm:flex-row sm:w-full lg:w-auto">
-              <Link
+              <a
                 className="px-4 py-2 bg-secondary font-bold rounded-4xl text-accent border border-accent hover:-translate-y-0.5 transition sm:flex-2 lg:flex-initial text-center"
-                href="/contacts"
+                href="#contacts"
               >
                 Связяться со мной
-              </Link>
+              </a>
               <Link
                 className="px-4 py-2 bg-secondary font-bold rounded-4xl text-accent border border-accent hover:-translate-y-0.5 transition sm:flex-1 lg:flex-initial text-center w-max"
-                href="/resume"
+                href="/"
               >
                 Резюме
               </Link>
             </div>
           </div>
           <div className="flex gap-2 mt-8 w-max text-gray-600">
-            <a href="#">
+            <a
+              href="https://github.com/KuzkaPim"
+              target="_blank"
+              rel="noreferrer"
+            >
               <IoLogoGithub className="size-8 hover:text-accent transition" />
             </a>
-            <a href="#">
-              <IoLogoLinkedin className="size-8 hover:text-accent transition" />
-            </a>
-            <a href="#">
+            <a href="https://t.me/KuzKen" target="_blank" rel="noreferrer">
               <RiTelegramFill className="size-8 hover:text-accent transition" />
+            </a>
+            <a
+              href="https://www.instagram.com/_kuzken_?igsh=ZmZoMjNhbjVub2g3&utm_source=qr"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <AiFillInstagram className="size-8 hover:text-accent transition" />
             </a>
           </div>
         </div>

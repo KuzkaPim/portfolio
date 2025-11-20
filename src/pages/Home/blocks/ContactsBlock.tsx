@@ -1,6 +1,7 @@
 import { Container } from '@/src/shared/ui';
-import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io';
+import { IoLogoGithub } from 'react-icons/io';
 import { RiTelegramFill } from 'react-icons/ri';
+import { AiFillInstagram } from 'react-icons/ai';
 
 export const ContactsBlock = () => {
   return (
@@ -20,14 +21,22 @@ export const ContactsBlock = () => {
           kuzken.prod@gmail.com
         </a>
         <div className="flex gap-2 mt-16 w-max mx-auto">
-          <a href="#">
+          <a
+            href="https://github.com/KuzkaPim"
+            target="_blank"
+            rel="noreferrer"
+          >
             <IoLogoGithub className="size-8 hover:scale-110 transition" />
           </a>
-          <a href="#">
-            <IoLogoLinkedin className="size-8 hover:scale-110 transition" />
-          </a>
-          <a href="#">
+          <a href="https://t.me/KuzKen" target="_blank" rel="noreferrer">
             <RiTelegramFill className="size-8 hover:scale-110 transition" />
+          </a>
+          <a
+            href="https://www.instagram.com/_kuzken_?igsh=ZmZoMjNhbjVub2g3&utm_source=qr"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiFillInstagram className="size-8 hover:scale-110 transition" />
           </a>
         </div>
       </Container>
