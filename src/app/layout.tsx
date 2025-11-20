@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import { Header } from './components/Header';
-import { Actions } from './components/Actions';
 import { Footer } from './components/Footer';
 import { UpArrow } from './components/UpArrow';
 
@@ -30,11 +28,9 @@ const RootLayout = ({ children }: Readonly<Props>) => {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-secondary`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-secondary min-h-screen flex flex-col`}
       >
-        <Actions />
-        <Header />
-        <main>{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
         <UpArrow />
       </body>

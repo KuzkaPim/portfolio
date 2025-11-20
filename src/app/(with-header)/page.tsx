@@ -1,4 +1,4 @@
-import { HomePage } from '../listOfPages/Home';
+import { HomePage } from '../../listOfPages/Home';
 
 const Page = () => {
   return <HomePage />;
