@@ -30,7 +30,7 @@ const RootLayout = ({ children }: Readonly<Props>) => {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-secondary`}
       >
         <Actions />
         <Header />

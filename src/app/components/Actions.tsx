@@ -17,12 +17,16 @@ export const Actions = () => {
       setIsMenuOpen(false);
     };
 
+    const onScroll = () => setIsMenuOpen(false);
+
     document.addEventListener('keydown', onKey);
     document.addEventListener('click', onClick);
+    window.addEventListener('scroll', onScroll, { passive: true });
 
     return () => {
       document.removeEventListener('keydown', onKey);
       document.removeEventListener('click', onClick);
+      window.removeEventListener('scroll', onScroll);
     };
   }, []);
 
