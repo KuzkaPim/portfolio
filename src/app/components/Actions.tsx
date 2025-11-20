@@ -32,7 +32,7 @@ export const Actions = () => {
     <header ref={ref} className="sm:hidden fixed z-20 right-3 top-3">
       <div className="relative">
         <button
-          className="w-8 h-8 flex flex-col shadow-md justify-center items-center rounded-md cursor-pointer gap-1 bg-accent transform transition-transform duration-150 active:scale-90 tou"
+          className="w-8 h-8 flex flex-col shadow-md justify-center items-center rounded-md cursor-pointer gap-1 bg-accent transform transition-transform duration-150 active:scale-90"
           onClick={toggleMenu}
           aria-label="Toggle menu"
           aria-expanded={isMenuOpen}

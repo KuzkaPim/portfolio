@@ -4,6 +4,7 @@ import './globals.css';
 import { Header } from './components/Header';
 import { Actions } from './components/Actions';
 import { Footer } from './components/Footer';
+import { UpArrow } from './components/UpArrow';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -35,6 +36,7 @@ const RootLayout = ({ children }: Readonly<Props>) => {
         <Header />
         <main>{children}</main>
         <Footer />
+        <UpArrow />
       </body>
     </html>
   );
