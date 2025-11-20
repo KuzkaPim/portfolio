@@ -44,7 +44,7 @@ export const PromoBlock = () => {
               </Link>
             </div>
           </div>
-          <div className="flex gap-2 mt-8 w-max text-dark">
+          <div className="flex gap-2 mt-8 w-max text-gray-600">
             <a href="#">
               <IoLogoGithub className="size-8 hover:text-accent transition" />
             </a>
