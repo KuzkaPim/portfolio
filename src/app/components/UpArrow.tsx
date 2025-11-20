@@ -27,9 +27,10 @@ export const UpArrow = () => {
   }, []);
 
   return (
-    <FaArrowUp
-      onClick={handleClick}
-      className={`bg-primary text-accent size-8 sm:size-10 fixed z-20 right-3 sm:right-5 bottom-3 sm:bottom-5 p-1.5 sm:p-2 rounded-full shadow-md transition hover:scale-105 active:scale-100 ${isVisible ? 'scale-100' : 'scale-50 opacity-0 pointer-events-none'}`}
-    />
+    <div
+      className={`bg-primary size-8 sm:size-10 right-3 sm:right-5 bottom-3 sm:bottom-5 p-1.5 sm:p-2 rounded-full transition hover:scale-105 active:scale-100 ${isVisible ? 'scale-100' : 'scale-50 opacity-0 pointer-events-none'} fixed z-20 shadow-md flex justify-center items-center`}
+    >
+      <FaArrowUp onClick={handleClick} className="text-accent size-full" />
+    </div>
   );
 };
