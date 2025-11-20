@@ -32,7 +32,7 @@ export const Actions = () => {
     <header ref={ref} className="sm:hidden fixed z-20 right-3 top-3">
       <div className="relative">
         <button
-          className="w-8 h-8 flex flex-col shadow-md justify-center items-center rounded-md cursor-pointer gap-1 bg-accent transform transition-transform duration-150 active:scale-90"
+          className="size-10 flex flex-col shadow-md justify-center items-center rounded-md cursor-pointer gap-1.5 bg-accent transform transition-transform duration-150 active:scale-90"
           onClick={toggleMenu}
           aria-label="Toggle menu"
           aria-expanded={isMenuOpen}
@@ -40,17 +40,17 @@ export const Actions = () => {
         >
           <span
             className={`w-2/3 h-1 rounded-sm bg-white block transform transition-transform duration-200 ease-in-out ${
-              isMenuOpen ? 'translate-y-4' : ''
+              isMenuOpen ? 'translate-y-5' : ''
             }`}
           />
           <span
             className={`w-2/3 h-1 rounded-sm bg-white block transition duration-200 ease-in-out ${
-              isMenuOpen ? 'opacity-70 -translate-y-2 scale-70' : ''
+              isMenuOpen ? 'opacity-70 -translate-y-2.5 scale-70' : ''
             }`}
           />
           <span
             className={`w-2/3 h-1 rounded-sm bg-white block transition duration-200 ease-in-out ${
-              isMenuOpen ? 'opacity-70 -translate-y-2 scale-80' : ''
+              isMenuOpen ? 'opacity-70 -translate-y-2.5 scale-80' : ''
             }`}
           />
         </button>
