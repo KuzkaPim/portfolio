@@ -36,7 +36,7 @@ export const PromoBlock = () => {
               </a>
               <Link
                 className="px-4 py-2 bg-secondary font-bold rounded-4xl text-accent border border-accent hover:-translate-y-0.5 transition sm:flex-1 lg:flex-initial text-center w-max"
-                href="/"
+                href="/resume"
               >
                 Резюме
               </Link>
