@@ -16,10 +16,7 @@ export const PromoBlock = () => {
           <p className="mt-8 text-xl sm:text-2xl font-bold">
             Фронтенд разработчик
           </p>
-          <p
-            className="mt-2
-             text-lg"
-          >
+          <p className="mt-2 text-lg">
             Превращаю сложные идеи в понятные и интерактивные веб-приложения
           </p>
           <div className="flex gap-4 mt-8 items-start lg:items-center flex-col lg:flex-row w-max sm:w-auto">
