@@ -40,7 +40,12 @@ export const Actions = () => {
         >
           <span
             className={`w-2/3 h-1 rounded-sm bg-white block transform transition-transform duration-200 ease-in-out ${
-              isMenuOpen ? 'translate-y-2' : ''
+              isMenuOpen ? 'translate-y-4' : ''
+            }`}
+          />
+          <span
+            className={`w-2/3 h-1 rounded-sm bg-white block transition duration-200 ease-in-out ${
+              isMenuOpen ? 'opacity-70 -translate-y-2 scale-70' : ''
             }`}
           />
           <span
@@ -48,7 +53,6 @@ export const Actions = () => {
               isMenuOpen ? 'opacity-70 -translate-y-2 scale-80' : ''
             }`}
           />
-          <span className="w-2/3 h-1 rounded-sm bg-white block transform transition-transform duration-200 ease-in-out" />
         </button>
 
         <div
