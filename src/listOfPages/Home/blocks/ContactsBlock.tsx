@@ -16,7 +16,7 @@ export const ContactsBlock = () => {
         </p>
         <a
           href="mailto:kuzken.prod@gmail.com?subject=Вопрос по сотрудничеству с Кузьмой"
-          className="mt-4 bg-white text-accent py-2 px-8 rounded-xl block mx-auto w-max shadow-md font-bold hover:-translate-y-0.5 transition"
+          className="mt-4 bg-white text-accent py-2 px-8 rounded-xl block mx-auto w-max shadow-md font-bold hover:-translate-y-0.5 hover:shadow-lg transition"
         >
           kuzken.prod@gmail.com
         </a>

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-export const Actions = () => {
+export const Hamburger = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const ref = useRef<HTMLElement | null>(null);
 

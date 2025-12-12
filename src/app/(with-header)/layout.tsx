@@ -1,5 +1,5 @@
 import { Header } from './components/Header';
-import { Actions } from './components/Actions';
+import { Hamburger } from './components/Hamburger';
 
 interface Props {
   children: React.ReactNode;
@@ -8,7 +8,7 @@ interface Props {
 const Layout = ({ children }: Props) => {
   return (
     <>
-      <Actions />
+      <Hamburger />
       <Header />
       {children}
     </>

@@ -1,7 +1,7 @@
 import { Container } from '@/src/shared/ui';
-import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowLeft, FaArrowDown } from 'react-icons/fa';
+import { DynamicPdfViewer } from '../components';
 
 export const Resume = () => {
   return (
@@ -15,15 +15,8 @@ export const Resume = () => {
             <FaArrowLeft className="transition group-hover/back:-translate-x-0.5 group-active/back:-translate-x-1" />
             Главная
           </Link>
-          <h1 className="text-4xl sm:text-6xl font-bold">Резюме</h1>
         </header>
-        <Image
-          src="/assets/resume.jpg"
-          alt="Резюме"
-          width={600}
-          height={800}
-          className="w-full mt-8 rounded-2xl"
-        />
+        <DynamicPdfViewer />
         <div className="flex items-center gap-2 mt-8">
           <a
             href="/assets/resume.pdf"
@@ -37,6 +30,7 @@ export const Resume = () => {
             PDF
           </div>
         </div>
+        <span className="block h-0.5 w-full rounded-full bg-gray-200 mt-8"></span>
       </Container>
     </section>
   );

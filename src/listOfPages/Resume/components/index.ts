@@ -1,0 +1,1 @@
+export { DynamicPdfViewer } from './DynamicPdfViewer';
