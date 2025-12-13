@@ -5,8 +5,8 @@ import { DynamicPdfViewer } from '../components';
 
 export const Resume = () => {
   return (
-    <section className="text-dark">
-      <Container className="py-12">
+    <section className="text-dark flex-1 flex flex-col">
+      <Container className="py-12 flex-1 w-full flex flex-col">
         <header className="flex flex-col gap-4">
           <Link
             href="/"
@@ -16,7 +16,9 @@ export const Resume = () => {
             Главная
           </Link>
         </header>
-        <DynamicPdfViewer />
+        <div className="flex-1 flex flex-col">
+          <DynamicPdfViewer />
+        </div>
         <div className="flex items-center gap-2 mt-8">
           <a
             href="/assets/resume.pdf"

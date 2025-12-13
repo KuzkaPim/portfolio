@@ -5,15 +5,14 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 const PdfView = () => {
   return (
     <Document file="/assets/resume.pdf" loading="">
-      <div className="mt-8 w-full rounded-2xl aspect-[0.7/1] bg-primary overflow-hidden">
-        <Page
-          loading=""
-          pageNumber={1}
-          renderTextLayer={false}
-          renderAnnotationLayer={false}
-          scale={1.5}
-        />
-      </div>
+      <Page
+        className="rounded-2xl overflow-hidden mt-8"
+        loading=""
+        pageNumber={1}
+        renderTextLayer={false}
+        renderAnnotationLayer={false}
+        scale={1.5}
+      />
     </Document>
   );
 };

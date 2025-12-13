@@ -30,7 +30,7 @@ const RootLayout = ({ children }: Readonly<Props>) => {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-secondary min-h-screen flex flex-col`}
       >
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 flex flex-col">{children}</main>
         <Footer />
         <UpArrow />
       </body>
