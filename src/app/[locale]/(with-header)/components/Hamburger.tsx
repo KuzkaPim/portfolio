@@ -48,7 +48,7 @@ export const Hamburger = () => {
   return (
     <div ref={ref} className="relative">
       <button
-        className="size-10 p-1.5 flex flex-col shadow-md justify-center items-center rounded-md cursor-pointer gap-1.5 bg-accent transform transition-transform duration-150 active:scale-90"
+        className="size-10 p-1.5 flex flex-col shadow-md justify-center items-center rounded-md cursor-pointer gap-1.5 bg-accent transform transition-transform duration-200 active:scale-90"
         onClick={toggleMenu}
         aria-label="Toggle menu"
         aria-expanded={isMenuOpen}
@@ -72,7 +72,7 @@ export const Hamburger = () => {
       </button>
 
       <div
-        className={`absolute top-0 right-12 transform transition-all duration-180 ease-out ${
+        className={`absolute top-0 right-12 transform transition-all duration-200 ease-out ${
           isMenuOpen
             ? 'opacity-100 scale-100 animate-bump-left pointer-events-auto'
             : 'opacity-0 scale-95 -translate-x-2 pointer-events-none'
@@ -82,7 +82,7 @@ export const Hamburger = () => {
       </div>
 
       <div
-        className={`absolute right-0 transform transition-all duration-180 ease-out origin-top-right ${
+        className={`absolute right-0 transform transition-all duration-200 ease-out origin-top-right ${
           isMenuOpen
             ? 'opacity-100 scale-100 animate-bump-bottom pointer-events-auto'
             : 'opacity-0 scale-95 translate-y-2 pointer-events-none'
