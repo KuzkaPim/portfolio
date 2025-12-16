@@ -77,6 +77,10 @@ export const Hamburger = () => {
             ? 'opacity-100 scale-100 animate-bump-left pointer-events-auto'
             : 'opacity-0 scale-95 -translate-x-2 pointer-events-none'
         }`}
+        style={{
+          willChange: 'opacity, transform',
+          backfaceVisibility: 'hidden',
+        }}
       >
         <ToggleLocale className="size-10 p-1.5 shadow-md" keepMenuOpen />
       </div>

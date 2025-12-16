@@ -46,8 +46,13 @@ export const ToggleLocale = ({
       </div>
       <button
         onClick={toggleLocale}
-        className={`bg-accent rounded-full text-primary transition hover:bg-accent-hover ${className}`}
+        className={`bg-accent rounded-full text-primary transition hover:bg-accent-hover transform-gpu ${className}`}
         aria-label="Toggle language"
+        style={{
+          willChange: 'transform',
+          backfaceVisibility: 'hidden',
+          WebkitTapHighlightColor: 'transparent',
+        }}
       >
         <GrLanguage className="size-full" />
       </button>
