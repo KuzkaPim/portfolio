@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import { Footer } from './components/Footer';
-import { UpArrow } from './components/UpArrow';
+import { NextIntlClientProvider } from 'next-intl';
+import { Footer } from './blocks/Footer';
+import { UpArrow } from './blocks/UpArrow';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -24,15 +25,17 @@ interface Props {
   children: React.ReactNode;
 }
 
-const RootLayout = ({ children }: Readonly<Props>) => {
+const RootLayout = async ({ children }: Readonly<Props>) => {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-secondary min-h-screen flex flex-col`}
       >
-        <main className="flex-1 flex flex-col">{children}</main>
-        <Footer />
-        <UpArrow />
+        <NextIntlClientProvider>
+          <main className="flex-1 flex flex-col">{children}</main>
+          <Footer />
+          <UpArrow />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

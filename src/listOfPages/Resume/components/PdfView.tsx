@@ -1,10 +1,16 @@
 import { Document, Page, pdfjs } from 'react-pdf';
+import { useLocale } from 'next-intl';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const PdfView = () => {
+  const locale = useLocale();
+
   return (
-    <Document file="/assets/resume.pdf" loading="">
+    <Document
+      file={locale === 'ru' ? '/assets/RESUME_RU.pdf' : '/assets/RESUME_EN.pdf'}
+      loading=""
+    >
       <Page
         className="rounded-2xl overflow-hidden mt-8"
         loading=""

@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "home": "Home",
+    "technologies": "Technologies",
+    "aboutMe": "About Me",
+    "contactMe": "Contact Me"
+  },
+  "footer": {
+    "copyright": "© 2025 Kuzma. All rights reserved."
+  },
+  "home": {
+    "promo": {
+      "title": "Hi, I'm Kuzma",
+      "subtitle": "Frontend Developer",
+      "description": "Turning complex ideas into clear and interactive web applications",
+      "btn": {
+        "myProjects": "My Projects",
+        "contactMe": "Contact Me",
+        "resume": "Resume"
+      }
+    },
+    "technologies": {
+      "title": "Technologies",
+      "languages": "Languages",
+      "frontend": "Frontend",
+      "backendAndDB": "Backend and Databases",
+      "styles": "Styling",
+      "toolsAndSystem": "Tools and Ecosystem"
+    },
+    "aboutMe": {
+      "title": "About Me",
+      "paragraph1": "Hi! I'm Kuzma, a frontend developer, and I'm passionate about turning cool ideas into truly working web applications.",
+      "paragraph2": {
+        "1": "I like it when the interface is beautiful, but even more when it is ",
+        "2": "fast",
+        "3": "reliable",
+        "4": ", and its code is easy to maintain. My main goal is to lay a solid and clean foundation for any project."
+      },
+      "paragraph3": {
+        "1": "I came into development through an intensive course where I immediately set myself the task: to learn not just syntax, but architecture. That's why I immediately immersed myself in working on a real Fullstack project. Experience with ",
+        "2": "and monorepositories ",
+        "3": "gave me an understanding of the entire development cycle: I know how to communicate properly with the backend because I wrote it myself."
+      },
+      "paragraph4": {
+        "1": "In my work, I always prioritize ",
+        "2": "and principles ",
+        "3": "clean",
+        "4": "component architecture to ensure stability. I value ",
+        "5": "teamwork",
+        "6": ", love to delve into complex tasks, and am always ready to learn new things quickly."
+      }
+    },
+    "contactMe": {
+      "title": "Ready for new challenges and collaboration!",
+      "description": "Looking for a developer who thinks not only about UI but also about architecture?"
+    }
+  },
+  "resume": {
+    "home": "Home",
+    "downloadResume": "Download resume"
+  }
+}

@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #ffffff;
+  --color-secondary: #f9f9f9;
+  --color-accent: #10b981;
+  --color-accent-hover: #11996c;
+  --color-dark: #111111;
+
+  --animate-bump-left: bump-left 0.4s ease-out;
+  --animate-bump-bottom: bump-bottom 0.4s ease-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.react-pdf__Page__canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+@keyframes bump-left {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-16px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+}
+
+@keyframes bump-bottom {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(16px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}

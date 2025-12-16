@@ -1,5 +1,4 @@
-import { Header } from './components/Header';
-import { Hamburger } from './components/Hamburger';
+import { Header } from './blocks';
 
 interface Props {
   children: React.ReactNode;
@@ -8,7 +7,6 @@ interface Props {
 const Layout = ({ children }: Props) => {
   return (
     <>
-      <Hamburger />
       <Header />
       {children}
     </>

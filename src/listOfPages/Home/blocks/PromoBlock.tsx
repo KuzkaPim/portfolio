@@ -4,8 +4,11 @@ import Link from 'next/link';
 import { IoLogoGithub } from 'react-icons/io';
 import { RiTelegramFill } from 'react-icons/ri';
 import { AiFillInstagram } from 'react-icons/ai';
+import { useTranslations } from 'next-intl';
 
 export const PromoBlock = () => {
+  const t = useTranslations('home.promo');
+
   return (
     <section
       id="promo"
@@ -13,32 +16,28 @@ export const PromoBlock = () => {
     >
       <Container className="flex flex-col sm:flex-row items-center justify-between relative pb-16 pt-12 md:py-12">
         <div className="z-10 sm:w-sm lg:w-auto">
-          <h1 className="text-4xl sm:text-6xl font-bold">Привет, я Кузьма</h1>
-          <p className="mt-8 text-xl sm:text-2xl font-bold">
-            Фронтенд разработчик
-          </p>
-          <p className="mt-2 text-lg">
-            Превращаю сложные идеи в понятные и интерактивные веб-приложения
-          </p>
+          <h1 className="text-4xl sm:text-6xl font-bold">{t('title')}</h1>
+          <p className="mt-8 text-xl sm:text-2xl font-bold">{t('subtitle')}</p>
+          <p className="mt-2 text-lg">{t('description')}</p>
           <div className="flex gap-4 mt-8 items-start lg:items-center flex-col lg:flex-row w-max sm:w-auto">
             <Link
               className="px-4 py-2 border text-white border-accent bg-accent font-bold rounded-4xl transition hover:-translate-y-0.5 text-center w-full lg:w-auto"
               href="/"
             >
-              Мои проекты
+              {t('btn.myProjects')}
             </Link>
             <div className="flex gap-4 flex-col sm:flex-row sm:w-full lg:w-auto">
               <a
                 className="px-4 py-2 bg-secondary font-bold rounded-4xl text-accent border border-accent hover:-translate-y-0.5 transition sm:flex-2 lg:flex-initial text-center"
                 href="#contacts"
               >
-                Связаться со мной
+                {t('btn.contactMe')}
               </a>
               <Link
                 className="px-4 py-2 bg-secondary font-bold rounded-4xl text-accent border border-accent hover:-translate-y-0.5 transition sm:flex-1 lg:flex-initial text-center w-max"
                 href="/resume"
               >
-                Резюме
+                {t('btn.resume')}
               </Link>
             </div>
           </div>
@@ -47,16 +46,23 @@ export const PromoBlock = () => {
               href="https://github.com/KuzkaPim"
               target="_blank"
               rel="noreferrer"
+              aria-label="GitHub"
             >
               <IoLogoGithub className="size-8 hover:text-accent transition" />
             </a>
-            <a href="https://t.me/KuzKen" target="_blank" rel="noreferrer">
+            <a
+              href="https://t.me/KuzKen"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Telegram"
+            >
               <RiTelegramFill className="size-8 hover:text-accent transition" />
             </a>
             <a
               href="https://www.instagram.com/_kuzken_?igsh=ZmZoMjNhbjVub2g3&utm_source=qr"
               target="_blank"
               rel="noreferrer"
+              aria-label="Instagram"
             >
               <AiFillInstagram className="size-8 hover:text-accent transition" />
             </a>

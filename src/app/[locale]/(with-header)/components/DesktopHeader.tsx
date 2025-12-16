@@ -1,9 +1,13 @@
 import { Container } from '@/src/shared/ui';
+import { ToggleLocale } from '@/src/shared/ui/ToggleLocale';
+import { useTranslations } from 'next-intl';
 
-export const Header = () => {
+export const DesktopHeader = () => {
+  const t = useTranslations('nav');
+
   return (
     <header className="sticky top-0 bg-primary z-20 shadow-sm h-16 text-gray-800 text-lg hidden sm:block">
-      <Container className="h-full items-center flex">
+      <Container className="h-full items-center flex justify-between">
         <nav>
           <ul className="flex items-center gap-8">
             <li>
@@ -11,7 +15,7 @@ export const Header = () => {
                 href="#promo"
                 className="transition border-accent hover:border-b-2"
               >
-                Главная
+                {t('home')}
               </a>
             </li>
             <li>
@@ -19,7 +23,7 @@ export const Header = () => {
                 href="#skills"
                 className="transition border-accent hover:border-b-2"
               >
-                Технологии
+                {t('technologies')}
               </a>
             </li>
             <li>
@@ -27,7 +31,7 @@ export const Header = () => {
                 href="#about-me"
                 className="transition border-accent hover:border-b-2"
               >
-                Обо мне
+                {t('aboutMe')}
               </a>
             </li>
             <li>
@@ -35,11 +39,12 @@ export const Header = () => {
                 href="#contacts"
                 className="transition border-accent hover:border-b-2"
               >
-                Контакты
+                {t('contactMe')}
               </a>
             </li>
           </ul>
         </nav>
+        <ToggleLocale />
       </Container>
     </header>
   );
