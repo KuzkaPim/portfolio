@@ -1,10 +1,7 @@
 import { Document, Page, pdfjs } from 'react-pdf';
 import { useLocale } from 'next-intl';
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url
-).toString();
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.mjs`;
 
 const PdfView = () => {
   const locale = useLocale();
