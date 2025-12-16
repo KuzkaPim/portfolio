@@ -1,5 +1,5 @@
 import { Container } from '@/src/shared/ui';
-import Link from 'next/link';
+import { Link } from '@/src/i18n/navigation';
 import { FaArrowLeft, FaArrowDown } from 'react-icons/fa';
 import { DynamicPdfViewer } from '../components';
 import { ToggleLocale } from '@/src/shared/ui/ToggleLocale';

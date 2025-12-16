@@ -1,10 +1,10 @@
 import { Container } from '@/src/shared/ui';
 import Image from 'next/image';
-import Link from 'next/link';
 import { IoLogoGithub } from 'react-icons/io';
 import { RiTelegramFill } from 'react-icons/ri';
 import { AiFillInstagram } from 'react-icons/ai';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/src/i18n/navigation';
 
 export const PromoBlock = () => {
   const t = useTranslations('home.promo');
