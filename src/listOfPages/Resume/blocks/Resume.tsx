@@ -1,9 +1,9 @@
 import { Container } from '@/src/shared/ui';
 import { Link } from '@/src/i18n/navigation';
 import { FaArrowLeft, FaArrowDown } from 'react-icons/fa';
-import { DynamicPdfViewer } from '../components';
 import { ToggleLocale } from '@/src/shared/ui/ToggleLocale';
 import { useTranslations, useLocale } from 'next-intl';
+import Image from 'next/image';
 
 export const Resume = () => {
   const t = useTranslations('resume');
@@ -22,9 +22,18 @@ export const Resume = () => {
           </Link>
           <ToggleLocale />
         </header>
-        <div className="flex-1 flex flex-col">
-          <DynamicPdfViewer />
-        </div>
+        <Image
+          src={
+            locale === 'ru'
+              ? '/assets/RESUME_RU.webp'
+              : '/assets/RESUME_EN.webp'
+          }
+          unoptimized
+          alt="Resume"
+          width={2481}
+          height={3509}
+          className="w-full h-auto mt-8 rounded-2xl"
+        />
         <div className="flex items-center gap-2 mt-8">
           <a
             href={
