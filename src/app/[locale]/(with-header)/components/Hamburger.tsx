@@ -55,17 +55,17 @@ export const Hamburger = () => {
         aria-controls="mobile-actions-menu"
       >
         <span
-          className={`w-full h-1 rounded-sm bg-white block transform transition-transform duration-300 ease-in-out ${
+          className={`w-full h-1 rounded-sm bg-white block transform transition-transform duration-250 ease-in-out ${
             isMenuOpen ? 'translate-y-5' : ''
           }`}
         />
         <span
-          className={`w-full h-1 rounded-sm bg-white block transition duration-300 ease-in-out ${
+          className={`w-full h-1 rounded-sm bg-white block transition duration-250 ease-in-out ${
             isMenuOpen ? 'opacity-70 -translate-y-2.5 scale-70' : ''
           }`}
         />
         <span
-          className={`w-full h-1 rounded-sm bg-white block transition duration-300 ease-in-out ${
+          className={`w-full h-1 rounded-sm bg-white block transition duration-250 ease-in-out ${
             isMenuOpen ? 'opacity-70 -translate-y-2.5 scale-80' : ''
           }`}
         />
