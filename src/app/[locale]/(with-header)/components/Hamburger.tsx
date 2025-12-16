@@ -48,24 +48,24 @@ export const Hamburger = () => {
   return (
     <div ref={ref} className="relative">
       <button
-        className="size-10 p-1.5 flex flex-col shadow-md justify-center items-center rounded-md cursor-pointer gap-1.5 bg-accent transform transition-transform duration-1200 active:scale-90"
+        className="size-10 p-1.5 flex flex-col shadow-md justify-center items-center rounded-md cursor-pointer gap-1.5 bg-accent active:scale-90"
         onClick={toggleMenu}
         aria-label="Toggle menu"
         aria-expanded={isMenuOpen}
         aria-controls="mobile-actions-menu"
       >
         <span
-          className={`w-full h-1 rounded-sm bg-white block transform transition-transform duration-200 ease-in-out ${
+          className={`w-full h-1 rounded-sm bg-white block transform transition-transform duration-300 ease-in-out ${
             isMenuOpen ? 'translate-y-5' : ''
           }`}
         />
         <span
-          className={`w-full h-1 rounded-sm bg-white block transition duration-200 ease-in-out ${
+          className={`w-full h-1 rounded-sm bg-white block transition duration-300 ease-in-out ${
             isMenuOpen ? 'opacity-70 -translate-y-2.5 scale-70' : ''
           }`}
         />
         <span
-          className={`w-full h-1 rounded-sm bg-white block transition duration-200 ease-in-out ${
+          className={`w-full h-1 rounded-sm bg-white block transition duration-300 ease-in-out ${
             isMenuOpen ? 'opacity-70 -translate-y-2.5 scale-80' : ''
           }`}
         />
