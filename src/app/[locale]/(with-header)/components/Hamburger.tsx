@@ -72,10 +72,10 @@ export const Hamburger = () => {
       </button>
 
       <div
-        className={`absolute top-0 right-12 transform transition-all duration-200 ease-out ${
+        className={`absolute top-0 right-12 transform transition-all duration-250 ease-out ${
           isMenuOpen
-            ? 'opacity-100 scale-100 animate-bump-left pointer-events-auto'
-            : 'opacity-0 scale-95 -translate-x-1 pointer-events-none'
+            ? 'opacity-100 animate-bump-left pointer-events-auto'
+            : 'opacity-0 pointer-events-none'
         }`}
         style={{
           willChange: 'opacity, transform',
@@ -86,10 +86,10 @@ export const Hamburger = () => {
       </div>
 
       <div
-        className={`absolute right-0 transform transition-all duration-200 ease-out origin-top-right ${
+        className={`absolute right-0 transform transition-all duration-250 ease-out origin-top-right ${
           isMenuOpen
-            ? 'opacity-100 scale-100 animate-bump-bottom pointer-events-auto'
-            : 'opacity-0 scale-95 translate-y-1 pointer-events-none'
+            ? 'opacity-100 animate-bump-bottom pointer-events-auto'
+            : 'opacity-0 pointer-events-none'
         }`}
       >
         <ul
