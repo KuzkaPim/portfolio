@@ -1,4 +1,8 @@
 {
+  "metadata": {
+    "title": "Кузьма | Frontend-разработчик | Next.js, Nest.js",
+    "description": "Frontend-разработчик, создающий архитектурно чистые приложения на Next.js, с опытом работы с Fullstack-стеком (Nest.js, TypeScript)"
+  },
   "nav": {
     "home": "Главная",
     "technologies": "Технологии",

@@ -4,6 +4,7 @@ import './globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import { Footer } from './blocks/Footer';
 import { UpArrow } from './blocks/UpArrow';
+import { getTranslations } from 'next-intl/server';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -15,19 +16,35 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
-  title: 'Кузьма | Frontend-разработчик | Next.js, Nest.js',
-  description:
-    'Frontend-разработчик, создающий архитектурно чистые приложения на Next.js, с опытом работы с Fullstack-стеком (Nest.js, TypeScript)',
-};
+export async function generateMetadata({
+  params,
+}: Omit<Props, 'children'>): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      type: 'website',
+      images: '/assets/kuzka.png',
+      locale: locale,
+    },
+  };
+}
 
 interface Props {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }
 
-const RootLayout = async ({ children }: Readonly<Props>) => {
+const RootLayout = async ({ children, params }: Readonly<Props>) => {
+  const { locale } = await params;
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-primary min-h-screen flex flex-col`}
       >

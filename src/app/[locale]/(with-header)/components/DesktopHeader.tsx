@@ -14,7 +14,7 @@ export const DesktopHeader = () => {
               <li>
                 <a
                   href="#promo"
-                  className="flex items-center px-4 h-11 transition rounded-full hover:bg-accent"
+                  className="flex items-center px-4 h-11 transition rounded-full hover:bg-accent/60"
                 >
                   {t('home')}
                 </a>
@@ -22,7 +22,7 @@ export const DesktopHeader = () => {
               <li>
                 <a
                   href="#skills"
-                  className="flex items-center px-4 h-11 transition rounded-full hover:bg-accent"
+                  className="flex items-center px-4 h-11 transition rounded-full hover:bg-accent/60"
                 >
                   {t('technologies')}
                 </a>
@@ -30,7 +30,7 @@ export const DesktopHeader = () => {
               <li>
                 <a
                   href="#about-me"
-                  className="flex items-center px-4 h-11 transition rounded-full hover:bg-accent"
+                  className="flex items-center px-4 h-11 transition rounded-full hover:bg-accent/60"
                 >
                   {t('aboutMe')}
                 </a>
@@ -38,7 +38,7 @@ export const DesktopHeader = () => {
               <li>
                 <a
                   href="#contacts"
-                  className="flex items-center px-4 h-11 transition rounded-full hover:bg-accent"
+                  className="flex items-center px-4 h-11 transition rounded-full hover:bg-accent/60"
                 >
                   {t('contactMe')}
                 </a>
