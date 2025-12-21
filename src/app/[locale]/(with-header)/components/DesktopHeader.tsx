@@ -6,45 +6,47 @@ export const DesktopHeader = () => {
   const t = useTranslations('nav');
 
   return (
-    <header className="sticky top-0 bg-primary z-20 shadow-sm h-16 text-gray-800 text-lg hidden sm:block">
-      <Container className="h-full items-center flex justify-between">
-        <nav>
-          <ul className="flex items-center gap-8">
-            <li>
-              <a
-                href="#promo"
-                className="transition border-accent hover:border-b-2"
-              >
-                {t('home')}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#skills"
-                className="transition border-accent hover:border-b-2"
-              >
-                {t('technologies')}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about-me"
-                className="transition border-accent hover:border-b-2"
-              >
-                {t('aboutMe')}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contacts"
-                className="transition border-accent hover:border-b-2"
-              >
-                {t('contactMe')}
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <ToggleLocale />
+    <header className="text-primary font-bold text-md hidden md:block sticky top-2 z-20">
+      <Container>
+        <div className="flex justify-between">
+          <nav className="bg-accent/80 rounded-full shadow-md backdrop-blur-md border border-white/20">
+            <ul className="flex">
+              <li>
+                <a
+                  href="#promo"
+                  className="flex items-center px-4 h-11 transition rounded-full hover:bg-accent"
+                >
+                  {t('home')}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#skills"
+                  className="flex items-center px-4 h-11 transition rounded-full hover:bg-accent"
+                >
+                  {t('technologies')}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#about-me"
+                  className="flex items-center px-4 h-11 transition rounded-full hover:bg-accent"
+                >
+                  {t('aboutMe')}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contacts"
+                  className="flex items-center px-4 h-11 transition rounded-full hover:bg-accent"
+                >
+                  {t('contactMe')}
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <ToggleLocale />
+        </div>
       </Container>
     </header>
   );

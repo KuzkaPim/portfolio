@@ -6,27 +6,37 @@ export const SkillsBlock = () => {
   const t = useTranslations('home.technologies');
 
   return (
-    <section id="skills" className="bg-primary text-dark sm:scroll-mt-16">
-      <Container className="py-12">
+    <section id="skills" className="bg-primary text-dark md:scroll-mt-16 py-4">
+      <Container className="py-8">
         <h2 className="text-4xl font-bold">{t('title')}</h2>
         <div className="mt-8">
-          <h3 className="font-bold text-2xl">{t('languages')}</h3>
+          <h3 className="font-bold text-md text-primary bg-accent w-max px-2 rounded-md">
+            {t('languages')}
+          </h3>
           <Skills catagory="languages" />
         </div>
         <div className="mt-8">
-          <h3 className="font-bold text-2xl">{t('frontend')}</h3>
+          <h3 className="font-bold text-md text-primary bg-accent w-max px-2 rounded-md">
+            {t('frontend')}
+          </h3>
           <Skills catagory="frontend" />
         </div>
         <div className="mt-8">
-          <h3 className="font-bold text-2xl">{t('backendAndDB')}</h3>
+          <h3 className="font-bold text-md text-primary bg-accent w-max px-2 rounded-md">
+            {t('backendAndDB')}
+          </h3>
           <Skills catagory="backend" />
         </div>
         <div className="mt-8">
-          <h3 className="font-bold text-2xl">{t('styles')}</h3>
+          <h3 className="font-bold text-md text-primary bg-accent w-max px-2 rounded-md">
+            {t('styles')}
+          </h3>
           <Skills catagory="styling" />
         </div>
         <div className="mt-8">
-          <h3 className="font-bold text-2xl">{t('toolsAndSystem')}</h3>
+          <h3 className="font-bold text-md text-primary bg-accent w-max px-2 rounded-md">
+            {t('toolsAndSystem')}
+          </h3>
           <Skills catagory="tools" />
         </div>
       </Container>

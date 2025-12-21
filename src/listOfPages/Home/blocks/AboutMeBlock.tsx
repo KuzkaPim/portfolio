@@ -5,8 +5,11 @@ export const AboutMeBlock = () => {
   const t = useTranslations('home.aboutMe');
 
   return (
-    <section id="about-me" className="bg-secondary text-dark sm:scroll-mt-16">
-      <Container className="py-12">
+    <section
+      id="about-me"
+      className="bg-primary text-dark md:scroll-mt-16 px-2 sm:px-0 py-4"
+    >
+      <Container className="py-8">
         <h2 className="text-4xl font-bold">{t('title')}</h2>
         <div className="text-lg leading-7 grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-8">
           <div>

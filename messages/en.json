@@ -52,7 +52,8 @@
     },
     "contactMe": {
       "title": "Ready for new challenges and collaboration!",
-      "description": "Looking for a developer who thinks not only about UI but also about architecture?"
+      "description": "Looking for a developer who thinks not only about UI but also about architecture?",
+      "copied": "Copied!"
     }
   },
   "resume": {

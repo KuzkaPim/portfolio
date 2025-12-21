@@ -5,25 +5,22 @@ import { useRouter, usePathname } from '@/src/i18n/navigation';
 import { GrLanguage } from 'react-icons/gr';
 
 interface ToggleLocaleProps {
-  className?: string;
   keepMenuOpen?: boolean;
 }
 
-export const ToggleLocale = ({
-  className = 'size-8 p-1.5',
-  keepMenuOpen = false,
-}: ToggleLocaleProps) => {
+export const ToggleLocale = ({ keepMenuOpen = false }: ToggleLocaleProps) => {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
 
   const toggleLocale = () => {
     const nextLocale = locale === 'en' ? 'ru' : 'en';
-    const hash = typeof window !== 'undefined' ? window.location.hash : '';
+    let hash = '';
     let search = '';
 
     if (typeof window !== 'undefined') {
       search = window.location.search;
+      hash = window.location.hash;
 
       if (keepMenuOpen) {
         const params = new URLSearchParams(search);
@@ -34,19 +31,28 @@ export const ToggleLocale = ({
 
     const fullPath = `${pathname}${search}${hash}`;
 
-    router.replace(fullPath, { locale: nextLocale });
+    router.replace(fullPath, { locale: nextLocale, scroll: false });
   };
 
-  const languageLabel = locale === 'en' ? 'EN' : 'РУ';
+  const isRussian = locale === 'ru';
 
   return (
-    <div className="flex items-center gap-2">
-      <div className="bg-gray-200 py-0.5 px-2 text-sm rounded-xl text-gray-600">
-        {languageLabel}
+    <div className="flex items-center gap-4 bg-accent/80 backdrop-blur-md rounded-full shadow-md pl-2 border border-white/20">
+      <div className="text-sm text-white">
+        <span
+          className={`px-2 py-1 rounded-full ${isRussian ? 'bg-accent' : ''}`}
+        >
+          РУ
+        </span>
+        <span
+          className={`px-2 py-1 rounded-full ${!isRussian ? 'bg-accent' : ''}`}
+        >
+          EN
+        </span>
       </div>
       <button
         onClick={toggleLocale}
-        className={`bg-accent rounded-full text-primary transition hover:bg-accent-hover transform-gpu ${className}`}
+        className="transition rounded-full cursor-pointer transform-gpu size-11 p-2 bg-transparent text-primary hover:bg-accent"
         aria-label="Toggle language"
         style={{
           willChange: 'transform',

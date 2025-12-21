@@ -3,21 +3,20 @@ import { IoLogoGithub } from 'react-icons/io';
 import { RiTelegramFill } from 'react-icons/ri';
 import { AiFillInstagram } from 'react-icons/ai';
 import { useTranslations } from 'next-intl';
+import { HackerButton } from '../components';
 
 export const ContactsBlock = () => {
   const t = useTranslations('home.contactMe');
 
   return (
-    <section id="contacts" className="bg-accent text-white sm:scroll-mt-16">
-      <Container className="py-12">
+    <section
+      id="contacts"
+      className="bg-primary text-white md:scroll-mt-16 px-2 sm:px-0 py-4"
+    >
+      <Container className="py-12 bg-accent rounded-2xl shadow-md">
         <h2 className="text-4xl font-bold text-center">{t('title')}</h2>
         <p className="mt-8 text-center">{t('description')}</p>
-        <a
-          href="mailto:kuzken.prod@gmail.com?subject=Вопрос по сотрудничеству с Кузьмой"
-          className="mt-4 bg-white text-accent py-2 px-8 rounded-xl block mx-auto w-max shadow-md font-bold hover:-translate-y-0.5 hover:shadow-lg transition"
-        >
-          kuzken.prod@gmail.com
-        </a>
+        <HackerButton />
         <div className="flex gap-2 mt-16 w-max mx-auto">
           <a
             href="https://github.com/KuzkaPim"

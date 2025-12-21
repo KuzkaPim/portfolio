@@ -48,7 +48,7 @@ export const Hamburger = () => {
   return (
     <div ref={ref} className="relative">
       <button
-        className="size-10 p-1.5 flex flex-col shadow-md justify-center items-center rounded-md cursor-pointer gap-1.5 bg-accent active:scale-90"
+        className="size-11 p-1.5 flex flex-col shadow-md justify-center items-center rounded-md cursor-pointer gap-1.5 bg-accent/80 backdrop-blur-md border border-white/20 active:scale-90 transition hover:bg-accent"
         onClick={toggleMenu}
         aria-label="Toggle menu"
         aria-expanded={isMenuOpen}
@@ -72,7 +72,7 @@ export const Hamburger = () => {
       </button>
 
       <div
-        className={`absolute top-0 right-12 transform transition-all duration-250 ease-out ${
+        className={`absolute top-0 right-12 transform transition-all rounded-full backdrop-blur-md duration-250 ease-out ${
           isMenuOpen
             ? 'opacity-100 animate-bump-left pointer-events-auto'
             : 'opacity-0 pointer-events-none'
@@ -82,11 +82,11 @@ export const Hamburger = () => {
           backfaceVisibility: 'hidden',
         }}
       >
-        <ToggleLocale className="size-10 p-1.5 shadow-md" keepMenuOpen />
+        <ToggleLocale keepMenuOpen />
       </div>
 
       <div
-        className={`absolute right-0 transform transition-all duration-250 ease-out origin-top-right ${
+        className={`absolute right-0 mt-2 transform transition-all backdrop-blur-md rounded-md duration-250 ease-out origin-top-right ${
           isMenuOpen
             ? 'opacity-100 animate-bump-bottom pointer-events-auto'
             : 'opacity-0 pointer-events-none'
@@ -96,13 +96,13 @@ export const Hamburger = () => {
           id="mobile-actions-menu"
           role="menu"
           aria-label="Quick links"
-          className="py-2 mt-2 min-w-36 bg-accent rounded-md shadow-md text-white"
+          className="py-2 min-w-36 bg-accent/80 border border-white/20 rounded-md shadow-md text-white"
         >
           <li role="none">
             <a
               role="menuitem"
               href="#promo"
-              className="group flex items-center gap-2 px-4 py-2 hover:bg-white hover:text-accent transition transform active:scale-95"
+              className="group flex items-center gap-2 px-4 py-2 hover:bg-accent transition transform active:scale-95"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('home')}
@@ -112,7 +112,7 @@ export const Hamburger = () => {
             <a
               role="menuitem"
               href="#skills"
-              className="group flex items-center gap-2 px-4 py-2 hover:bg-white hover:text-accent transition transform active:scale-95"
+              className="group flex items-center gap-2 px-4 py-2 hover:bg-accent transition transform active:scale-95"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('technologies')}
@@ -122,7 +122,7 @@ export const Hamburger = () => {
             <a
               role="menuitem"
               href="#about-me"
-              className="group flex items-center gap-2 px-4 py-2 hover:bg-white hover:text-accent transition transform active:scale-95"
+              className="group flex items-center gap-2 px-4 py-2 hover:bg-accent transition transform active:scale-95"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('aboutMe')}
@@ -132,7 +132,7 @@ export const Hamburger = () => {
             <a
               role="menuitem"
               href="#contacts"
-              className="group flex items-center gap-2 px-4 py-2 hover:bg-white hover:text-accent transition transform active:scale-95"
+              className="group flex items-center gap-2 px-4 py-2 hover:bg-accent transition transform active:scale-95"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('contactMe')}

@@ -1,6 +1,7 @@
 import { Container } from '@/src/shared/ui';
 import { Link } from '@/src/i18n/navigation';
-import { FaArrowLeft, FaArrowDown } from 'react-icons/fa';
+import { FaArrowDown } from 'react-icons/fa';
+import { MdKeyboardArrowLeft } from 'react-icons/md';
 import { ToggleLocale } from '@/src/shared/ui/ToggleLocale';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
@@ -11,14 +12,13 @@ export const Resume = () => {
 
   return (
     <section className="text-dark flex-1 flex flex-col">
-      <Container className="py-12 flex-1 w-full flex flex-col">
-        <header className="flex justify-between items-center gap-4">
+      <Container className="py-4 flex-1 w-full flex flex-col">
+        <header className="sticky top-4 flex justify-between items-center gap-4">
           <Link
             href="/"
-            className="py-1 px-4 bg-accent rounded-2xl text-white w-max flex items-center gap-2 group/back"
+            className="bg-accent/80 backdrop-blur-md border border-white/20 size-11 rounded-full text-primary p-1 pr-1.5 hover:bg-accent transition"
           >
-            <FaArrowLeft className="transition group-hover/back:-translate-x-0.5 group-active/back:-translate-x-1" />
-            {t('home')}
+            <MdKeyboardArrowLeft className="block size-full" />
           </Link>
           <ToggleLocale />
         </header>
@@ -32,7 +32,7 @@ export const Resume = () => {
           alt="Resume"
           width={2481}
           height={3509}
-          className="w-full h-auto mt-8 rounded-2xl"
+          className="w-full h-auto mt-8 shadow-md rounded-2xl"
         />
         <div className="flex items-center gap-2 mt-8">
           <a

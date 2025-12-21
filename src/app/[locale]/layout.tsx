@@ -29,7 +29,7 @@ const RootLayout = async ({ children }: Readonly<Props>) => {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-secondary min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-primary min-h-screen flex flex-col`}
       >
         <NextIntlClientProvider>
           <main className="flex-1 flex flex-col">{children}</main>

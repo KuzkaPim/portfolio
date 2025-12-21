@@ -12,12 +12,14 @@ export const PromoBlock = () => {
   return (
     <section
       id="promo"
-      className="bg-secondary overflow-hidden sm:scroll-mt-16 text-dark"
+      className="bg-primary overflow-hidden md:scroll-mt-16 text-dark px-2 sm:px-0 md:mt-6 py-4"
     >
-      <Container className="flex flex-col sm:flex-row items-center justify-between relative pb-16 pt-12 md:py-12">
+      <Container className="flex flex-col sm:flex-row items-center justify-between relative pb-16 pt-12 md:py-12 bg-secondary rounded-2xl overflow-hidden shadow-md">
         <div className="z-10 sm:w-sm lg:w-auto">
           <h1 className="text-4xl sm:text-6xl font-bold">{t('title')}</h1>
-          <p className="mt-8 text-xl sm:text-2xl font-bold">{t('subtitle')}</p>
+          <p className="mt-8 text-xl sm:text-2xl uppercase text-accent font-bold">
+            {t('subtitle')}
+          </p>
           <p className="mt-2 text-lg">{t('description')}</p>
           <div className="flex gap-4 mt-8 items-start lg:items-center flex-col lg:flex-row w-max sm:w-auto">
             <Link
@@ -69,7 +71,7 @@ export const PromoBlock = () => {
           </div>
         </div>
         <Image
-          className="max-w-60 w-full absolute -right-14 sm:-right-6 md:right-0 bottom-0 z-0"
+          className="max-w-60 w-full absolute -right-18 sm:-right-6 md:right-0 bottom-0 z-0"
           src="/assets/kuzka.png"
           alt="Моя фотография"
           width={300}
