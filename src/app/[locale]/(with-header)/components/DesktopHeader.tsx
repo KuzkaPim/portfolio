@@ -6,7 +6,7 @@ export const DesktopHeader = () => {
   const t = useTranslations('nav');
 
   return (
-    <header className="text-primary font-bold text-md hidden md:block sticky top-2 z-20">
+    <header className="text-primary text-md hidden md:block sticky top-2 z-20">
       <Container>
         <div className="flex justify-between">
           <nav className="bg-accent/80 rounded-full shadow-md backdrop-blur-md border border-white/20">

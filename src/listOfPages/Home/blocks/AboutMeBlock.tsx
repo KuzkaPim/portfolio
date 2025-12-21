@@ -7,7 +7,7 @@ export const AboutMeBlock = () => {
   return (
     <section
       id="about-me"
-      className="bg-primary text-dark md:scroll-mt-16 px-2 sm:px-0 py-4"
+      className="bg-primary text-gray-700 md:scroll-mt-16 px-2 sm:px-0 py-4"
     >
       <Container className="py-8">
         <h2 className="text-4xl font-bold">{t('title')}</h2>

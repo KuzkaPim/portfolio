@@ -16,9 +16,10 @@ export const Resume = () => {
         <header className="sticky top-4 flex justify-between items-center gap-4">
           <Link
             href="/"
-            className="bg-accent/80 backdrop-blur-md border border-white/20 size-11 rounded-full text-primary p-1 pr-1.5 hover:bg-accent transition"
+            className="bg-accent/80 backdrop-blur-md border border-white/20 size-11 rounded-full text-primary p-1 pr-1.5 hover:bg-accent transition group/back"
+            aria-label="Go back home"
           >
-            <MdKeyboardArrowLeft className="block size-full" />
+            <MdKeyboardArrowLeft className="block transition duration-200 size-full group-hover/back:-translate-x-0.5" />
           </Link>
           <ToggleLocale />
         </header>
@@ -44,7 +45,7 @@ export const Resume = () => {
             download
             className="py-1 px-4 bg-accent rounded-2xl text-white w-max flex items-center gap-2 group/download"
           >
-            <FaArrowDown className="transition group-hover/download:translate-y-0.5 group-active/download:translate-y-1" />
+            <FaArrowDown className="transition duration-200 group-hover/download:translate-y-0.5 group-active/download:translate-y-1" />
             {t('downloadResume')}
           </a>
           <div className="bg-gray-200 py-0.5 px-2 text-sm rounded-xl text-gray-600">

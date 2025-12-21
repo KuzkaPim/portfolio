@@ -37,22 +37,20 @@ export const ToggleLocale = ({ keepMenuOpen = false }: ToggleLocaleProps) => {
   const isRussian = locale === 'ru';
 
   return (
-    <div className="flex items-center gap-4 bg-accent/80 backdrop-blur-md rounded-full shadow-md pl-2 border border-white/20">
-      <div className="text-sm text-white">
-        <span
-          className={`px-2 py-1 rounded-full ${isRussian ? 'bg-accent' : ''}`}
-        >
-          РУ
-        </span>
-        <span
-          className={`px-2 py-1 rounded-full ${!isRussian ? 'bg-accent' : ''}`}
-        >
-          EN
-        </span>
+    <div className="text-sm text-primary flex items-center bg-accent/80 backdrop-blur-md rounded-full shadow-md border border-white/20">
+      <div
+        className={`flex items-center justify-center size-11 rounded-full ${isRussian ? 'bg-white/10' : ''}`}
+      >
+        РУ
+      </div>
+      <div
+        className={`flex items-center justify-center size-11 rounded-full ${!isRussian ? 'bg-white/10' : ''}`}
+      >
+        EN
       </div>
       <button
         onClick={toggleLocale}
-        className="transition rounded-full cursor-pointer transform-gpu size-11 p-2 bg-transparent text-primary hover:bg-accent"
+        className="transition rounded-full cursor-pointer transform-gpu size-11 p-2.5 bg-transparent text-primary hover:bg-accent"
         aria-label="Toggle language"
         style={{
           willChange: 'transform',

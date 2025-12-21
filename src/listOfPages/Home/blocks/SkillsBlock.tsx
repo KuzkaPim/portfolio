@@ -6,7 +6,10 @@ export const SkillsBlock = () => {
   const t = useTranslations('home.technologies');
 
   return (
-    <section id="skills" className="bg-primary text-dark md:scroll-mt-16 py-4">
+    <section
+      id="skills"
+      className="bg-primary text-gray-700 md:scroll-mt-16 py-4"
+    >
       <Container className="py-8">
         <h2 className="text-4xl font-bold">{t('title')}</h2>
         <div className="mt-8">
