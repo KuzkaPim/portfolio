@@ -23,6 +23,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'metadata' });
 
   return {
+    metadataBase: new URL('https://kuzmadev.vercel.app'),
     title: t('title'),
     description: t('description'),
     openGraph: {
