@@ -30,7 +30,7 @@ export async function generateMetadata({
       title: t('title'),
       description: t('description'),
       type: 'website',
-      images: '/assets/kuzka.png',
+      images: '/assets/opengraph-image.jpg',
       locale: locale,
     },
   };
