@@ -1,7 +1,7 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { useEffect, useState, useTransition } from 'react';
+import { useState, useTransition } from 'react';
 import { useRouter, usePathname } from '@/src/i18n/navigation';
 import { GrLanguage } from 'react-icons/gr';
 

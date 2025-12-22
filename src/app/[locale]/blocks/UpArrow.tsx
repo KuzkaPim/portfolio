@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { FaArrowUp } from 'react-icons/fa';
+import { MdKeyboardArrowUp } from 'react-icons/md';
 
 export const UpArrow = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -28,9 +28,12 @@ export const UpArrow = () => {
 
   return (
     <div
-      className={`bg-primary size-10 right-3 sm:right-5 bottom-5 p-1.5 sm:p-2 rounded-full transition hover:scale-105 active:scale-100 ${isVisible ? 'scale-100' : 'scale-50 opacity-0 pointer-events-none'} fixed z-20 shadow-md flex justify-center items-center`}
+      className={`bg-accent/80 backdrop-blur-md border border-white/20 size-11 right-3 bottom-5 p-1 rounded-full transition duration-200 hover:bg-accent cursor-pointer fixed z-20 shadow-md flex justify-center items-center active:scale-105 group/upArrow ${isVisible ? 'scale-100' : 'scale-50 opacity-0 pointer-events-none'}`}
     >
-      <FaArrowUp onClick={handleClick} className="text-accent size-full" />
+      <MdKeyboardArrowUp
+        onClick={handleClick}
+        className="text-primary size-full transition duration-200 group-hover/upArrow:-translate-y-0.5"
+      />
     </div>
   );
 };

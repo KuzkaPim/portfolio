@@ -16,10 +16,10 @@ export const Resume = () => {
         <header className="sticky top-4 flex justify-between items-center gap-4">
           <Link
             href="/"
-            className="bg-accent/80 backdrop-blur-md border border-white/20 size-11 rounded-full text-primary p-1 pr-1.5 hover:bg-accent transition group/back"
+            className="bg-accent/80 backdrop-blur-md border border-white/20 size-11 rounded-full text-primary p-1 pr-1.5 hover:bg-accent transition duration-200 group/back shadow-md"
             aria-label="Go back home"
           >
-            <MdKeyboardArrowLeft className="block transition duration-200 size-full group-hover/back:-translate-x-0.5" />
+            <MdKeyboardArrowLeft className="transition duration-200 size-full group-hover/back:-translate-x-0.5" />
           </Link>
           <ToggleLocale />
         </header>
