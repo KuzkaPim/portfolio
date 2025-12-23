@@ -48,7 +48,7 @@ export const Hamburger = () => {
   return (
     <div ref={ref} className="relative">
       <button
-        className="size-11 p-1.5 flex flex-col shadow-md justify-center items-center rounded-md cursor-pointer gap-1.5 bg-accent/80 backdrop-blur-md border border-white/20 active:scale-90 transition hover:bg-accent"
+        className="size-11 p-1.5 flex flex-col shadow-md justify-center items-center rounded-xl cursor-pointer gap-1.5 bg-accent/80 backdrop-blur-md border border-white/20 active:scale-90 transition hover:bg-accent"
         onClick={toggleMenu}
         aria-label="Toggle menu"
         aria-expanded={isMenuOpen}
