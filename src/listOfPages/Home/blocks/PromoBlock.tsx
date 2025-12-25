@@ -23,20 +23,20 @@ export const PromoBlock = () => {
           <p className="mt-2 text-lg">{t('description')}</p>
           <div className="flex gap-4 mt-8 items-start lg:items-center flex-col lg:flex-row w-max sm:w-auto">
             <Link
-              className="px-4 py-2 text-white bg-accent/80 font-bold rounded-4xl transition text-center w-full lg:w-auto hover:bg-accent"
+              className="px-4 py-2 text-white border border-accent/40 bg-accent/90 font-bold rounded-4xl transition text-center w-full lg:w-auto hover:bg-accent hover:border-accent"
               href="/"
             >
               {t('btn.myProjects')}
             </Link>
             <div className="flex gap-4 flex-col sm:flex-row sm:w-full lg:w-auto">
               <a
-                className="px-4 py-2 bg-accent/10 font-bold rounded-4xl text-accent transition sm:flex-2 lg:flex-initial text-center hover:bg-accent/20"
+                className="px-4 py-2 border border-accent/10 bg-accent/10 font-bold rounded-4xl text-accent transition sm:flex-2 lg:flex-initial text-center hover:bg-accent/20"
                 href="#contacts"
               >
                 {t('btn.contactMe')}
               </a>
               <Link
-                className="px-4 py-2 bg-accent/10 font-bold rounded-4xl text-accent transition sm:flex-1 lg:flex-initial text-center w-max hover:bg-accent/20"
+                className="px-4 py-2 border border-accent/10 bg-accent/10 font-bold rounded-4xl text-accent transition sm:flex-1 lg:flex-initial text-center w-max hover:bg-accent/20"
                 href="/resume"
               >
                 {t('btn.resume')}
