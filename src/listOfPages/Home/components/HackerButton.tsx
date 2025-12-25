@@ -54,7 +54,7 @@ export const HackerButton = () => {
 
   return (
     <button
-      className="mt-4 bg-white text-accent py-2 rounded-xl block mx-auto w-64 font-bold hover:bg-gray-100 transition font-mono"
+      className="cursor-pointer mt-4 bg-white/90 text-accent py-2 rounded-xl block mx-auto w-64 font-bold hover:bg-white transition font-mono"
       onMouseEnter={() => handleMouseEnter(text)}
       onClick={handleClick}
     >
