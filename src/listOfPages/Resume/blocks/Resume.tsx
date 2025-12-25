@@ -11,7 +11,7 @@ export const Resume = () => {
   const locale = useLocale();
 
   return (
-    <section className="text-dark flex-1 flex flex-col py-4">
+    <section className="text-dark flex-1 flex flex-col py-4 px-2 sm:px-0">
       <Container className="flex-1 w-full flex flex-col">
         <header className="sticky top-4 flex justify-between items-center gap-4">
           <Link
