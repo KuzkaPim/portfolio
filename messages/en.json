@@ -21,7 +21,8 @@
         "myProjects": "My Projects",
         "contactMe": "Contact Me",
         "resume": "Resume"
-      }
+      },
+      "altMeImage": "My photo"
     },
     "technologies": {
       "title": "Technologies",

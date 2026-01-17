@@ -5,6 +5,7 @@ import { RiTelegramFill } from 'react-icons/ri';
 import { AiFillInstagram } from 'react-icons/ai';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/src/i18n/navigation';
+import meImg from '../assets/kuzka.png';
 
 export const PromoBlock = () => {
   const t = useTranslations('home.promo');
@@ -72,10 +73,8 @@ export const PromoBlock = () => {
         </div>
         <Image
           className="max-w-60 w-full absolute -right-18 sm:-right-6 md:right-0 bottom-0 z-0"
-          src="/assets/kuzka.png"
-          alt="Моя фотография"
-          width={300}
-          height={400}
+          src={meImg}
+          alt={t('altMeImage')}
         />
       </Container>
     </section>

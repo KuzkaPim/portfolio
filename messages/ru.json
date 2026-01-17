@@ -21,7 +21,8 @@
         "myProjects": "Мои проекты",
         "contactMe": "Связаться со мной",
         "resume": "Резюме"
-      }
+      },
+      "altMeImage": "Моя фотография"
     },
     "technologies": {
       "title": "Технологии",
