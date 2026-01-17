@@ -4,6 +4,7 @@ import { FaArrowDown } from 'react-icons/fa';
 import { MdKeyboardArrowLeft } from 'react-icons/md';
 import { ToggleLocale } from '@/src/shared/ui/ToggleLocale';
 import { useTranslations, useLocale } from 'next-intl';
+import { resumeImages } from '../model';
 import Image from 'next/image';
 
 export const Resume = () => {
@@ -23,18 +24,14 @@ export const Resume = () => {
           </Link>
           <ToggleLocale />
         </header>
-        <Image
-          src={
-            locale === 'ru'
-              ? '/assets/RESUME_RU.webp'
-              : '/assets/RESUME_EN.webp'
-          }
-          unoptimized
-          alt="Resume"
-          width={2481}
-          height={3509}
-          className="w-full h-auto mt-8 shadow-sm rounded-2xl"
-        />
+        {resumeImages[locale as 'ru' | 'en'].map((imageSrc, index) => (
+          <Image
+            key={`${locale}-resume-${index}`}
+            src={imageSrc}
+            alt="Resume"
+            className="w-full h-auto mt-8 shadow-sm shadow-accent rounded-2xl"
+          />
+        ))}
         <div className="flex items-center gap-2 mt-8">
           <a
             href={

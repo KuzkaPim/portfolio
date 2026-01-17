@@ -1,0 +1,1 @@
+export { resumeImages } from './constants';
