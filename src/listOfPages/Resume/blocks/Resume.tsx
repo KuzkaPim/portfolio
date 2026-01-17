@@ -24,14 +24,16 @@ export const Resume = () => {
           </Link>
           <ToggleLocale />
         </header>
-        {resumeImages[locale as 'ru' | 'en'].map((imageSrc, index) => (
-          <Image
-            key={`${locale}-resume-${index}`}
-            src={imageSrc}
-            alt="Resume"
-            className="w-full h-auto mt-8 shadow-sm shadow-accent rounded-2xl"
-          />
-        ))}
+        <div className="mt-4 grid gap-2 p-1 md:p-2 bg-secondary rounded-2xl overflow-hidden">
+          {resumeImages[locale as 'ru' | 'en'].map((imageSrc, index) => (
+            <Image
+              key={`${locale}-resume-${index}`}
+              src={imageSrc}
+              alt="Resume"
+              className="w-full h-auto rounded-xl"
+            />
+          ))}
+        </div>
         <div className="flex items-center gap-2 mt-8">
           <a
             href={
@@ -40,7 +42,7 @@ export const Resume = () => {
                 : '/assets/RESUME_EN.pdf'
             }
             download
-            className="py-1 px-4 bg-accent rounded-2xl text-white w-max flex items-center gap-2 group/download"
+            className="py-1 px-4 bg-accent rounded-2xl text-white w-max flex items-center gap-2 group/download transition duration-200 hover:bg-accent-hover"
           >
             <FaArrowDown className="transition duration-200 group-hover/download:translate-y-0.5 group-active/download:translate-y-1" />
             {t('downloadResume')}
