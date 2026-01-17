@@ -75,6 +75,7 @@ export const PromoBlock = () => {
           className="max-w-60 w-full absolute -right-18 sm:-right-6 md:right-0 bottom-0 z-0"
           src={meImg}
           alt={t('altMeImage')}
+          priority
         />
       </Container>
     </section>

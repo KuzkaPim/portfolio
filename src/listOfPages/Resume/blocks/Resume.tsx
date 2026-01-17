@@ -31,6 +31,7 @@ export const Resume = () => {
               src={imageSrc}
               alt="Resume"
               className="w-full h-auto rounded-xl"
+              priority
             />
           ))}
         </div>
