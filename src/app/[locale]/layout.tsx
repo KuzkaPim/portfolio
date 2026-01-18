@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import './globals.css';
+import '../globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import { Footer } from './blocks/Footer';
 import { UpArrow } from './blocks/UpArrow';
 import { getTranslations } from 'next-intl/server';
+import { ThemeProvider } from '../providers';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -45,14 +46,21 @@ const RootLayout = async ({ children, params }: Readonly<Props>) => {
   const { locale } = await params;
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-primary min-h-screen flex flex-col`}
       >
         <NextIntlClientProvider>
-          <main className="flex-1 flex flex-col">{children}</main>
-          <Footer />
-          <UpArrow />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <main className="flex-1 flex flex-col">{children}</main>
+            <Footer />
+            <UpArrow />
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

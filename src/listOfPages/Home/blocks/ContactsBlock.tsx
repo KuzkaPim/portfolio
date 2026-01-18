@@ -11,9 +11,9 @@ export const ContactsBlock = () => {
   return (
     <section
       id="contacts"
-      className="bg-primary text-white md:scroll-mt-16 px-2 sm:px-0 py-4"
+      className="bg-primary text-content-secondary md:scroll-mt-16 px-2 sm:px-0 py-4"
     >
-      <Container className="py-12 bg-accent rounded-2xl shadow-md px-4">
+      <Container className="py-12 bg-accent rounded-2xl shadow-md shadow-layer/80 px-4">
         <h2 className="text-4xl font-bold text-center">{t('title')}</h2>
         <p className="mt-8 text-center">{t('description')}</p>
         <HackerButton />
@@ -24,7 +24,7 @@ export const ContactsBlock = () => {
             rel="noreferrer"
             aria-label="GitHub"
           >
-            <IoLogoGithub className="size-8 hover:scale-110 transition" />
+            <IoLogoGithub className="size-8 hover:scale-107 transition" />
           </a>
           <a
             href="https://t.me/KuzKen"
@@ -32,7 +32,7 @@ export const ContactsBlock = () => {
             rel="noreferrer"
             aria-label="Telegram"
           >
-            <RiTelegramFill className="size-8 hover:scale-110 transition" />
+            <RiTelegramFill className="size-8 hover:scale-107 transition" />
           </a>
           <a
             href="https://www.instagram.com/_kuzken_?igsh=ZmZoMjNhbjVub2g3&utm_source=qr"
@@ -40,7 +40,7 @@ export const ContactsBlock = () => {
             rel="noreferrer"
             aria-label="Instagram"
           >
-            <AiFillInstagram className="size-8 hover:scale-110 transition" />
+            <AiFillInstagram className="size-8 hover:scale-107 transition" />
           </a>
         </div>
       </Container>

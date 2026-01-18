@@ -32,7 +32,7 @@ export const UpArrow = () => {
     >
       <MdKeyboardArrowUp
         onClick={handleClick}
-        className="text-primary size-full transition duration-200 group-hover/upArrow:-translate-y-0.5"
+        className="text-content-secondary size-full transition duration-200 group-hover/upArrow:-translate-y-0.5"
       />
     </div>
   );

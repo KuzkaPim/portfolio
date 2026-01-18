@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { ToggleLocale } from '@/src/shared/ui/ToggleLocale';
 import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { Swithes } from '@/src/shared/ui';
 
 export const Hamburger = () => {
   const t = useTranslations('nav');
@@ -82,7 +82,7 @@ export const Hamburger = () => {
           backfaceVisibility: 'hidden',
         }}
       >
-        <ToggleLocale keepMenuOpen />
+        <Swithes keepMenuOpen />
       </div>
 
       <div

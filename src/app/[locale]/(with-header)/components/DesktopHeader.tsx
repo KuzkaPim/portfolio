@@ -1,12 +1,12 @@
 import { Container } from '@/src/shared/ui';
-import { ToggleLocale } from '@/src/shared/ui/ToggleLocale';
 import { useTranslations } from 'next-intl';
+import { Swithes } from '@/src/shared/ui';
 
 export const DesktopHeader = () => {
   const t = useTranslations('nav');
 
   return (
-    <header className="text-primary text-md hidden md:block sticky top-2 z-20">
+    <header className="text-content-secondary text-md hidden md:block sticky top-2 z-20">
       <Container>
         <div className="flex justify-between">
           <nav className="bg-accent/80 rounded-full shadow-md backdrop-blur-md border border-white/20">
@@ -45,7 +45,7 @@ export const DesktopHeader = () => {
               </li>
             </ul>
           </nav>
-          <ToggleLocale />
+          <Swithes />
         </div>
       </Container>
     </header>

@@ -7,7 +7,7 @@ export const AboutMeBlock = () => {
   return (
     <section
       id="about-me"
-      className="bg-primary text-gray-700 md:scroll-mt-16 py-12"
+      className="bg-primary text-content-primary md:scroll-mt-16 py-12"
     >
       <Container className="px-2 sm:px-0">
         <h2 className="text-4xl font-bold">{t('title')}</h2>
@@ -16,11 +16,11 @@ export const AboutMeBlock = () => {
             <p className="mt-8">{t('paragraph1')}</p>
             <p className="mt-8">
               {t('paragraph2.1')}
-              <span className="bg-accent text-secondary px-1 rounded-md shadow-md">
+              <span className="bg-accent text-content-secondary px-1 rounded-md shadow-md shadow-layer/80">
                 {t('paragraph2.2')}
               </span>
               ,{' '}
-              <span className="bg-accent text-secondary px-1 rounded-md shadow-md">
+              <span className="bg-accent text-content-secondary px-1 rounded-md shadow-md shadow-layer/80">
                 {t('paragraph2.3')}
               </span>
               {t('paragraph2.4')}
@@ -29,26 +29,26 @@ export const AboutMeBlock = () => {
           <div>
             <p className="mt-8">
               {t('paragraph3.1')}
-              <span className="bg-accent text-secondary px-1 rounded-md shadow-md">
+              <span className="bg-accent text-content-secondary px-1 rounded-md shadow-md shadow-layer/80">
                 Nest.js
               </span>{' '}
               {t('paragraph3.2')}
-              <span className="bg-accent text-secondary px-1 rounded-md shadow-md">
+              <span className="bg-accent text-content-secondary px-1 rounded-md shadow-md shadow-layer/80">
                 NX
               </span>{' '}
               {t('paragraph3.3')}
             </p>
             <p className="mt-8">
               {t('paragraph4.1')}
-              <span className="bg-accent text-secondary px-1 rounded-md shadow-md">
+              <span className="bg-accent text-content-secondary px-1 rounded-md shadow-md shadow-layer/80">
                 TypeScript
               </span>{' '}
               {t('paragraph4.2')}
-              <span className="bg-accent text-secondary px-1 rounded-md shadow-md">
+              <span className="bg-accent text-content-secondary px-1 rounded-md shadow-md shadow-layer/80">
                 {t('paragraph4.3')}
               </span>{' '}
               {t('paragraph4.4')}
-              <span className="bg-accent text-secondary px-1 rounded-md shadow-md">
+              <span className="bg-accent text-content-secondary px-1 rounded-md shadow-md shadow-layer/80">
                 {t('paragraph4.5')}
               </span>
               {t('paragraph4.6')}

@@ -13,9 +13,9 @@ export const PromoBlock = () => {
   return (
     <section
       id="promo"
-      className="bg-primary overflow-hidden md:scroll-mt-16 text-gray-700 px-2 sm:px-0 md:mt-6 py-4 pt-2"
+      className="bg-primary overflow-hidden md:scroll-mt-16 text-content-primary px-2 sm:px-0 md:mt-6 py-4 pt-2"
     >
-      <Container className="flex flex-col sm:flex-row items-center justify-between relative px-4 pb-16 pt-12 md:py-12 bg-secondary rounded-2xl overflow-hidden shadow-md">
+      <Container className="flex flex-col sm:flex-row items-center justify-between relative px-4 pb-16 pt-12 md:py-12 bg-secondary rounded-2xl overflow-hidden shadow-md shadow-layer/80">
         <div className="z-10 sm:w-sm lg:w-auto">
           <h1 className="text-4xl sm:text-6xl font-bold">{t('title')}</h1>
           <p className="mt-8 text-xl sm:text-2xl uppercase text-accent font-bold">
@@ -24,7 +24,7 @@ export const PromoBlock = () => {
           <p className="mt-2 text-lg">{t('description')}</p>
           <div className="flex gap-4 mt-8 items-start lg:items-center flex-col lg:flex-row w-max sm:w-auto">
             <Link
-              className="px-4 py-2 text-white border border-accent/40 bg-accent font-bold rounded-4xl transition text-center w-full lg:w-auto hover:bg-accent-hover hover:border-accent-hover"
+              className="px-4 py-2 text-content-secondary border border-accent/40 bg-accent font-bold rounded-4xl transition text-center w-full lg:w-auto hover:bg-accent-hover hover:border-accent-hover"
               href="/"
             >
               {t('btn.myProjects')}
@@ -44,14 +44,14 @@ export const PromoBlock = () => {
               </Link>
             </div>
           </div>
-          <div className="flex gap-2 mt-8 w-max text-gray-600">
+          <div className="flex gap-2 mt-8 w-max">
             <a
               href="https://github.com/KuzkaPim"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
             >
-              <IoLogoGithub className="size-8 hover:text-accent transition" />
+              <IoLogoGithub className="size-8 hover:text-accent hover:scale-107 transition" />
             </a>
             <a
               href="https://t.me/KuzKen"
@@ -59,7 +59,7 @@ export const PromoBlock = () => {
               rel="noreferrer"
               aria-label="Telegram"
             >
-              <RiTelegramFill className="size-8 hover:text-accent transition" />
+              <RiTelegramFill className="size-8 hover:text-accent hover:scale-107 transition" />
             </a>
             <a
               href="https://www.instagram.com/_kuzken_?igsh=ZmZoMjNhbjVub2g3&utm_source=qr"
@@ -67,7 +67,7 @@ export const PromoBlock = () => {
               rel="noreferrer"
               aria-label="Instagram"
             >
-              <AiFillInstagram className="size-8 hover:text-accent transition" />
+              <AiFillInstagram className="size-8 hover:text-accent hover:scale-107 transition" />
             </a>
           </div>
         </div>

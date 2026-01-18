@@ -2,9 +2,9 @@ import { Container } from '@/src/shared/ui';
 import { Link } from '@/src/i18n/navigation';
 import { FaArrowDown } from 'react-icons/fa';
 import { MdKeyboardArrowLeft } from 'react-icons/md';
-import { ToggleLocale } from '@/src/shared/ui/ToggleLocale';
 import { useTranslations, useLocale } from 'next-intl';
 import { resumeImages } from '../model';
+import { Swithes } from '@/src/shared/ui';
 import Image from 'next/image';
 
 export const Resume = () => {
@@ -12,17 +12,17 @@ export const Resume = () => {
   const locale = useLocale();
 
   return (
-    <section className="text-dark flex-1 flex flex-col py-4 px-2 sm:px-0">
+    <section className="text-dark flex-1 flex flex-col pt-2 pb-4 px-2 sm:px-0">
       <Container className="flex-1 w-full flex flex-col">
-        <header className="sticky top-4 flex justify-between items-center gap-4">
+        <header className="sticky top-2 flex justify-between items-center gap-4">
           <Link
             href="/"
-            className="bg-accent/80 backdrop-blur-md border border-white/20 size-11 rounded-full text-primary p-1 pr-1.5 hover:bg-accent transition duration-200 group/back shadow-md"
+            className="bg-accent/80 backdrop-blur-md border border-white/20 size-11 rounded-full text-content-secondary p-1 pr-1.5 hover:bg-accent transition duration-200 group/back shadow-md"
             aria-label="Go back home"
           >
             <MdKeyboardArrowLeft className="transition duration-200 size-full group-hover/back:-translate-x-0.5" />
           </Link>
-          <ToggleLocale />
+          <Swithes />
         </header>
         <div className="mt-4 grid gap-2 p-1 md:p-2 bg-secondary rounded-2xl overflow-hidden">
           {resumeImages[locale as 'ru' | 'en'].map((imageSrc, index) => (
@@ -43,7 +43,7 @@ export const Resume = () => {
                 : '/assets/RESUME_EN.pdf'
             }
             download
-            className="py-1 px-4 bg-accent rounded-2xl text-white w-max flex items-center gap-2 group/download transition duration-200 hover:bg-accent-hover"
+            className="py-1 px-4 bg-accent rounded-2xl text-content-secondary w-max flex items-center gap-2 group/download transition duration-200 hover:bg-accent-hover"
           >
             <FaArrowDown className="transition duration-200 group-hover/download:translate-y-0.5 group-active/download:translate-y-1" />
             {t('downloadResume')}

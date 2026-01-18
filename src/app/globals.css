@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-content-primary: var(--content-primary);
+  --color-content-secondary: var(--content-secondary);
+  --color-layer: var(--color-layer);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+
+  --animate-bump-left: bump-left 0.5s ease-out;
+  --animate-bump-bottom: bump-bottom 0.5s ease-out;
+
+  @keyframes bump-left {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    40% {
+      transform: translateX(-4px);
+    }
+    80% {
+      transform: translateX(1px);
+    }
+  }
+
+  @keyframes bump-bottom {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(4px);
+    }
+    80% {
+      transform: translateY(-1px);
+    }
+  }
+}
+
+:root {
+  --primary: var(--color-white);
+  --secondary: #f9f9f9;
+  --content-primary: var(--color-gray-700);
+  --content-secondary: var(--color-white);
+  --color-layer: var(--color-neutral-200);
+  --accent: #10b981;
+  --accent-hover: #00a36d;
+}
+
+.dark {
+  --primary: #0a0a0a;
+  --secondary: #141414;
+  --content-primary: var(--color-neutral-300);
+  --content-secondary: var(--color-neutral-50);
+  --color-layer: var(--color-neutral-800);
+  --accent: #10b981;
+  --accent-hover: #00a36d;
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+html,
+body {
+  scroll-behavior: smooth;
+  background: var(--primary);
+}

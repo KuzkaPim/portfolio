@@ -13,7 +13,7 @@ export const Skills = ({ catagory }: Props) => {
       {skills.map((skill) => (
         <li
           key={skill}
-          className="px-4 py-2 bg-secondary text-neutral-500 font-bold rounded-xl shadow-md hover:-translate-y-1 transition cursor-default rotate-2"
+          className="px-4 py-2 bg-secondary text-content-primary font-bold rounded-xl shadow-md shadow-layer/80 hover:-translate-y-1 transition cursor-default rotate-2"
         >
           {skill}
         </li>
