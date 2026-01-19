@@ -72,31 +72,40 @@ export const Hamburger = () => {
       </button>
 
       <div
-        className={`absolute top-0 right-12 transform transition-all rounded-full backdrop-blur-md duration-250 ease-out ${
-          isMenuOpen
-            ? 'opacity-100 animate-bump-left pointer-events-auto'
-            : 'opacity-0 pointer-events-none'
-        }`}
-        style={{
-          willChange: 'opacity, transform',
-          backfaceVisibility: 'hidden',
-        }}
+        className={`
+          absolute top-0 right-0 h-11
+          flex items-center justify-center
+          -z-10
+          transform-gpu will-change-transform
+          transition duration-250 ease-out
+          origin-center
+          ${
+            isMenuOpen
+              ? '-translate-x-13 scale-100 animate-bump-left pointer-events-auto'
+              : 'translate-x-16 scale-0 pointer-events-none'
+          }
+        `}
       >
         <Swithes keepMenuOpen />
       </div>
 
       <div
-        className={`absolute right-0 mt-2 transform transition-all backdrop-blur-md rounded-md duration-250 ease-out origin-top-right ${
-          isMenuOpen
-            ? 'opacity-100 animate-bump-bottom pointer-events-auto'
-            : 'opacity-0 pointer-events-none'
-        }`}
+        className={`
+          absolute right-0 mt-2
+          transform
+          -z-10
+          transition duration-250 ease-out
+          origin-top ${
+            isMenuOpen
+              ? 'translate-y-0 translate-x-0 scale-100 animate-bump-bottom pointer-events-auto'
+              : '-translate-y-8 translate-x-16 scale-0 pointer-events-none'
+          }`}
       >
         <ul
           id="mobile-actions-menu"
           role="menu"
           aria-label="Quick links"
-          className="py-2 min-w-36 bg-accent/80 border border-white/20 rounded-md shadow-md text-white"
+          className="py-2 min-w-36 bg-accent/80 backdrop-blur-md border border-white/20 rounded-md shadow-md text-white"
         >
           <li role="none">
             <a

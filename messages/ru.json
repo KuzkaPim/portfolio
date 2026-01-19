@@ -10,7 +10,7 @@
     "contactMe": "Контакты"
   },
   "footer": {
-    "copyright": "© 2025 Кузьма. Все права защищены."
+    "copyright": "© 2026 Кузьма. Все права защищены."
   },
   "home": {
     "promo": {
@@ -62,6 +62,43 @@
     }
   },
   "resume": {
+    "experience": {
+      "title": "Опыт работы",
+      "jobs": [
+        {
+          "position": "Frontend Архитектор / Fullstack разработчик",
+          "company": "КОНСТРУКТОР ПРИГЛАШЕНИЙ Invite.kz (SaaS Platform)",
+          "duration": "Август 2025 - январь 2026",
+          "responsibilities": [
+            "Architecture & Nx Monorepo: Спроектировал структуру монорепозитория, разделив проект на изолированные приложения: Editor (Vite) и Public Viewer (Next.js). Настроил Nx Affected, чтобы CI-процессы запускались только для измененных частей проекта.",
+            [
+              "Shared Libraries: Разработал общие библиотеки для переиспользования кода между фронтендами и бэкендом:",
+              "Shared Types: Единые TypeScript-интерфейсы.",
+              "Shared Utils: Набор утилит, включая кастомную логику валидации и форматирования телефонных номеров."
+            ],
+            "Public Viewer Application: С нуля разработал модуль просмотра приглашений на Next.js 16. Реализовал SSR для SEO-оптимизации.",
+            [
+              "Feature Development & Quality Control:",
+              "Проводил Code Review реализации бэкенда, клиентской части (Vite), помогал команде в отладке (debugging) и устранении сложных логических багов перед релизом.",
+              "Реализовал Single Audio Manager для управления воспроизведением музыки на клиенте."
+            ],
+            "Infrastructure: Настроил Docker-контейнеры, Nginx-конфигурацию и пайплайны деплоя. Реализовал REST API на NestJS + PostgreSQL."
+          ],
+          "technologies": "TypeScript, React 19, Next.js 16 (App Router), Vite, Nx (Monorepo), NestJS, PostgreSQL, Docker, Nginx, Tailwind CSS, FSD, Zustand, i18n, GitLab CI/CD pipelines."
+        },
+        {
+          "position": "Frontend разработчик",
+          "company": "Личный портфолио-сайт (Pet-project)",
+          "duration": "Ноябрь 2025 - сейчас",
+          "responsibilities": [
+            "Bleeding Edge Stack: Разработал production-ready решение на новейшем стеке: React 19, Next.js 16 (App Router) и Tailwind CSS 4.",
+            "Advanced UI & Animations: Реализовал кастомный эффект \"Matrix Glitch\" с использованием requestAnimationFrame и GPU-оптимизации для достижения стабильных 60 FPS без использования тяжелых библиотек.",
+            "Architecture & i18n: Спроектировал приложение по адаптированной методологии FSD, настроил двухуровневую локализацию (RU/EN) через middleware и next-intl."
+          ],
+          "technologies": "React 19, Next.js 16 (App Router), TypeScript, Tailwind CSS 4, next-intl, FSD Architecture, ESLint 9 (Flat Config), Vercel CI/CD."
+        }
+      ]
+    },
     "home": "Главная",
     "downloadResume": "Скачать резюме"
   }

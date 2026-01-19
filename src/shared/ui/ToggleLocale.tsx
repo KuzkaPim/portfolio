@@ -60,7 +60,7 @@ export const ToggleLocale = ({ keepMenuOpen = false }: ToggleLocaleProps) => {
       onClick={toggleLocale}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`text-sm text-content-secondary flex items-center backdrop-blur-md rounded-full shadow-md border border-white/20 cursor-pointer group/locale transition duration-250 ${isHovered ? 'bg-accent/90' : 'bg-accent/80'}`}
+      className={`text-sm text-content-secondary flex items-center backdrop-blur-md rounded-full shadow-md border border-white/20 cursor-pointer group/locale transition-colors duration-250 ${isHovered ? 'bg-accent/90' : 'bg-accent/80'}`}
     >
       <div
         className={`flex items-center justify-center size-11 rounded-full ${isRussian ? 'bg-white/10' : ''}`}
