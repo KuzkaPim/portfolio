@@ -6,6 +6,7 @@ import { Footer } from './blocks/Footer';
 import { UpArrow } from './blocks/UpArrow';
 import { getTranslations } from 'next-intl/server';
 import { ThemeProvider } from '../providers';
+import { cookies } from 'next/headers';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -45,8 +46,12 @@ interface Props {
 const RootLayout = async ({ children, params }: Readonly<Props>) => {
   const { locale } = await params;
 
+  const cookieStore = await cookies();
+  const theme = cookieStore.get('theme');
+  const themeClass = theme?.value || 'light';
+
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} className={themeClass} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-primary min-h-screen flex flex-col`}
       >

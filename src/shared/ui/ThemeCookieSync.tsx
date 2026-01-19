@@ -1,0 +1,16 @@
+'use client';
+
+import { useTheme } from 'next-themes';
+import { useEffect } from 'react';
+
+export const ThemeCookieSync = () => {
+  const { resolvedTheme } = useTheme();
+
+  useEffect(() => {
+    if (resolvedTheme) {
+      document.cookie = `theme=${resolvedTheme}; path=/; max-age=31536000`;
+    }
+  }, [resolvedTheme]);
+
+  return null;
+};
