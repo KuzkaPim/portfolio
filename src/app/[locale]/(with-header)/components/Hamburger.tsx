@@ -105,7 +105,7 @@ export const Hamburger = () => {
           id="mobile-actions-menu"
           role="menu"
           aria-label="Quick links"
-          className="py-2 min-w-36 bg-accent/60 backdrop-blur-sm border border-white/20 rounded-md shadow-md text-content-secondary"
+          className="py-2 min-w-36 bg-accent/60 backdrop-blur-sm border border-white/20 rounded-2xl shadow-md text-content-secondary"
         >
           <li role="none">
             <a
