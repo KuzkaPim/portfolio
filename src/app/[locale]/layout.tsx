@@ -28,12 +28,34 @@ export async function generateMetadata({
     metadataBase: new URL('https://kuzmadev.vercel.app'),
     title: t('title'),
     description: t('description'),
+    alternates: {
+      canonical: '/',
+      languages: { ru: '/', en: '/en' },
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true },
+    },
     openGraph: {
       title: t('title'),
       description: t('description'),
       type: 'website',
-      images: '/assets/opengraph-image.jpg',
-      locale: locale,
+      images: [
+        {
+          url: '/assets/opengraph-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: t('title'),
+        },
+      ],
+      locale,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+      images: ['/assets/opengraph-image.jpg'],
     },
   };
 }
