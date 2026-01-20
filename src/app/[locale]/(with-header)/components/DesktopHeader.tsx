@@ -8,7 +8,7 @@ export const DesktopHeader = () => {
     <header className="text-content-secondary text-md hidden md:block sticky top-2 z-20">
       <Container>
         <div className="flex justify-between">
-          <nav className="bg-accent/60 rounded-full shadow-md shadow-layer/80 backdrop-blur-sm border border-white/20">
+          <nav className="bg-accent/60 rounded-full backdrop-blur-sm border border-white/20">
             <ul className="flex">
               <li>
                 <a

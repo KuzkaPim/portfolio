@@ -9,7 +9,7 @@ export const ToggleTheme = () => {
   return (
     <button
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-      className="text-content-secondary relative shadow-md shadow-layer/80 flex items-center justify-center w-11 h-11 rounded-full bg-accent/60 hover:bg-accent/70 border border-white/20 cursor-pointer backdrop-blur-sm transition-colors duration-250"
+      className="text-content-secondary relative flex items-center justify-center w-11 h-11 rounded-full bg-accent/60 hover:bg-accent/70 border border-white/20 cursor-pointer backdrop-blur-sm transition-colors duration-250"
       aria-label="Toggle theme"
     >
       <FiSun className="w-5 h-5 transition-all duration-250 scale-100 rotate-0 dark:scale-0 dark:-rotate-90" />

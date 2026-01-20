@@ -60,7 +60,7 @@ export const ToggleLocale = ({ keepMenuOpen = false }: ToggleLocaleProps) => {
       data-frozen={isFrozen}
       className={`
         relative flex items-center text-sm text-content-secondary rounded-full
-        backdrop-blur-sm shadow-md shadow-layer/80 border border-white/20 cursor-pointer
+        backdrop-blur-sm border border-white/20 cursor-pointer
         transition-all duration-250 group
         bg-accent/60
         [@media(hover:hover)]:hover:bg-accent/70
@@ -72,12 +72,12 @@ export const ToggleLocale = ({ keepMenuOpen = false }: ToggleLocaleProps) => {
       }}
     >
       <div
-        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${isRussian ? 'bg-white/5 text-content-secondary' : 'text-white/50'}`}
+        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${isRussian ? 'bg-white/10 text-content-secondary' : 'text-white/50'}`}
       >
         РУ
       </div>
       <div
-        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${!isRussian ? 'bg-white/5 text-content-secondary' : 'text-white/50'}`}
+        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${!isRussian ? 'bg-white/10 text-content-secondary' : 'text-white/50'}`}
       >
         EN
       </div>
