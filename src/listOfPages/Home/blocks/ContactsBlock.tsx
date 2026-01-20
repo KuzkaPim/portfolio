@@ -11,7 +11,7 @@ export const ContactsBlock = () => {
   return (
     <section
       id="contacts"
-      className="bg-primary text-content-secondary md:scroll-mt-16 px-2 sm:px-0 py-4"
+      className="bg-primary text-content-secondary md:scroll-mt-4 px-2 sm:px-0 py-4"
     >
       <Container className="py-12 bg-accent rounded-2xl shadow-md shadow-layer/80 px-4">
         <h2 className="text-3xl sm:text-4xl font-bold text-center">
