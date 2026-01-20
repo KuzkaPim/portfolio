@@ -14,7 +14,9 @@ export const ContactsBlock = () => {
       className="bg-primary text-content-secondary md:scroll-mt-16 px-2 sm:px-0 py-4"
     >
       <Container className="py-12 bg-accent rounded-2xl shadow-md shadow-layer/80 px-4">
-        <h2 className="text-4xl font-bold text-center">{t('title')}</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center">
+          {t('title')}
+        </h2>
         <p className="mt-8 text-center">{t('description')}</p>
         <HackerButton />
         <div className="flex gap-2 mt-16 w-max mx-auto">
