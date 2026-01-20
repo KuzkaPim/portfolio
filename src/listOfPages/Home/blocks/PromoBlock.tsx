@@ -15,7 +15,7 @@ export const PromoBlock = () => {
       id="promo"
       className="bg-primary overflow-hidden md:scroll-mt-18 text-content-primary px-2 sm:px-0 md:mt-6 py-4 pt-2"
     >
-      <Container className="flex flex-col sm:flex-row items-center justify-between relative px-4 pb-16 pt-12 md:py-12 bg-secondary rounded-2xl overflow-hidden shadow-md shadow-layer/80">
+      <Container className="flex flex-col sm:flex-row items-center justify-between relative px-4 pb-16 pt-12 md:py-12 bg-secondary rounded-3xl overflow-hidden shadow-md shadow-layer/80">
         <div className="z-10 sm:w-sm lg:w-auto">
           <h1 className="text-4xl sm:text-6xl font-bold">{t('title')}</h1>
           <p className="mt-8 text-xl sm:text-2xl uppercase text-accent font-bold">
