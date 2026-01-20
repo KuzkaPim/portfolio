@@ -72,12 +72,12 @@ export const ToggleLocale = ({ keepMenuOpen = false }: ToggleLocaleProps) => {
       }}
     >
       <div
-        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${isRussian ? 'bg-white/10 text-content-secondary' : 'text-white/50'}`}
+        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${isRussian ? 'bg-accent/25 text-content-secondary' : 'text-white/50'}`}
       >
         РУ
       </div>
       <div
-        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${!isRussian ? 'bg-white/10 text-content-secondary' : 'text-white/50'}`}
+        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${!isRussian ? 'bg-accent/25 text-content-secondary' : 'text-white/50'}`}
       >
         EN
       </div>
