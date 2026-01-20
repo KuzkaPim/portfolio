@@ -60,11 +60,11 @@ export const ToggleLocale = ({ keepMenuOpen = false }: ToggleLocaleProps) => {
       data-frozen={isFrozen}
       className={`
         relative flex items-center text-sm text-content-secondary rounded-full
-        backdrop-blur-md shadow-md border border-white/20 cursor-pointer
+        backdrop-blur-sm shadow-md border border-white/20 cursor-pointer
         transition-all duration-250 group
-        bg-accent/80
-        [@media(hover:hover)]:hover:bg-accent/90
-        data-[frozen=true]:[@media(hover:hover)]:bg-accent/90
+        bg-accent/60
+        [@media(hover:hover)]:hover:bg-accent/70
+        data-[frozen=true]:[@media(hover:hover)]:bg-accent/70
         active:scale-98
       `}
       style={{
@@ -72,12 +72,12 @@ export const ToggleLocale = ({ keepMenuOpen = false }: ToggleLocaleProps) => {
       }}
     >
       <div
-        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${isRussian ? 'bg-white/10 text-white' : 'text-white/50'}`}
+        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${isRussian ? 'bg-white/5 text-content-secondary' : 'text-white/50'}`}
       >
         РУ
       </div>
       <div
-        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${!isRussian ? 'bg-white/10 text-white' : 'text-white/50'}`}
+        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${!isRussian ? 'bg-white/5 text-content-secondary' : 'text-white/50'}`}
       >
         EN
       </div>

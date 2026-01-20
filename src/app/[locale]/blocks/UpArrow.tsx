@@ -28,11 +28,11 @@ export const UpArrow = () => {
 
   return (
     <div
-      className={`bg-accent/80 backdrop-blur-md border border-white/20 size-11 right-4 bottom-4 p-1 rounded-full transition duration-200 hover:bg-accent cursor-pointer fixed z-20 shadow-md flex justify-center items-center active:scale-105 group/upArrow ${isVisible ? 'scale-100' : 'scale-50 opacity-0 pointer-events-none'}`}
+      className={`bg-accent/60 backdrop-blur-sm border border-white/20 size-11 right-4 bottom-4 p-1 rounded-full transition duration-250 hover:bg-accent/70 cursor-pointer fixed z-20 shadow-md flex justify-center items-center active:scale-105 group/upArrow ${isVisible ? 'scale-100' : 'scale-50 opacity-0 pointer-events-none'}`}
     >
       <MdKeyboardArrowUp
         onClick={handleClick}
-        className="text-content-secondary size-full transition duration-200 group-hover/upArrow:-translate-y-0.5"
+        className="text-content-secondary size-full transition duration-250 group-hover/upArrow:-translate-y-0.5"
       />
     </div>
   );

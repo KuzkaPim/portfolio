@@ -48,24 +48,24 @@ export const Hamburger = () => {
   return (
     <div ref={ref} className="relative">
       <button
-        className="size-11 p-1.5 flex flex-col shadow-md justify-center items-center rounded-xl cursor-pointer gap-1.5 bg-accent/80 backdrop-blur-md border border-white/20 active:scale-90 transition hover:bg-accent"
+        className="size-11 p-1.5 flex flex-col shadow-md justify-center items-center rounded-xl cursor-pointer gap-1.5 bg-accent/60 backdrop-blur-sm border border-white/20 active:scale-90 transition hover:bg-accent/70"
         onClick={toggleMenu}
         aria-label="Toggle menu"
         aria-expanded={isMenuOpen}
         aria-controls="mobile-actions-menu"
       >
         <span
-          className={`w-full h-1 rounded-sm bg-white block transform transition-transform duration-250 ease-in-out ${
+          className={`w-full h-1 rounded-sm bg-content-secondary block transform transition-transform duration-250 ease-in-out ${
             isMenuOpen ? 'translate-y-5' : ''
           }`}
         />
         <span
-          className={`w-full h-1 rounded-sm bg-white block transition duration-250 ease-in-out ${
+          className={`w-full h-1 rounded-sm bg-content-secondary block transition duration-250 ease-in-out ${
             isMenuOpen ? 'opacity-70 -translate-y-2.5 scale-70' : ''
           }`}
         />
         <span
-          className={`w-full h-1 rounded-sm bg-white block transition duration-250 ease-in-out ${
+          className={`w-full h-1 rounded-sm bg-content-secondary block transition duration-250 ease-in-out ${
             isMenuOpen ? 'opacity-70 -translate-y-2.5 scale-80' : ''
           }`}
         />
@@ -105,13 +105,13 @@ export const Hamburger = () => {
           id="mobile-actions-menu"
           role="menu"
           aria-label="Quick links"
-          className="py-2 min-w-36 bg-accent/80 backdrop-blur-md border border-white/20 rounded-md shadow-md text-white"
+          className="py-2 min-w-36 bg-accent/60 backdrop-blur-sm border border-white/20 rounded-md shadow-md text-content-secondary"
         >
           <li role="none">
             <a
               role="menuitem"
               href="#promo"
-              className="group flex items-center gap-2 px-4 py-2 hover:bg-accent transition transform active:scale-95"
+              className="group flex items-center gap-2 px-4 py-2 hover:bg-accent/30 transition transform active:scale-95"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('home')}
@@ -121,7 +121,7 @@ export const Hamburger = () => {
             <a
               role="menuitem"
               href="#skills"
-              className="group flex items-center gap-2 px-4 py-2 hover:bg-accent transition transform active:scale-95"
+              className="group flex items-center gap-2 px-4 py-2 hover:bg-accent/30 transition transform active:scale-95"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('technologies')}
@@ -131,7 +131,7 @@ export const Hamburger = () => {
             <a
               role="menuitem"
               href="#about-me"
-              className="group flex items-center gap-2 px-4 py-2 hover:bg-accent transition transform active:scale-95"
+              className="group flex items-center gap-2 px-4 py-2 hover:bg-accent/30 transition transform active:scale-95"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('aboutMe')}
@@ -141,7 +141,7 @@ export const Hamburger = () => {
             <a
               role="menuitem"
               href="#contacts"
-              className="group flex items-center gap-2 px-4 py-2 hover:bg-accent transition transform active:scale-95"
+              className="group flex items-center gap-2 px-4 py-2 hover:bg-accent/30 transition transform active:scale-95"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('contactMe')}
