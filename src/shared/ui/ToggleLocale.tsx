@@ -1,55 +1,54 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { useState, useTransition } from 'react';
+import { useTransition, useState, useEffect } from 'react';
 import { useRouter, usePathname } from '@/src/i18n/navigation';
 import { GrLanguage } from 'react-icons/gr';
+import { useSearchParams } from 'next/navigation';
 
 export interface ToggleLocaleProps {
   keepMenuOpen?: boolean;
 }
 
-let globalHoverState = false;
+let isGlobalFlight = false;
 
 export const ToggleLocale = ({ keepMenuOpen = false }: ToggleLocaleProps) => {
   const [isPending, startTransition] = useTransition();
-  const [isHovered, setIsHovered] = useState(globalHoverState);
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const [isFrozen, setIsFrozen] = useState(() => isGlobalFlight);
 
-  const handleMouseEnter = () => {
-    globalHoverState = true;
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    globalHoverState = false;
-    setIsHovered(false);
-  };
+  useEffect(() => {
+    if (isFrozen) {
+      const timer = setTimeout(() => {
+        setIsFrozen(false);
+        isGlobalFlight = false;
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [isFrozen]);
 
   const toggleLocale = () => {
     if (isPending) return;
 
+    isGlobalFlight = true;
+    setIsFrozen(true);
+
     const nextLocale = locale === 'en' ? 'ru' : 'en';
-    let hash = '';
-    let search = '';
-
-    if (typeof window !== 'undefined') {
-      search = window.location.search;
-      hash = window.location.hash;
-
-      if (keepMenuOpen) {
-        const params = new URLSearchParams(search);
-        params.set('menu', 'open');
-        search = `?${params.toString()}`;
-      }
-    }
-
-    const fullPath = `${pathname}${search}${hash}`;
+    const currentParams = new URLSearchParams(searchParams.toString());
+    if (keepMenuOpen) currentParams.set('menu', 'open');
+    const queryString = currentParams.toString()
+      ? `?${currentParams.toString()}`
+      : '';
+    const hash = typeof window !== 'undefined' ? window.location.hash : '';
 
     startTransition(() => {
-      router.replace(fullPath, { locale: nextLocale, scroll: false });
+      router.replace(`${pathname}${queryString}${hash}`, {
+        locale: nextLocale,
+        scroll: false,
+      });
     });
   };
 
@@ -58,28 +57,43 @@ export const ToggleLocale = ({ keepMenuOpen = false }: ToggleLocaleProps) => {
   return (
     <button
       onClick={toggleLocale}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className={`text-sm text-content-secondary flex items-center backdrop-blur-md rounded-full shadow-md border border-white/20 cursor-pointer group/locale transition-colors duration-250 ${isHovered ? 'bg-accent/90' : 'bg-accent/80'}`}
+      data-frozen={isFrozen}
+      className={`
+        relative flex items-center text-sm text-content-secondary rounded-full
+        backdrop-blur-md shadow-md border border-white/20 cursor-pointer
+        transition-all duration-250 group
+        bg-accent/80
+        [@media(hover:hover)]:hover:bg-accent/90
+        data-[frozen=true]:[@media(hover:hover)]:bg-accent/90
+        active:scale-95 active:bg-accent
+      `}
+      style={{
+        transition: isFrozen ? 'none' : undefined,
+      }}
     >
       <div
-        className={`flex items-center justify-center size-11 rounded-full ${isRussian ? 'bg-white/10' : ''}`}
+        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${isRussian ? 'bg-white/10 text-white' : 'text-white/50'}`}
       >
         РУ
       </div>
       <div
-        className={`flex items-center justify-center size-11 rounded-full ${!isRussian ? 'bg-white/10' : ''}`}
+        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${!isRussian ? 'bg-white/10 text-white' : 'text-white/50'}`}
       >
         EN
       </div>
+
       <div
-        className={`transition duration-250 transform-gpu size-11 p-2.5 ${isHovered ? 'rotate-60' : ''}`}
-        aria-label="Toggle language"
+        className={`
+          size-11 p-2.5 transform-gpu
+          transition-transform duration-250 ease-in-out
+          [@media(hover:hover)]:group-hover:rotate-60
+          group-data-[frozen=true]:[@media(hover:hover)]:rotate-60
+        `}
         style={{
+          transition: isFrozen ? 'none' : undefined,
           willChange: 'transform',
-          backfaceVisibility: 'hidden',
-          WebkitTapHighlightColor: 'transparent',
         }}
+        aria-hidden="true"
       >
         <GrLanguage className="size-full" />
       </div>
