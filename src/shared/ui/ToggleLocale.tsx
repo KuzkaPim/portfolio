@@ -65,7 +65,7 @@ export const ToggleLocale = ({ keepMenuOpen = false }: ToggleLocaleProps) => {
         bg-accent/80
         [@media(hover:hover)]:hover:bg-accent/90
         data-[frozen=true]:[@media(hover:hover)]:bg-accent/90
-        active:scale-95
+        active:scale-98
       `}
       style={{
         transition: isFrozen ? 'none' : undefined,
