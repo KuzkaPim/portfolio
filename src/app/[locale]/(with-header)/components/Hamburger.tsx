@@ -48,27 +48,15 @@ export const Hamburger = () => {
   return (
     <div ref={ref} className="relative">
       <button
-        className="size-11 p-1.5 flex flex-col shadow-md justify-center items-center rounded-xl cursor-pointer gap-1.5 bg-accent/60 backdrop-blur-sm border border-white/20 active:scale-90 transition hover:bg-accent/70"
+        className={`size-11 py-1.5 px-2 flex flex-col shadow-md justify-center items-center rounded-full cursor-pointer gap-1 bg-accent/60 backdrop-blur-sm border border-white/20 active:scale-90 transition duration-250 hover:bg-accent/70 ${isMenuOpen ? 'rotate-20' : ''}`}
         onClick={toggleMenu}
         aria-label="Toggle menu"
         aria-expanded={isMenuOpen}
         aria-controls="mobile-actions-menu"
       >
-        <span
-          className={`w-full h-1 rounded-sm bg-content-secondary block transform transition-transform duration-250 ease-in-out ${
-            isMenuOpen ? 'translate-y-5' : ''
-          }`}
-        />
-        <span
-          className={`w-full h-1 rounded-sm bg-content-secondary block transition duration-250 ease-in-out ${
-            isMenuOpen ? 'opacity-70 -translate-y-2.5 scale-70' : ''
-          }`}
-        />
-        <span
-          className={`w-full h-1 rounded-sm bg-content-secondary block transition duration-250 ease-in-out ${
-            isMenuOpen ? 'opacity-70 -translate-y-2.5 scale-80' : ''
-          }`}
-        />
+        <span className="w-11/12 h-[3px] rounded-sm bg-content-secondary block" />
+        <span className="w-11/12 h-[3px] rounded-sm bg-content-secondary block" />
+        <span className="w-11/12 h-[3px] rounded-sm bg-content-secondary block" />
       </button>
 
       <div
