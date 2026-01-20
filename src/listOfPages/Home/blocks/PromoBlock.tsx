@@ -31,13 +31,13 @@ export const PromoBlock = () => {
             </Link>
             <div className="flex gap-4 flex-col sm:flex-row sm:w-full lg:w-auto">
               <a
-                className="px-4 py-2 border border-accent/10 bg-accent/10 font-bold rounded-4xl text-accent transition sm:flex-2 lg:flex-initial text-center hover:bg-accent/20"
+                className="px-4 py-2 border border-accent/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 font-bold rounded-4xl text-accent dark:text-content-secondary transition sm:flex-2 lg:flex-initial text-center hover:bg-accent/20 dark:hover:bg-accent/40"
                 href="#contacts"
               >
                 {t('btn.contactMe')}
               </a>
               <Link
-                className="px-4 py-2 border border-accent/10 bg-accent/10 font-bold rounded-4xl text-accent transition sm:flex-1 lg:flex-initial text-center w-max hover:bg-accent/20"
+                className="px-4 py-2 border border-accent/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 font-bold rounded-4xl text-accent dark:text-content-secondary transition sm:flex-1 lg:flex-initial text-center w-max hover:bg-accent/20 dark:hover:bg-accent/40"
                 href="/resume"
               >
                 {t('btn.resume')}
@@ -72,7 +72,7 @@ export const PromoBlock = () => {
           </div>
         </div>
         <Image
-          className="max-w-60 w-full absolute -right-18 sm:-right-6 md:right-0 bottom-0 z-0"
+          className="max-w-60 sm:max-w-68 md:max-w-76 lg:max-w-80 w-full absolute -right-18 sm:-right-6 md:right-0 bottom-0 z-0"
           src={meImg}
           alt={t('altMeImage')}
           priority
