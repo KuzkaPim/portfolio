@@ -60,7 +60,7 @@ export const ToggleLocale = ({ keepMenuOpen = false }: ToggleLocaleProps) => {
       data-frozen={isFrozen}
       className={`
         relative flex items-center text-sm text-content-secondary rounded-full
-        backdrop-blur-sm shadow-md border border-white/20 cursor-pointer
+        backdrop-blur-sm shadow-md shadow-layer/80 border border-white/20 cursor-pointer
         transition-all duration-250 group
         bg-accent/60
         [@media(hover:hover)]:hover:bg-accent/70
