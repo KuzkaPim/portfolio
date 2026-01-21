@@ -21,7 +21,7 @@ export const DesktopHeader = () => {
       <Container>
         <div className="flex justify-between items-center">
           <nav
-            className="bg-accent/60 rounded-full backdrop-blur-sm border border-navigation/10"
+            className="bg-accent/30 rounded-full backdrop-blur-md border border-navigation/10"
             onMouseLeave={() => setHoveredId(null)}
           >
             <ul className="flex relative">

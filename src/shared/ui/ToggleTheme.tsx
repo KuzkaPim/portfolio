@@ -9,7 +9,7 @@ export const ToggleTheme = () => {
   return (
     <button
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-      className="text-navigation relative flex items-center justify-center size-11 rounded-full bg-accent/60 hover:bg-accent/70 border border-navigation/10 cursor-pointer backdrop-blur-sm transition-colors duration-250"
+      className="text-navigation relative flex items-center justify-center size-11 rounded-full bg-accent/30 hover:bg-accent/50 border border-navigation/10 cursor-pointer backdrop-blur-md transition-colors duration-250"
       aria-label="Toggle theme"
     >
       <GoSun className="size-11 p-3 transition-all duration-250 scale-100 rotate-0 dark:scale-0 dark:-rotate-90" />

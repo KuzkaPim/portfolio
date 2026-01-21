@@ -48,15 +48,15 @@ export const Hamburger = () => {
   return (
     <div ref={ref} className="relative">
       <button
-        className={`size-11 py-1.5 px-2 flex flex-col justify-center items-center rounded-full cursor-pointer gap-[5px] bg-accent/60 backdrop-blur-sm border border-navigation/10 active:scale-90 transition duration-250 hover:bg-accent/70 ${isMenuOpen ? 'rotate-20' : ''}`}
+        className={`size-11 py-1.5 px-2 flex flex-col justify-center items-center rounded-2xl cursor-pointer gap-[5px] bg-accent/30 backdrop-blur-md border border-navigation/10 active:scale-90 transition duration-250 hover:bg-accent/50 ${isMenuOpen ? 'rotate-20' : ''}`}
         onClick={toggleMenu}
         aria-label="Toggle menu"
         aria-expanded={isMenuOpen}
         aria-controls="mobile-actions-menu"
       >
-        <span className="w-5/7 h-px rounded-sm bg-navigation block" />
-        <span className="w-4/7 h-px rounded-sm bg-navigation block" />
-        <span className="w-5/7 h-px rounded-sm bg-navigation block" />
+        <span className="w-5/7 h-[1.5px] rounded-sm bg-navigation block" />
+        <span className="w-4/7 h-[1.5px] rounded-sm bg-navigation block" />
+        <span className="w-5/7 h-[1.5px] rounded-sm bg-navigation block" />
       </button>
 
       <div
@@ -93,7 +93,7 @@ export const Hamburger = () => {
           id="mobile-actions-menu"
           role="menu"
           aria-label="Quick links"
-          className="py-2 min-w-36 bg-accent/60 backdrop-blur-sm border border-navigation/10 rounded-2xl shadow-md text-navigation"
+          className="py-2 min-w-36 bg-accent/30 backdrop-blur-md border border-navigation/10 rounded-2xl shadow-md text-navigation"
         >
           <li role="none">
             <a
