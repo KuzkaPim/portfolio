@@ -3,7 +3,7 @@
 import { useLocale } from 'next-intl';
 import { useTransition, useState, useEffect } from 'react';
 import { useRouter, usePathname } from '@/src/i18n/navigation';
-import { GrLanguage } from 'react-icons/gr';
+import { CiGlobe } from 'react-icons/ci';
 import { useSearchParams } from 'next/navigation';
 
 export interface ToggleLocaleProps {
@@ -59,8 +59,8 @@ export const ToggleLocale = ({ keepMenuOpen = false }: ToggleLocaleProps) => {
       onClick={toggleLocale}
       data-frozen={isFrozen}
       className={`
-        relative flex items-center text-sm text-content-secondary rounded-full
-        backdrop-blur-sm border border-white/20 cursor-pointer
+        relative flex items-center text-sm text-navigation rounded-full
+        backdrop-blur-sm border border-navigation/10 cursor-pointer
         transition-all duration-250 group
         bg-accent/60
         [@media(hover:hover)]:hover:bg-accent/70
@@ -72,12 +72,12 @@ export const ToggleLocale = ({ keepMenuOpen = false }: ToggleLocaleProps) => {
       }}
     >
       <div
-        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${isRussian ? 'bg-accent/25 text-content-secondary' : 'text-white/50'}`}
+        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${isRussian ? 'bg-accent/25' : 'text-navigation/60'}`}
       >
         РУ
       </div>
       <div
-        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${!isRussian ? 'bg-accent/25 text-content-secondary' : 'text-white/50'}`}
+        className={`flex items-center justify-center size-11 rounded-full transition-colors duration-250 ${!isRussian ? 'bg-accent/25' : 'text-navigation/60'}`}
       >
         EN
       </div>
@@ -95,7 +95,7 @@ export const ToggleLocale = ({ keepMenuOpen = false }: ToggleLocaleProps) => {
         }}
         aria-hidden="true"
       >
-        <GrLanguage className="size-full" />
+        <CiGlobe className="size-full" />
       </div>
     </button>
   );

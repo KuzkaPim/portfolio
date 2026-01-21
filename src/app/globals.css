@@ -3,6 +3,7 @@
 @theme {
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-navigation: var(--navigation);
   --color-content-primary: var(--content-primary);
   --color-content-secondary: var(--content-secondary);
   --color-layer: var(--color-layer);
@@ -42,6 +43,7 @@
 :root {
   --primary: var(--color-white);
   --secondary: #f9f9f9;
+  --navigation: hsl(0, 0%, 20%);
   --content-primary: var(--color-gray-700);
   --content-secondary: var(--color-white);
   --color-layer: var(--color-neutral-200);
@@ -52,6 +54,7 @@
 .dark {
   --primary: #0a0a0a;
   --secondary: #141414;
+  --navigation: hsl(0, 0%, 90%);
   --content-primary: var(--color-neutral-300);
   --content-secondary: var(--color-neutral-50);
   --color-layer: var(--color-neutral-800);

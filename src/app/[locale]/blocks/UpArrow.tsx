@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { MdKeyboardArrowUp } from 'react-icons/md';
+import { SlArrowUp } from 'react-icons/sl';
 
 export const UpArrow = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -28,11 +28,11 @@ export const UpArrow = () => {
 
   return (
     <div
-      className={`bg-accent/60 backdrop-blur-sm border border-white/20 size-11 right-2 bottom-4 p-1 rounded-full transition duration-250 hover:bg-accent/70 cursor-pointer fixed z-20 flex justify-center items-center active:scale-105 group/upArrow ${isVisible ? 'scale-100' : 'scale-50 opacity-0 pointer-events-none'}`}
+      className={`bg-accent/60 backdrop-blur-sm border border-navigation/10 size-11 right-2 bottom-4 p-1 rounded-full transition duration-250 hover:bg-accent/70 cursor-pointer fixed z-20 flex justify-center items-center active:scale-105 group/upArrow ${isVisible ? 'scale-100' : 'scale-50 opacity-0 pointer-events-none'}`}
     >
-      <MdKeyboardArrowUp
+      <SlArrowUp
         onClick={handleClick}
-        className="text-content-secondary size-full transition duration-250 group-hover/upArrow:-translate-y-0.5"
+        className="text-navigation size-full p-2 transition duration-250 group-hover/upArrow:-translate-y-0.5"
       />
     </div>
   );

@@ -48,15 +48,15 @@ export const Hamburger = () => {
   return (
     <div ref={ref} className="relative">
       <button
-        className={`size-11 py-1.5 px-2 flex flex-col justify-center items-center rounded-full cursor-pointer gap-[5px] bg-accent/60 backdrop-blur-sm border border-white/20 active:scale-90 transition duration-250 hover:bg-accent/70 ${isMenuOpen ? 'rotate-20' : ''}`}
+        className={`size-11 py-1.5 px-2 flex flex-col justify-center items-center rounded-full cursor-pointer gap-[5px] bg-accent/60 backdrop-blur-sm border border-navigation/10 active:scale-90 transition duration-250 hover:bg-accent/70 ${isMenuOpen ? 'rotate-20' : ''}`}
         onClick={toggleMenu}
         aria-label="Toggle menu"
         aria-expanded={isMenuOpen}
         aria-controls="mobile-actions-menu"
       >
-        <span className="w-11/12 h-[3px] rounded-sm bg-content-secondary block" />
-        <span className="w-11/12 h-[3px] rounded-sm bg-content-secondary block" />
-        <span className="w-11/12 h-[3px] rounded-sm bg-content-secondary block" />
+        <span className="w-11/12 h-0.5 rounded-sm bg-navigation block" />
+        <span className="w-11/12 h-0.5 rounded-sm bg-navigation block" />
+        <span className="w-11/12 h-0.5 rounded-sm bg-navigation block" />
       </button>
 
       <div
@@ -82,7 +82,7 @@ export const Hamburger = () => {
           absolute right-0 mt-2
           transform
           -z-10
-          transition duration-250 ease-out
+          transition duration-250 delay-50 ease-out
           origin-top ${
             isMenuOpen
               ? 'translate-y-0 translate-x-0 scale-100 animate-bump-bottom pointer-events-auto'
@@ -93,7 +93,7 @@ export const Hamburger = () => {
           id="mobile-actions-menu"
           role="menu"
           aria-label="Quick links"
-          className="py-2 min-w-36 bg-accent/60 backdrop-blur-sm border border-white/20 rounded-2xl shadow-md text-content-secondary"
+          className="py-2 min-w-36 bg-accent/60 backdrop-blur-sm border border-navigation/10 rounded-2xl shadow-md text-navigation"
         >
           <li role="none">
             <a
