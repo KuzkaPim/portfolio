@@ -54,9 +54,9 @@ export const Hamburger = () => {
         aria-expanded={isMenuOpen}
         aria-controls="mobile-actions-menu"
       >
-        <span className="w-11/12 h-0.5 rounded-sm bg-navigation block" />
-        <span className="w-11/12 h-0.5 rounded-sm bg-navigation block" />
-        <span className="w-11/12 h-0.5 rounded-sm bg-navigation block" />
+        <span className="w-5/7 h-px rounded-sm bg-navigation block" />
+        <span className="w-4/7 h-px rounded-sm bg-navigation block" />
+        <span className="w-5/7 h-px rounded-sm bg-navigation block" />
       </button>
 
       <div
