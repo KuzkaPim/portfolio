@@ -43,23 +43,23 @@
 :root {
   --primary: var(--color-white);
   --secondary: #f9f9f9;
-  --navigation: hsl(0, 0%, 20%);
+  --navigation: hsl(160, 84%, 15%);
   --content-primary: var(--color-gray-700);
-  --content-secondary: var(--color-white);
+  --content-secondary: hsl(0, 0%, 100%);
   --color-layer: var(--color-neutral-200);
-  --accent: #10b981;
-  --accent-hover: #00a36d;
+  --accent: hsl(160, 85%, 40%);
+  --accent-hover: hsl(160, 85%, 37%);
 }
 
 .dark {
   --primary: #0a0a0a;
   --secondary: #141414;
-  --navigation: hsl(0, 0%, 90%);
+  --navigation: hsl(160, 85%, 90%);
   --content-primary: var(--color-neutral-300);
-  --content-secondary: var(--color-neutral-50);
+  --content-secondary: hsl(0, 0%, 95%);
   --color-layer: var(--color-neutral-800);
-  --accent: #0c9467;
-  --accent-hover: #008257;
+  --accent: hsl(160, 85%, 30%);
+  --accent-hover: hsl(160, 85%, 27%);
 }
 
 @variant dark (&:where(.dark, .dark *));
