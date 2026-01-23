@@ -22,29 +22,31 @@ export const Experience = () => {
               {job.duration}
             </p>
             <ul className="mt-4 flex flex-col gap-5">
-              {job.responsibilities.map((item: string, idx: number) => {
-                return (
-                  <li
-                    className="bg-secondary p-4 rounded-2xl shadow-md shadow-layer/80"
-                    key={idx}
-                  >
-                    {Array.isArray(item) ? (
-                      <>
-                        {item[0]}
-                        {item.map((subItem, subIdx) => {
-                          return subIdx === 0 ? null : (
-                            <p className="block ml-4" key={subIdx}>
-                              - {subItem}
-                            </p>
-                          );
-                        })}
-                      </>
-                    ) : (
-                      item
-                    )}
-                  </li>
-                );
-              })}
+              {job.responsibilities.map(
+                (item: string | string[], idx: number) => {
+                  return (
+                    <li
+                      className="bg-secondary p-4 rounded-2xl shadow-md shadow-layer/80"
+                      key={idx}
+                    >
+                      {Array.isArray(item) ? (
+                        <>
+                          {item[0]}
+                          {item.map((subItem, subIdx) => {
+                            return subIdx === 0 ? null : (
+                              <p className="block ml-4" key={subIdx}>
+                                - {subItem}
+                              </p>
+                            );
+                          })}
+                        </>
+                      ) : (
+                        item
+                      )}
+                    </li>
+                  );
+                }
+              )}
             </ul>
           </div>
         ))}

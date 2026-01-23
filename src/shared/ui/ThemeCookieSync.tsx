@@ -8,7 +8,7 @@ export const ThemeCookieSync = () => {
 
   useEffect(() => {
     if (resolvedTheme) {
-      document.cookie = `theme=${resolvedTheme}; path=/; max-age=31536000`;
+      document.cookie = `theme=${resolvedTheme}; path=/; max-age=31536000; SameSite=Lax`;
     }
   }, [resolvedTheme]);
 
