@@ -7,7 +7,10 @@ export const ProjectsBlock = () => {
   const t = useTranslations('home.projects');
 
   return (
-    <section className="bg-primary text-content-primary md:scroll-mt-4 py-12 px-2 sm:px-0">
+    <section
+      id="projects"
+      className="bg-primary text-content-primary lg:scroll-mt-10 py-6 px-2 sm:px-0"
+    >
       <Container>
         <h2 className="font-bold text-4xl">{t('title')}</h2>
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">

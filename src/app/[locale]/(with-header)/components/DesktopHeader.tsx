@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { id: 'promo', label: 'home' },
   { id: 'skills', label: 'technologies' },
   { id: 'about-me', label: 'aboutMe' },
+  { id: 'projects', label: 'projects' },
   { id: 'contacts', label: 'contactMe' },
 ] as const;
 
@@ -17,7 +18,7 @@ export const DesktopHeader = () => {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   return (
-    <header className="text-navigation text-md hidden md:block sticky top-2 z-20">
+    <header className="text-navigation text-md hidden lg:block sticky top-2 z-20">
       <Container>
         <div className="flex justify-between items-center">
           <nav

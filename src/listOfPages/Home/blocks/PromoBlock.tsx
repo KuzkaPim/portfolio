@@ -13,7 +13,7 @@ export const PromoBlock = () => {
   return (
     <section
       id="promo"
-      className="bg-primary overflow-hidden md:scroll-mt-18 text-content-primary px-2 sm:px-0 md:mt-6 py-4 pt-2"
+      className="bg-primary overflow-hidden lg:scroll-mt-18 text-content-primary px-2 sm:px-0 md:mt-6 pb-6 pt-2"
     >
       <Container className="flex flex-col sm:flex-row items-center justify-between relative px-4 pb-16 pt-12 md:py-12 bg-secondary rounded-3xl overflow-hidden shadow-md shadow-layer/80">
         <div className="z-10 sm:w-sm lg:w-auto">
@@ -25,7 +25,7 @@ export const PromoBlock = () => {
           <div className="flex gap-4 mt-8 items-start lg:items-center flex-col lg:flex-row w-max sm:w-auto">
             <Link
               className="px-4 py-2 text-content-secondary border border-accent/40 bg-accent font-bold rounded-4xl transition text-center w-full lg:w-auto hover:bg-accent-hover hover:border-accent-hover"
-              href="/"
+              href="#projects"
             >
               {t('btn.myProjects')}
             </Link>

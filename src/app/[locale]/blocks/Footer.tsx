@@ -5,7 +5,7 @@ export const Footer = () => {
   const t = useTranslations('footer');
 
   return (
-    <footer className="bg-primary text-content-primary text-sm py-4 text-center">
+    <footer className="bg-primary text-content-primary text-sm py-6 text-center">
       <Container>
         <p>{t('copyright')}</p>
       </Container>

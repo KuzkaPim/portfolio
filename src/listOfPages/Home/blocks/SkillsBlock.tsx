@@ -8,7 +8,7 @@ export const SkillsBlock = () => {
   return (
     <section
       id="skills"
-      className="bg-primary text-content-primary md:scroll-mt-4 py-12"
+      className="bg-primary text-content-primary lg:scroll-mt-10 py-6"
     >
       <Container className="px-2 sm:px-0">
         <h2 className="text-4xl font-bold">{t('title')}</h2>
