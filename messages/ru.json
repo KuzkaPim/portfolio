@@ -55,6 +55,39 @@
         "6": ", люблю разбираться в сложных задачах и всегда готов быстро учиться новому."
       }
     },
+    "projects": {
+      "title": "Проекты",
+      "codeLinkLabel": "Посмотреть код",
+      "projects": [
+        {
+          "title": "Invite.kz (SaaS Платформа)",
+          "description": "Fullstack SaaS-платформа для создания и управления цифровыми приглашениями. Проект построен на архитектуре Nx Monorepo, разделяющей приложение на конструктор (Vite) и публичный просмотрщик (Next.js) для максимальной SEO-оптимизации и производительности.",
+          "technologies": [
+            "Next.js 16",
+            "React 19",
+            "NestJS",
+            "PostgreSQL",
+            "Nx",
+            "Docker"
+          ],
+          "videoSrc": "/assets/videos/invite.mp4",
+          "link": "https://gitlab.com/esdp-ajs-22-1/invitekz"
+        },
+        {
+          "title": "Персональное портфолио",
+          "description": "Высокопроизводительный персональный сайт, разработанный на новейшем стеке технологий (React 19 + Tailwind 4). Проект служит песочницей для экспериментов с продвинутыми анимациями, FSD-архитектурой и оптимизацией Core Web Vitals.",
+          "technologies": [
+            "React 19",
+            "Next.js 16",
+            "Tailwind CSS 4",
+            "Framer Motion",
+            "TypeScript"
+          ],
+          "videoSrc": "/assets/videos/portfolio.mp4",
+          "link": "https://github.com/KuzkaPim/portfolio"
+        }
+      ]
+    },
     "contactMe": {
       "title": "Готов к новым задачам и сотрудничеству!",
       "description": "Ищете разработчика, который думает не только о UI, но и об архитектуре?",
