@@ -42,7 +42,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 
   return (
     <li className="bg-secondary p-4 pt-8 rounded-3xl flex flex-col shadow-md shadow-layer/80">
-      <div className="relative rounded-xl overflow-hidden h-50 mx-auto aspect-[9/19.5] bg-transparent shadow-[0_0_200px_4px] shadow-accent/60">
+      <div className="relative rounded-lg overflow-hidden h-50 mx-auto aspect-9/16 bg-transparent shadow-[0_0_200px_4px] shadow-accent/60">
         <Image
           src={project.posterSrc}
           alt={project.title}
@@ -58,7 +58,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           loop
           muted
           playsInline
-          className="w-full h-full block dark:brightness-90 bg-transparent object-cover"
+          className="w-full h-full block dark:brightness-90 object-cover"
           onPlaying={() => setHasPlayed(true)}
         />
       </div>
