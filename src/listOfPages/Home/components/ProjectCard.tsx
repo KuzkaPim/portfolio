@@ -49,7 +49,8 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 z-10 ${
             hasPlayed ? 'opacity-0 pointer-events-none' : 'opacity-100'
           }`}
-          layout="fill"
+          fill
+          sizes="113px"
           aria-hidden="true"
         />
         <video
