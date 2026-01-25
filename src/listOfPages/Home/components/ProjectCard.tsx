@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { ProjectCardInfo } from '../types';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 interface ProjectCardProps {
   project: ProjectCardInfo;
@@ -11,6 +12,7 @@ interface ProjectCardProps {
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   const t = useTranslations('home.projects');
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     const videoElement = videoRef.current;
@@ -41,14 +43,24 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <li className="bg-secondary p-4 pt-8 rounded-3xl flex flex-col shadow-md shadow-layer/80">
       <div className="relative rounded-xl h-50 mx-auto aspect-[9/19.5] overflow-hidden border border-accent/60 dark:border-accent shadow-[0_0_100px_4px] shadow-accent/30 dark:shadow-accent/60">
+        <Image
+          src={project.posterSrc}
+          alt={project.title}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 z-10 ${
+            isPlaying ? 'opacity-0 pointer-events-none' : 'opacity-100'
+          }`}
+          layout="fill"
+          aria-hidden="true"
+        />
         <video
           ref={videoRef}
           src={project.videoSrc}
-          poster={project.posterSrc}
           loop
           muted
           playsInline
           className="w-full h-full block dark:brightness-90 object-cover"
+          onPlaying={() => setIsPlaying(true)}
+          onPause={() => setIsPlaying(false)}
         />
       </div>
       <h3 className="mt-6 text-2xl font-bold leading-6">{project.title}</h3>
