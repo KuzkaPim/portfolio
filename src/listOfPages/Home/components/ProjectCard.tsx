@@ -12,7 +12,7 @@ interface ProjectCardProps {
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   const t = useTranslations('home.projects');
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [hasPlayed, setHasPlayed] = useState(false);
 
   useEffect(() => {
     const videoElement = videoRef.current;
@@ -47,7 +47,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           src={project.posterSrc}
           alt={project.title}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 z-10 ${
-            isPlaying ? 'opacity-0 pointer-events-none' : 'opacity-100'
+            hasPlayed ? 'opacity-0 pointer-events-none' : 'opacity-100'
           }`}
           layout="fill"
           aria-hidden="true"
@@ -59,8 +59,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           muted
           playsInline
           className="w-full h-full block dark:brightness-90 object-cover"
-          onPlaying={() => setIsPlaying(true)}
-          onPause={() => setIsPlaying(false)}
+          onPlaying={() => setHasPlayed(true)}
         />
       </div>
       <h3 className="mt-6 text-2xl font-bold leading-6">{project.title}</h3>
