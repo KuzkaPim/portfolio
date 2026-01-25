@@ -11,8 +11,8 @@ export const HomePage = () => {
     <>
       <PromoBlock />
       <SkillsBlock />
-      <AboutMeBlock />
       <ProjectsBlock />
+      <AboutMeBlock />
       <ContactsBlock />
     </>
   );

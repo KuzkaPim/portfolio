@@ -3,5 +3,6 @@ export interface ProjectCardInfo {
   description: string;
   technologies: string[];
   videoSrc: string;
+  posterSrc: string;
   link: string;
 }

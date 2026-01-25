@@ -35,7 +35,7 @@ export const HackerButton = () => {
         if (intervalRef.current) clearInterval(intervalRef.current);
       }
 
-      iteration += 1 / 3;
+      iteration += 4 / 5;
     }, 30);
   };
 

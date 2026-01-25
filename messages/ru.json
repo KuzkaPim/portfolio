@@ -72,6 +72,7 @@
             "Docker"
           ],
           "videoSrc": "/assets/videos/invite.mp4",
+          "posterSrc": "/assets/invite.png",
           "link": "https://gitlab.com/esdp-ajs-22-1/invitekz"
         },
         {
@@ -85,6 +86,7 @@
             "TypeScript"
           ],
           "videoSrc": "/assets/videos/portfolio.mp4",
+          "posterSrc": "/assets/portfolio.png",
           "link": "https://github.com/KuzkaPim/portfolio"
         }
       ]

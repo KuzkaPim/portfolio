@@ -10,14 +10,15 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 
   return (
     <li className="bg-secondary p-4 pt-8 rounded-3xl flex flex-col shadow-md shadow-layer/80">
-      <div className="relative rounded-xl h-50 mx-auto overflow-hidden border-2 border-accent/60 dark:border-accent shadow-[0_0_100px_4px] shadow-accent/30 dark:shadow-accent/60">
+      <div className="relative rounded-xl h-50 mx-auto aspect-[9/19.5] overflow-hidden border border-accent/60 dark:border-accent shadow-[0_0_100px_4px] shadow-accent/30 dark:shadow-accent/60">
         <video
           src={project.videoSrc}
+          poster={project.posterSrc}
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full block dark:brightness-90"
+          className="w-auto h-full block dark:brightness-90 object-cover"
         />
       </div>
       <h3 className="mt-6 text-2xl font-bold leading-6">{project.title}</h3>
@@ -33,7 +34,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         ))}
       </ul>
       <a
-        className="mt-6 text-center uppercase px-4 py-2 border border-white/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 hover:bg-accent/20 dark:hover:bg-accent/40 rounded-xl text-accent dark:text-navigation font-bold transition"
+        className="mt-6 text-center text-sm uppercase px-4 py-2 border border-white/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 hover:bg-accent/20 dark:hover:bg-accent/40 rounded-xl text-accent dark:text-navigation font-bold transition"
         href={project.link}
         target="_blank"
       >

@@ -8,8 +8,8 @@ import { useTranslations } from 'next-intl';
 const NAV_ITEMS = [
   { id: 'promo', label: 'home' },
   { id: 'skills', label: 'technologies' },
-  { id: 'about-me', label: 'aboutMe' },
   { id: 'projects', label: 'projects' },
+  { id: 'about-me', label: 'aboutMe' },
   { id: 'contacts', label: 'contactMe' },
 ] as const;
 

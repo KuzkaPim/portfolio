@@ -118,21 +118,21 @@ export const Hamburger = () => {
           <li role="none">
             <a
               role="menuitem"
-              href="#about-me"
-              className="group flex items-center gap-2 px-4 py-2 hover:bg-accent/30 transition transform active:scale-95"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {t('aboutMe')}
-            </a>
-          </li>
-          <li role="none">
-            <a
-              role="menuitem"
               href="#projects"
               className="group flex items-center gap-2 px-4 py-2 hover:bg-accent/30 transition transform active:scale-95"
               onClick={() => setIsMenuOpen(false)}
             >
               {t('projects')}
+            </a>
+          </li>
+          <li role="none">
+            <a
+              role="menuitem"
+              href="#about-me"
+              className="group flex items-center gap-2 px-4 py-2 hover:bg-accent/30 transition transform active:scale-95"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t('aboutMe')}
             </a>
           </li>
           <li role="none">
