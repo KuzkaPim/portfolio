@@ -29,7 +29,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         }
       },
       {
-        threshold: 0.3,
+        threshold: 0.05,
       }
     );
 
@@ -48,7 +48,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           loop
           muted
           playsInline
-          className="w-auto h-full block dark:brightness-90 object-cover"
+          className="w-full h-full block dark:brightness-90 object-cover"
         />
       </div>
       <h3 className="mt-6 text-2xl font-bold leading-6">{project.title}</h3>
