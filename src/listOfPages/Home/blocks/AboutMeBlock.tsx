@@ -18,11 +18,11 @@ export const AboutMeBlock = () => {
             <p className="mt-8">{t('paragraph1')}</p>
             <p className="mt-8">
               {t('paragraph2.1')}
-              <span className="bg-accent text-content-secondary px-1 rounded-lg shadow-md shadow-accent/60">
+              <span className="bg-accent text-content-secondary font-mono px-1 rounded-md shadow-sm shadow-accent/60">
                 {t('paragraph2.2')}
               </span>
               ,{' '}
-              <span className="bg-accent text-content-secondary px-1 rounded-lg shadow-md shadow-accent/60">
+              <span className="bg-accent text-content-secondary font-mono px-1 rounded-md shadow-sm shadow-accent/60">
                 {t('paragraph2.3')}
               </span>
               {t('paragraph2.4')}
@@ -31,26 +31,26 @@ export const AboutMeBlock = () => {
           <div>
             <p className="mt-8">
               {t('paragraph3.1')}
-              <span className="bg-accent text-content-secondary px-1 rounded-lg shadow-md shadow-accent/60">
+              <span className="bg-accent text-content-secondary font-mono px-1 rounded-md shadow-sm shadow-accent/60">
                 Nest.js
               </span>{' '}
               {t('paragraph3.2')}
-              <span className="bg-accent text-content-secondary px-1 rounded-lg shadow-md shadow-accent/60">
+              <span className="bg-accent text-content-secondary font-mono px-1 rounded-md shadow-sm shadow-accent/60">
                 NX
               </span>{' '}
               {t('paragraph3.3')}
             </p>
             <p className="mt-8">
               {t('paragraph4.1')}
-              <span className="bg-accent text-content-secondary px-1 rounded-lg shadow-md shadow-accent/60">
+              <span className="bg-accent text-content-secondary font-mono px-1 rounded-md shadow-sm shadow-accent/60">
                 TypeScript
               </span>{' '}
               {t('paragraph4.2')}
-              <span className="bg-accent text-content-secondary px-1 rounded-lg shadow-md shadow-accent/60">
+              <span className="bg-accent text-content-secondary font-mono px-1 rounded-md shadow-sm shadow-accent/60">
                 {t('paragraph4.3')}
               </span>{' '}
               {t('paragraph4.4')}
-              <span className="bg-accent text-content-secondary px-1 rounded-lg shadow-md shadow-accent/60">
+              <span className="bg-accent text-content-secondary font-mono px-1 rounded-md shadow-sm shadow-accent/60">
                 {t('paragraph4.5')}
               </span>
               {t('paragraph4.6')}
