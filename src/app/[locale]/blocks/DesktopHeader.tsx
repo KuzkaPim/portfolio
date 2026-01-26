@@ -27,7 +27,7 @@ export const DesktopHeader = () => {
                 >
                   <a
                     href={`#${item.id}`}
-                    className="relative z-10 flex items-center px-4 h-11"
+                    className="relative z-10 flex items-center px-3.5 h-11"
                   >
                     {t(item.label)}
                   </a>

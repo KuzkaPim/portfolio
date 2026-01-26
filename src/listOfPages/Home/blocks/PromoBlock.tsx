@@ -1,14 +1,16 @@
 import { Container } from '@/src/shared/ui';
 import Image from 'next/image';
 import { IoLogoGithub } from 'react-icons/io';
+import { FaArrowDown } from 'react-icons/fa';
 import { RiTelegramFill } from 'react-icons/ri';
 import { AiFillInstagram } from 'react-icons/ai';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/src/i18n/navigation';
 import meImg from '../assets/kuzka.png';
 
 export const PromoBlock = () => {
   const t = useTranslations('home.promo');
+  const locale = useLocale();
 
   return (
     <section
@@ -31,17 +33,23 @@ export const PromoBlock = () => {
             </Link>
             <div className="flex gap-4 flex-col sm:flex-row sm:w-full lg:w-auto">
               <a
-                className="px-4 py-2 border border-accent/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 font-bold rounded-4xl text-accent dark:text-navigation transition sm:flex-2 lg:flex-initial text-center hover:bg-accent/20 dark:hover:bg-accent/40"
+                className="px-4 py-2 border border-accent/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 font-bold rounded-4xl text-accent dark:text-navigation transition sm:flex-2 lg:flex-initial text-center hover:bg-accent/15 dark:hover:bg-accent/40"
                 href="#contacts"
               >
                 {t('btn.contactMe')}
               </a>
-              <Link
-                className="px-4 py-2 border border-accent/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 font-bold rounded-4xl text-accent dark:text-navigation transition sm:flex-1 lg:flex-initial text-center w-max hover:bg-accent/20 dark:hover:bg-accent/40"
-                href="/resume"
+              <a
+                href={
+                  locale === 'ru'
+                    ? '/assets/RESUME_RU.pdf'
+                    : '/assets/RESUME_EN.pdf'
+                }
+                download
+                className="px-4 py-2 border border-accent/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 font-bold rounded-4xl text-accent dark:text-navigation transition sm:flex-1 lg:flex-initial text-center w-max hover:bg-accent/15 dark:hover:bg-accent/40 group/download flex items-center justify-center gap-2"
               >
                 {t('btn.resume')}
-              </Link>
+                <FaArrowDown className="transition duration-250 group-hover/download:translate-y-0.5 group-active/download:translate-y-1" />
+              </a>
             </div>
           </div>
           <div className="flex gap-2 mt-8 w-max">

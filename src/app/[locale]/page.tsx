@@ -1,4 +1,4 @@
-import { HomePage } from '../../../listOfPages/Home';
+import { HomePage } from '../../listOfPages/Home';
 import { setRequestLocale } from 'next-intl/server';
 
 interface Props {

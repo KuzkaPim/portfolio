@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import '../globals.css';
 import { NextIntlClientProvider } from 'next-intl';
-import { Footer } from './blocks/Footer';
-import { UpArrow } from './blocks/UpArrow';
 import {
   getTranslations,
   setRequestLocale,
   getMessages,
 } from 'next-intl/server';
 import { ThemeProvider } from '../providers';
+import { Suspense } from 'react';
+import { DesktopHeader, MobileHeader, Footer, UpArrow } from './blocks';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -91,6 +91,10 @@ const RootLayout = async ({ children, params }: Readonly<Props>) => {
             enableSystem
             disableTransitionOnChange
           >
+            <Suspense>
+              <DesktopHeader />
+              <MobileHeader />
+            </Suspense>
             <main className="flex-1 flex flex-col">{children}</main>
             <Footer />
             <UpArrow />

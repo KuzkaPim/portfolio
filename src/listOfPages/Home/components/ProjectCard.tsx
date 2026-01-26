@@ -76,7 +76,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         ))}
       </ul>
       <a
-        className="mt-6 text-center text-sm uppercase px-4 py-2 border border-white/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 hover:bg-accent/20 dark:hover:bg-accent/40 rounded-xl text-accent dark:text-navigation font-bold transition"
+        className="mt-6 text-center text-sm uppercase px-4 py-2 border border-accent/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 hover:bg-accent/20 dark:hover:bg-accent/40 rounded-xl text-accent dark:text-navigation font-bold transition"
         href={project.link}
         target="_blank"
       >
