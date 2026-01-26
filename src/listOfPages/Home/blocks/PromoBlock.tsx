@@ -72,7 +72,7 @@ export const PromoBlock = () => {
           </div>
         </div>
         <Image
-          className="max-w-60 sm:max-w-68 md:max-w-76 lg:max-w-80 w-full absolute -right-18 sm:-right-6 md:right-0 bottom-0 z-0"
+          className="max-w-60 sm:max-w-68 md:max-w-76 lg:max-w-80 w-full absolute -right-18 sm:-right-6 md:right-0 bottom-0 z-0 dark:brightness-90"
           src={meImg}
           alt={t('altMeImage')}
           sizes="(max-width: 639px) 240px, (max-width: 767px) 272px, (max-width: 1023px) 304px, 320px"

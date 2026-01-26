@@ -11,7 +11,9 @@ export const SkillsBlock = () => {
       className="bg-primary text-content-primary lg:scroll-mt-10 py-6"
     >
       <Container className="px-2 sm:px-0">
-        <h2 className="text-4xl font-bold">{t('title')}</h2>
+        <h2 className="text-3xl leading-6 scale-y-150 text-content-secondary font-mono uppercase bg-accent w-max">
+          {t('title')}
+        </h2>
         <div className="mt-8">
           <h3 className="font-bold text-md text-content-secondary bg-accent w-max px-2 rounded-md">
             {t('languages')}
