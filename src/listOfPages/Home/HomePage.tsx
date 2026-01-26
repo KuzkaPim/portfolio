@@ -10,9 +10,9 @@ export const HomePage = () => {
   return (
     <>
       <PromoBlock />
-      <SkillsBlock />
-      <ProjectsBlock />
       <AboutMeBlock />
+      <ProjectsBlock />
+      <SkillsBlock />
       <ContactsBlock />
     </>
   );

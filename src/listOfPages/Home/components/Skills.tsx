@@ -1,5 +1,5 @@
-import { SkillCatagory } from '@/src/shared/types';
-import { getSkills } from '@/src/shared/utils';
+import { SkillCatagory } from '../types';
+import { getSkills } from '../utils/getSkills';
 
 interface Props {
   catagory: SkillCatagory;

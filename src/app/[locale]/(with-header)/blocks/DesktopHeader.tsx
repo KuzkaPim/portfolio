@@ -4,14 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Container, Swithes } from '@/src/shared/ui';
 import { useTranslations } from 'next-intl';
-
-const NAV_ITEMS = [
-  { id: 'promo', label: 'home' },
-  { id: 'skills', label: 'technologies' },
-  { id: 'projects', label: 'projects' },
-  { id: 'about-me', label: 'aboutMe' },
-  { id: 'contacts', label: 'contactMe' },
-] as const;
+import { NAV_ITEMS } from '../constants';
 
 export const DesktopHeader = () => {
   const t = useTranslations('nav');

@@ -1,4 +1,4 @@
-import { Header } from './blocks';
+import { DesktopHeader, MobileHeader } from './blocks';
 import { Suspense } from 'react';
 import { setRequestLocale } from 'next-intl/server';
 
@@ -14,7 +14,8 @@ const Layout = async ({ children, params }: Props) => {
   return (
     <>
       <Suspense>
-        <Header />
+        <DesktopHeader />
+        <MobileHeader />
       </Suspense>
       {children}
     </>
