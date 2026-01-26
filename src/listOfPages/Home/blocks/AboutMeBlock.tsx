@@ -10,7 +10,7 @@ export const AboutMeBlock = () => {
       className="bg-primary text-content-primary lg:scroll-mt-10 py-6"
     >
       <Container className="px-2 sm:px-0">
-        <h2 className="text-3xl leading-6 scale-y-150 text-content-secondary font-mono uppercase bg-accent w-max">
+        <h2 className="text-3xl scale-y-150 font-mono uppercase">
           {t('title')}
         </h2>
         <div className="text-lg leading-7 grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-8">
