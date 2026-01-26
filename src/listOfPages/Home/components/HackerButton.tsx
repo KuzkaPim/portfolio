@@ -49,12 +49,12 @@ export const HackerButton = () => {
     timeoutRef.current = setTimeout(() => {
       setDisplayText(text);
       handleMouseEnter(text);
-    }, 4000);
+    }, 1500);
   };
 
   return (
     <button
-      className="cursor-pointer mt-4 bg-white/15 dark:bg-white/10 border-2 border-white/20 text-content-secondary py-2 rounded-full block mx-auto w-64 font-bold hover:bg-white/25 dark:hover:bg-white/20 transition font-mono active:scale-98 duration-250"
+      className="cursor-pointer mt-4 bg-white/15 dark:bg-white/10 border-2 border-white/20 text-content-secondary py-2 rounded-full block mx-auto w-64 hover:bg-white/25 dark:hover:bg-white/20 transition font-mono active:scale-98 duration-250"
       onMouseEnter={() => handleMouseEnter(text)}
       onClick={handleClick}
     >
