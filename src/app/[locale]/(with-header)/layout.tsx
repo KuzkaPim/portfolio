@@ -1,4 +1,5 @@
 import { Header } from './blocks';
+import { Suspense } from 'react';
 
 interface Props {
   children: React.ReactNode;
@@ -7,7 +8,9 @@ interface Props {
 const Layout = ({ children }: Props) => {
   return (
     <>
-      <Header />
+      <Suspense>
+        <Header />
+      </Suspense>
       {children}
     </>
   );

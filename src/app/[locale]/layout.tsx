@@ -4,9 +4,8 @@ import '../globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import { Footer } from './blocks/Footer';
 import { UpArrow } from './blocks/UpArrow';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { ThemeProvider } from '../providers';
-import { cookies } from 'next/headers';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -17,6 +16,10 @@ const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
 });
+
+export function generateStaticParams() {
+  return [{ locale: 'ru' }, { locale: 'en' }];
+}
 
 export async function generateMetadata({
   params,
@@ -67,13 +70,10 @@ interface Props {
 
 const RootLayout = async ({ children, params }: Readonly<Props>) => {
   const { locale } = await params;
-
-  const cookieStore = await cookies();
-  const theme = cookieStore.get('theme');
-  const themeClass = theme?.value || 'light';
+  setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={themeClass} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-primary min-h-screen flex flex-col`}
       >

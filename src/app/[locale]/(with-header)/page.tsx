@@ -1,6 +1,14 @@
 import { HomePage } from '../../../listOfPages/Home';
+import { setRequestLocale } from 'next-intl/server';
 
-const Page = () => {
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+const Page = async ({ params }: Props) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return <HomePage />;
 };
 

@@ -1,10 +1,13 @@
 import { Container } from '@/src/shared/ui';
 import { Download, Header, Experience } from './blocks';
+import { Suspense } from 'react';
 
 export const ResumePage = () => {
   return (
     <>
-      <Header />
+      <Suspense>
+        <Header />
+      </Suspense>
       <Experience />
       <Download />
       <Container className="w-full px-2 sm:px-0">
