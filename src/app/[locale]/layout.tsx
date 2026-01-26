@@ -4,7 +4,11 @@ import '../globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import { Footer } from './blocks/Footer';
 import { UpArrow } from './blocks/UpArrow';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import {
+  getTranslations,
+  setRequestLocale,
+  getMessages,
+} from 'next-intl/server';
 import { ThemeProvider } from '../providers';
 
 const geistSans = Geist({
@@ -16,6 +20,8 @@ const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
 });
+
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return [{ locale: 'ru' }, { locale: 'en' }];
@@ -71,13 +77,14 @@ interface Props {
 const RootLayout = async ({ children, params }: Readonly<Props>) => {
   const { locale } = await params;
   setRequestLocale(locale);
+  const messages = await getMessages();
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-primary min-h-screen flex flex-col`}
       >
-        <NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
