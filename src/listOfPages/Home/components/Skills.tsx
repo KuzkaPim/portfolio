@@ -9,11 +9,11 @@ export const Skills = ({ catagory }: Props) => {
   const skills = getSkills(catagory);
 
   return (
-    <ul className="flex flex-wrap gap-2 mt-4">
+    <ul className="flex flex-wrap gap-x-2 gap-y-4 mt-4">
       {skills.map((skill) => (
         <li
           key={skill}
-          className="px-4 py-2 bg-secondary text-content-primary font-bold rounded-xl shadow-md shadow-layer/80 hover:-translate-y-1 transition cursor-default rotate-2"
+          className="px-4 py-1 bg-secondary text-content-primary font-mono rounded-md shadow-sm shadow-layer/80 hover:-translate-y-1 transition cursor-default uppercase scale-y-125"
         >
           {skill}
         </li>
