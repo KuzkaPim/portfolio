@@ -21,7 +21,7 @@ export const PromoBlock = () => {
           <p className="mt-8 text-xl sm:text-2xl uppercase text-accent tracking-[2px] font-mono">
             {t('subtitle')}
           </p>
-          <p className="mt-2 text-lg">{t('description')}</p>
+          <p className="text-lg">{t('description')}</p>
           <div className="flex gap-4 mt-8 items-start lg:items-center flex-col lg:flex-row w-max sm:w-auto">
             <Link
               className="px-4 py-2 text-content-secondary border border-accent/40 bg-accent font-bold rounded-4xl transition text-center w-full lg:w-auto hover:bg-accent-hover hover:border-accent-hover"
