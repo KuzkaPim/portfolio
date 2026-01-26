@@ -18,7 +18,7 @@ export const PromoBlock = () => {
       <Container className="flex flex-col sm:flex-row items-center justify-between relative px-4 pb-16 pt-12 md:py-12 bg-secondary rounded-3xl overflow-hidden shadow-md shadow-layer/80">
         <div className="z-10 sm:w-sm lg:w-auto">
           <h1 className="text-4xl sm:text-6xl font-bold">{t('title')}</h1>
-          <p className="mt-8 text-xl sm:text-2xl uppercase text-accent font-bold">
+          <p className="mt-8 text-xl sm:text-2xl uppercase text-accent tracking-[2px] font-mono">
             {t('subtitle')}
           </p>
           <p className="mt-2 text-lg">{t('description')}</p>
