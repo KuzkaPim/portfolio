@@ -64,9 +64,9 @@
           "title": "Invite.kz (SaaS Platform)",
           "description": "A Fullstack SaaS platform for creating digital invitations. Built with Nx Monorepo architecture, separating the Editor (Vite) from the Public Viewer (Next.js) to ensure maximum SEO performance and scalability.",
           "technologies": [
-            "Next.js 16",
-            "React 19",
-            "NestJS",
+            "Next js",
+            "React",
+            "Nest JS",
             "PostgreSQL",
             "Nx",
             "Docker"
@@ -79,9 +79,9 @@
           "title": "Personal Portfolio",
           "description": "A high-performance personal website built on the bleeding-edge stack (React 19 + Tailwind 4). Serves as a playground for experimenting with advanced animations, FSD architecture, and Core Web Vitals optimization.",
           "technologies": [
-            "React 19",
-            "Next.js 16",
-            "Tailwind CSS 4",
+            "React",
+            "Next js",
+            "Tailwind CSS",
             "Framer Motion",
             "TypeScript"
           ],
