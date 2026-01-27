@@ -4,7 +4,6 @@ import { RiTelegramFill } from 'react-icons/ri';
 import { AiFillInstagram } from 'react-icons/ai';
 import { useTranslations, useLocale } from 'next-intl';
 import { HackerButton } from '../components';
-import { FaArrowDown } from 'react-icons/fa';
 
 export const ContactsBlock = () => {
   const t = useTranslations('home.contactMe');
@@ -28,11 +27,10 @@ export const ContactsBlock = () => {
                 ? '/assets/RESUME_RU.pdf'
                 : '/assets/RESUME_EN.pdf'
             }
-            download
-            className="cursor-pointer text-accent rounded-2xl duration-250 group/download flex items-center justify-center gap-2 bg-content-secondary px-2 py-1 w-full hover:bg-content-secondary/85"
+            target="_blank"
+            className="cursor-pointer text-accent rounded-2xl duration-250 bg-content-secondary px-2 py-1 w-full hover:bg-content-secondary/85 text-center"
           >
             {t('resume')}
-            <FaArrowDown className="transition duration-250 group-hover/download:translate-y-0.5 group-active/download:translate-y-1" />
           </a>
           <div className="flex mt-2 w-full justify-between">
             <a

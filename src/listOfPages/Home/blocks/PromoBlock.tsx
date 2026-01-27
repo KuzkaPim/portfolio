@@ -44,11 +44,10 @@ export const PromoBlock = () => {
                     ? '/assets/RESUME_RU.pdf'
                     : '/assets/RESUME_EN.pdf'
                 }
-                download
-                className="px-4 py-2 border border-accent/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 font-bold rounded-4xl text-accent dark:text-navigation transition sm:flex-1 lg:flex-initial text-center w-max hover:bg-accent/15 dark:hover:bg-accent/40 group/download flex items-center justify-center gap-2"
+                target="_blank"
+                className="px-4 py-2 border border-accent/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 font-bold rounded-4xl text-accent dark:text-navigation transition sm:flex-1 lg:flex-initial text-center w-max hover:bg-accent/15 dark:hover:bg-accent/40"
               >
                 {t('btn.resume')}
-                <FaArrowDown className="transition duration-250 group-hover/download:translate-y-0.5 group-active/download:translate-y-1" />
               </a>
             </div>
           </div>
