@@ -43,12 +43,12 @@
 :root {
   --primary: var(--color-white);
   --secondary: #f9f9f9;
-  --navigation: hsl(160, 84%, 18%);
+  --navigation: hsl(160, 84%, 25%);
   --content-primary: var(--color-gray-700);
   --content-secondary: hsl(0, 0%, 100%);
   --color-layer: var(--color-neutral-200);
-  --accent: hsl(160, 85%, 33%);
-  --accent-hover: hsl(160, 85%, 30%);
+  --accent: hsl(160, 85%, 40%);
+  --accent-hover: hsl(160, 85%, 37%);
 }
 
 .dark {
