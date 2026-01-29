@@ -64,6 +64,9 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         />
       </div>
       <h3 className="mt-6 text-2xl font-bold leading-6">{project.title}</h3>
+      <p className="mt-2 text-sm font-bold text-accent uppercase">
+        {project.duration}
+      </p>
       <p className="mt-4 flex-1">{project.description}</p>
       <ul className="mt-4 flex flex-wrap gap-2">
         {project.technologies.map((tech) => (

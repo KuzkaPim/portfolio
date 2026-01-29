@@ -62,6 +62,7 @@
       "projects": [
         {
           "title": "Invite.kz (SaaS Platform)",
+          "duration": "August 2025 - January 2026",
           "description": "A Fullstack SaaS platform for creating digital invitations. Built with Nx Monorepo architecture, separating the Editor (Vite) from the Public Viewer (Next.js) to ensure maximum SEO performance and scalability.",
           "technologies": [
             "Next js",
@@ -77,6 +78,7 @@
         },
         {
           "title": "Personal Portfolio",
+          "duration": "November 2025 - Present",
           "description": "A high-performance personal website built on the bleeding-edge stack (React 19 + Tailwind 4). Serves as a playground for experimenting with advanced animations, FSD architecture, and Core Web Vitals optimization.",
           "technologies": [
             "React",
