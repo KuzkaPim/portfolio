@@ -43,7 +43,7 @@
 :root {
   --primary: var(--color-white);
   --secondary: #f9f9f9;
-  --navigation: hsl(160, 84%, 25%);
+  --navigation: hsl(160, 84%, 18%);
   --content-primary: var(--color-gray-700);
   --content-secondary: hsl(0, 0%, 100%);
   --color-layer: var(--color-neutral-200);
