@@ -82,11 +82,22 @@ const RootLayout = async ({ children, params }: Readonly<Props>) => {
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Kuzma Pimenov',
+              jobTitle: 'Frontend Developer',
+              url: 'https://kuzmadev.vercel.app',
+              sameAs: [
+                'https://github.com/KuzkaPim',
+                'https://t.me/KuzKen',
+                'https://www.instagram.com/_kuzken_',
+              ],
+            }),
+          }}
         />
       </head>
       <body
