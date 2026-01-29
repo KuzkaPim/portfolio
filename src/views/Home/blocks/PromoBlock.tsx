@@ -1,7 +1,7 @@
 import { Container } from '@/src/shared/ui';
 import Image from 'next/image';
 import { IoLogoGithub } from 'react-icons/io';
-import { FaArrowDown } from 'react-icons/fa';
+
 import { RiTelegramFill } from 'react-icons/ri';
 import { AiFillInstagram } from 'react-icons/ai';
 import { useTranslations, useLocale } from 'next-intl';
@@ -84,6 +84,7 @@ export const PromoBlock = () => {
           alt={t('altMeImage')}
           sizes="(max-width: 639px) 240px, (max-width: 767px) 272px, (max-width: 1023px) 304px, 320px"
           priority
+          fetchPriority="high"
         />
       </Container>
     </section>
