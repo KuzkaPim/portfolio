@@ -83,6 +83,7 @@ export const PromoBlock = () => {
           src={meImg}
           alt={t('altMeImage')}
           sizes="(max-width: 639px) 240px, (max-width: 767px) 272px, (max-width: 1023px) 304px, 320px"
+          quality={80}
           priority
           fetchPriority="high"
         />
