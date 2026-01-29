@@ -47,8 +47,8 @@
   --content-primary: var(--color-gray-700);
   --content-secondary: hsl(0, 0%, 100%);
   --color-layer: var(--color-neutral-200);
-  --accent: hsl(160, 85%, 40%);
-  --accent-hover: hsl(160, 85%, 37%);
+  --accent: hsl(160, 85%, 33%);
+  --accent-hover: hsl(160, 85%, 30%);
 }
 
 .dark {
