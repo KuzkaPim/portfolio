@@ -38,7 +38,7 @@ export async function generateMetadata({
     title: t('title'),
     description: t('description'),
     alternates: {
-      canonical: '/',
+      canonical: locale === 'ru' ? '/' : `/${locale}`,
       languages: { ru: '/', en: '/en' },
     },
     robots: {
