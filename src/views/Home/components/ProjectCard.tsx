@@ -1,12 +1,12 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import type { ProjectCardInfo } from '../types';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import type { ProjectInfo } from '@/src/shared/consts';
 
 interface ProjectCardProps {
-  project: ProjectCardInfo;
+  project: ProjectInfo;
 }
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
@@ -45,10 +45,9 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
       <div className="relative rounded-lg overflow-hidden h-50 mx-auto aspect-9/16 bg-transparent shadow-[0_0_200px_4px] shadow-accent/60">
         <Image
           src={project.posterSrc}
-          alt={project.title}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 z-10 ${
-            hasPlayed ? 'opacity-0 pointer-events-none' : 'opacity-100'
-          }`}
+          alt={t(`projects.${project.id}.title`)}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 z-10 ${hasPlayed ? 'opacity-0 pointer-events-none' : 'opacity-100'
+            }`}
           fill
           sizes="113px"
           aria-hidden="true"
@@ -63,11 +62,11 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           onPlaying={() => setHasPlayed(true)}
         />
       </div>
-      <h3 className="mt-6 text-2xl font-bold leading-6">{project.title}</h3>
+      <h3 className="mt-6 text-2xl font-bold leading-6">{t(`projects.${project.id}.title`)}</h3>
       <p className="mt-2 text-sm font-bold text-accent uppercase">
-        {project.duration}
+        {t(`projects.${project.id}.duration`)}
       </p>
-      <p className="mt-4 flex-1">{project.description}</p>
+      <p className="mt-4 flex-1">{t(`projects.${project.id}.description`)}</p>
       <ul className="mt-4 flex flex-wrap gap-2">
         {project.technologies.map((tech) => (
           <li

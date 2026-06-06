@@ -35,64 +35,26 @@
     },
     "aboutMe": {
       "title": "About Me",
-      "paragraph1": "Hi! I'm Kuzma, a frontend developer, and I'm passionate about turning cool ideas into truly working web applications.",
-      "paragraph2": {
-        "1": "I like it when the interface is beautiful, but even more when it is ",
-        "2": "fast",
-        "3": "reliable",
-        "4": ", and its code is easy to maintain. My main goal is to lay a solid and clean foundation for any project."
-      },
-      "paragraph3": {
-        "1": "I came into development through an intensive course where I immediately set myself the task: to learn not just syntax, but architecture. That's why I immediately immersed myself in working on a real Fullstack project. Experience with ",
-        "2": "and monorepositories ",
-        "3": "gave me an understanding of the entire development cycle: I know how to communicate properly with the backend because I wrote it myself."
-      },
-      "paragraph4": {
-        "1": "In my work, I always prioritize ",
-        "2": "and principles ",
-        "3": "clean",
-        "4": "component architecture to ensure stability. I value ",
-        "5": "teamwork",
-        "6": ", love to delve into complex tasks, and am always ready to learn new things quickly."
-      }
+      "paragraph1": "Hi! I'm Kuzma, a frontend developer. My specialization is creating complex interfaces with a focus on well-thought-out architecture (<tech>FSD</tech>), rather than just writing code.",
+      "paragraph2": "I have a Fullstack background: I wrote backend on <tech>Nest.js</tech>, worked with relational databases, and configured monorepositories (<tech>Nx</tech>). Because of this, I understand the entire development lifecycle and speak the same language as backend developers.",
+      "paragraph3": "I value when a product not only looks attractive but also works fast (<tech>Next.js</tech>, <tech>Core Web Vitals</tech>). For me, it's important to build a reliable foundation that is easy to maintain and scale with the team."
     },
     "projects": {
       "title": "Projects",
       "viewAll": "View All",
       "codeLinkLabel": "View Code",
-      "projects": [
-        {
+      "projects": {
+        "inviteKz": {
           "title": "Invite.kz (SaaS Platform)",
-          "duration": "August 2025 - January 2026",
-          "description": "A Fullstack SaaS platform for creating digital invitations. Built with Nx Monorepo architecture, separating the Editor (Vite) from the Public Viewer (Next.js) to ensure maximum SEO performance and scalability.",
-          "technologies": [
-            "Next js",
-            "React",
-            "Nest JS",
-            "PostgreSQL",
-            "Nx",
-            "Docker"
-          ],
-          "videoSrc": "/assets/videos/invite.mp4",
-          "posterSrc": "/assets/invite.png",
-          "link": "https://gitlab.com/esdp-ajs-22-1/invitekz"
+          "duration": "January 2025 - January 2026",
+          "description": "A Fullstack SaaS platform for creating digital invitations. Built with Nx Monorepo architecture, separating the Editor (Vite) from the Public Viewer (Next.js) to ensure maximum SEO performance and scalability."
         },
-        {
+        "portfolio": {
           "title": "Personal Portfolio",
           "duration": "November 2025 - Present",
-          "description": "A high-performance personal website built on the bleeding-edge stack (React 19 + Tailwind 4). Serves as a playground for experimenting with advanced animations, FSD architecture, and Core Web Vitals optimization.",
-          "technologies": [
-            "React",
-            "Next js",
-            "Tailwind CSS",
-            "Framer Motion",
-            "TypeScript"
-          ],
-          "videoSrc": "/assets/videos/portfolio.mp4",
-          "posterSrc": "/assets/portfolio.png",
-          "link": "https://github.com/KuzkaPim/portfolio"
+          "description": "A high-performance personal website built on the bleeding-edge stack (React 19 + Tailwind 4). Serves as a playground for experimenting with advanced animations, FSD architecture, and Core Web Vitals optimization."
         }
-      ]
+      }
     },
     "contactMe": {
       "title": "Ready for new challenges and collaboration!",

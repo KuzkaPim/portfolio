@@ -13,49 +13,34 @@ export const AboutMeBlock = () => {
         <h2 className="text-3xl scale-y-150 font-mono uppercase">
           {t('title')}
         </h2>
-        <div className="text-lg leading-7 grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-8">
-          <div>
-            <p className="mt-8">{t('paragraph1')}</p>
-            <p className="mt-8">
-              {t('paragraph2.1')}
-              <span className="bg-accent text-content-secondary font-mono px-1 rounded-md shadow-sm shadow-accent/60">
-                {t('paragraph2.2')}
-              </span>
-              ,{' '}
-              <span className="bg-accent text-content-secondary font-mono px-1 rounded-md shadow-sm shadow-accent/60">
-                {t('paragraph2.3')}
-              </span>
-              {t('paragraph2.4')}
-            </p>
-          </div>
-          <div>
-            <p className="mt-8">
-              {t('paragraph3.1')}
-              <span className="bg-accent text-content-secondary font-mono px-1 rounded-md shadow-sm shadow-accent/60">
-                Nest.js
-              </span>{' '}
-              {t('paragraph3.2')}
-              <span className="bg-accent text-content-secondary font-mono px-1 rounded-md shadow-sm shadow-accent/60">
-                NX
-              </span>{' '}
-              {t('paragraph3.3')}
-            </p>
-            <p className="mt-8">
-              {t('paragraph4.1')}
-              <span className="bg-accent text-content-secondary font-mono px-1 rounded-md shadow-sm shadow-accent/60">
-                TypeScript
-              </span>{' '}
-              {t('paragraph4.2')}
-              <span className="bg-accent text-content-secondary font-mono px-1 rounded-md shadow-sm shadow-accent/60">
-                {t('paragraph4.3')}
-              </span>{' '}
-              {t('paragraph4.4')}
-              <span className="bg-accent text-content-secondary font-mono px-1 rounded-md shadow-sm shadow-accent/60">
-                {t('paragraph4.5')}
-              </span>
-              {t('paragraph4.6')}
-            </p>
-          </div>
+        <div className="mt-8 space-y-8 text-pretty">
+          <p className="text-lg leading-8 max-w-[850px] opacity-80">
+            {t.rich('paragraph1', {
+              tech: (chunks) => (
+                <span className="font-bold text-accent bg-secondary px-2 py-0.5 rounded-md whitespace-nowrap">
+                  {chunks}
+                </span>
+              ),
+            })}
+          </p>
+          <p className="text-lg leading-8 max-w-[850px] opacity-80">
+            {t.rich('paragraph2', {
+              tech: (chunks) => (
+                <span className="font-bold text-accent bg-secondary px-2 py-0.5 rounded-md whitespace-nowrap">
+                  {chunks}
+                </span>
+              ),
+            })}
+          </p>
+          <p className="text-lg leading-8 max-w-[850px] opacity-80">
+            {t.rich('paragraph3', {
+              tech: (chunks) => (
+                <span className="font-bold text-accent bg-secondary px-2 py-0.5 rounded-md whitespace-nowrap">
+                  {chunks}
+                </span>
+              ),
+            })}
+          </p>
         </div>
       </Container>
     </section>
