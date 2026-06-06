@@ -39,11 +39,7 @@ export const PromoBlock = () => {
                 {t('btn.contactMe')}
               </a>
               <a
-                href={
-                  locale === 'ru'
-                    ? '/assets/RESUME_RU.pdf'
-                    : '/assets/RESUME_EN.pdf'
-                }
+                href="/assets/cv_kuzma_pimenov_frontend.pdf"
                 target="_blank"
                 className="px-4 py-2 border border-accent/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 font-bold rounded-4xl text-accent dark:text-navigation transition sm:flex-1 lg:flex-initial text-center w-max hover:bg-accent/15 dark:hover:bg-accent/40"
               >
