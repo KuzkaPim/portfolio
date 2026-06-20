@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Container, Swithes } from '@/src/shared/ui';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
+import { Container, Swithes } from '@/src/shared/ui';
 import { NAV_ITEMS } from '../constants';
 
 export const DesktopHeader = () => {

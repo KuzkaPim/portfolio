@@ -1,23 +1,21 @@
-import { Container } from '@/src/shared/ui';
 import Image from 'next/image';
-import { IoLogoGithub } from 'react-icons/io';
-
-import { RiTelegramFill } from 'react-icons/ri';
+import { useTranslations } from 'next-intl';
 import { AiFillInstagram } from 'react-icons/ai';
-import { useTranslations, useLocale } from 'next-intl';
+import { IoLogoGithub } from 'react-icons/io';
+import { RiTelegramFill } from 'react-icons/ri';
 import { Link } from '@/src/i18n/navigation';
+import { Container } from '@/src/shared/ui';
 import meImg from '../assets/kuzka.png';
 
 export const PromoBlock = () => {
   const t = useTranslations('home.promo');
-  const locale = useLocale();
 
   return (
     <section
       id="promo"
       className="bg-primary overflow-hidden lg:scroll-mt-18 text-content-primary px-2 sm:px-0 md:mt-6 pb-6 pt-2"
     >
-      <Container className="flex flex-col sm:flex-row items-center justify-between relative px-4 pb-16 pt-12 md:py-12 bg-secondary rounded-3xl overflow-hidden shadow-md shadow-layer/80">
+      <Container className="flex flex-col sm:flex-row items-center justify-between relative px-4 pb-16 pt-12 md:py-12 bg-secondary rounded-3xl overflow-hidden shadow-sm shadow-layer/80">
         <div className="z-10 sm:w-sm lg:w-auto">
           <h1 className="text-4xl sm:text-6xl font-bold">{t('title')}</h1>
           <p className="mt-8 text-xl sm:text-2xl uppercase text-accent tracking-[2px] font-mono">
@@ -42,6 +40,7 @@ export const PromoBlock = () => {
                 href="/assets/cv_kuzma_pimenov_frontend.pdf"
                 target="_blank"
                 className="px-4 py-2 border border-accent/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 font-bold rounded-4xl text-accent dark:text-navigation transition sm:flex-1 lg:flex-initial text-center w-max hover:bg-accent/15 dark:hover:bg-accent/40"
+                rel="noopener"
               >
                 {t('btn.resume')}
               </a>

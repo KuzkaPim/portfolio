@@ -1,17 +1,12 @@
-import {
-  AboutMeBlock,
-  ContactsBlock,
-  PromoBlock,
-  SkillsBlock,
-  ProjectsBlock,
-} from './blocks';
+import { ProjectsBlock } from '@/src/shared/blocks/ProjectsBlock';
+import { AboutMeBlock, ContactsBlock, PromoBlock, SkillsBlock } from './blocks';
 
 export const HomePage = () => {
   return (
     <>
       <PromoBlock />
       <AboutMeBlock />
-      <ProjectsBlock />
+      <ProjectsBlock projectsLimit={2} />
       <SkillsBlock />
       <ContactsBlock />
     </>

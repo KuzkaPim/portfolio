@@ -1,5 +1,5 @@
-import { Container } from '@/src/shared/ui';
 import { useTranslations } from 'next-intl';
+import { Container } from '@/src/shared/ui';
 
 export const AboutMeBlock = () => {
   const t = useTranslations('home.aboutMe');

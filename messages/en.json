@@ -44,15 +44,20 @@
       "viewAll": "View All",
       "codeLinkLabel": "View Code",
       "projects": {
+        "hubnity": {
+          "title": "Hubnity (SaaS Platform)",
+          "duration": "February 2026 - Present",
+          "description": "A frontend SaaS platform for time tracking, built from scratch as the sole frontend engineer. Features analytics dashboards with interactive charts, virtualized activity logs (stable 60 FPS with 30–40 concurrent users), URL-synced filtering with Zustand + nuqs, and multi-timezone scheduling with DST handling."
+        },
         "inviteKz": {
           "title": "Invite.kz (SaaS Platform)",
           "duration": "January 2025 - January 2026",
-          "description": "A Fullstack SaaS platform for creating digital invitations. Built with Nx Monorepo architecture, separating the Editor (Vite) from the Public Viewer (Next.js) to ensure maximum SEO performance and scalability."
+          "description": "A Fullstack SaaS platform for creating and managing digital invitations. Built with Nx Monorepo architecture, separating the Editor (Vite) from the Public Viewer (Next.js) for maximum SEO performance and scalability. Includes a drag-and-drop canvas builder, NestJS backend with JWT auth, and full i18n via Google Cloud Translation API."
         },
         "portfolio": {
           "title": "Personal Portfolio",
           "duration": "November 2025 - Present",
-          "description": "A high-performance personal website built on the bleeding-edge stack (React 19 + Tailwind 4). Serves as a playground for experimenting with advanced animations, FSD architecture, and Core Web Vitals optimization."
+          "description": "A high-performance personal website built on the bleeding-edge stack (React 19 + Tailwind 4). Serves as a playground for experimenting with advanced animations (Framer Motion), FSD architecture, full i18n (next-intl), and Core Web Vitals optimization."
         }
       }
     },

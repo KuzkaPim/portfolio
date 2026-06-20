@@ -1,12 +1,18 @@
-import { Container } from '@/src/shared/ui';
-import { useTranslations } from 'next-intl';
-import { ProjectCard } from '../components';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { PROJECTS_INFO } from '@/src/shared/consts';
+import { Container } from '@/src/shared/ui';
+import { ProjectCard } from './ProjectCard';
 
-export const ProjectsBlock = () => {
+interface ProjectsBlockProps {
+  projectsLimit?: number;
+}
+
+export const ProjectsBlock = ({ projectsLimit }: ProjectsBlockProps) => {
   const t = useTranslations('home.projects');
+
+  const projects = projectsLimit ? PROJECTS_INFO.slice(0, 2) : PROJECTS_INFO;
 
   return (
     <section
@@ -19,18 +25,18 @@ export const ProjectsBlock = () => {
             {t('title')}
           </h2>
 
-          {/* <Link
+          <Link
             href="/projects"
             className="font-mono text-accent flex items-center gap-2 group/projects"
           >
             {t('viewAll')}
 
             <FaArrowRightLong className="group-hover/projects:translate-x-1 transition duration-150" />
-          </Link> */}
+          </Link>
         </header>
 
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-          {PROJECTS_INFO.map((project) => (
+          {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </ul>

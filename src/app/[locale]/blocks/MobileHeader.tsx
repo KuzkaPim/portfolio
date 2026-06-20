@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { useEffect, useRef, useState } from 'react';
 import { Swithes } from '@/src/shared/ui';
 import { NAV_ITEMS } from '../constants';
 
@@ -50,6 +50,7 @@ export const MobileHeader = () => {
     <header className="lg:hidden fixed z-20 right-2 top-2">
       <div ref={ref} className="relative">
         <button
+          type="button"
           className={`size-11 py-1.5 px-2 flex flex-col justify-center items-center rounded-2xl cursor-pointer gap-[5px] bg-accent/30 backdrop-blur-md border border-navigation/10 active:scale-90 transition duration-250 hover:bg-accent/50 ${isMenuOpen ? 'rotate-20' : ''}`}
           onClick={toggleMenu}
           aria-label="Toggle menu"
@@ -93,7 +94,6 @@ export const MobileHeader = () => {
         >
           <ul
             id="mobile-actions-menu"
-            role="menu"
             aria-label="Quick links"
             className="py-2 min-w-36 bg-accent/30 backdrop-blur-md border border-navigation/10 rounded-2xl shadow-md text-navigation"
           >

@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useRef } from 'react';
 import { useTranslations } from 'next-intl';
+import { useRef, useState } from 'react';
 
 export const HackerButton = () => {
   const text = 'kuzken.prod@gmail.com';
@@ -54,6 +54,7 @@ export const HackerButton = () => {
 
   return (
     <button
+      type="button"
       className="cursor-pointer mt-4 bg-white/15 dark:bg-white/10 border-2 border-white/20 text-content-secondary py-2 rounded-full block mx-auto w-64 hover:bg-white/25 dark:hover:bg-white/20 transition font-mono active:scale-98 duration-250"
       onMouseEnter={() => handleMouseEnter(text)}
       onClick={handleClick}

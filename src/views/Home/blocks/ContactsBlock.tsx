@@ -1,8 +1,8 @@
-import { Container } from '@/src/shared/ui';
+import { useLocale, useTranslations } from 'next-intl';
+import { AiFillInstagram } from 'react-icons/ai';
 import { IoLogoGithub } from 'react-icons/io';
 import { RiTelegramFill } from 'react-icons/ri';
-import { AiFillInstagram } from 'react-icons/ai';
-import { useTranslations, useLocale } from 'next-intl';
+import { Container } from '@/src/shared/ui';
 import { HackerButton } from '../components';
 
 export const ContactsBlock = () => {
@@ -25,6 +25,7 @@ export const ContactsBlock = () => {
             href="/assets/cv_kuzma_pimenov_frontend.pdf"
             target="_blank"
             className="cursor-pointer text-accent rounded-2xl duration-250 bg-content-secondary px-2 py-1 w-full hover:bg-content-secondary/85 text-center"
+            rel="noopener"
           >
             {t('resume')}
           </a>
