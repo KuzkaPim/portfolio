@@ -1,6 +1,6 @@
+import { useTranslations } from 'next-intl';
 import { Container } from '@/src/shared/ui';
 import { Skills } from '../components';
-import { useTranslations } from 'next-intl';
 
 export const SkillsBlock = () => {
   const t = useTranslations('home.technologies');

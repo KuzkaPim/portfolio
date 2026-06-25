@@ -3,13 +3,12 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import '../globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import {
+  getMessages,
   getTranslations,
   setRequestLocale,
-  getMessages,
 } from 'next-intl/server';
 import { ThemeProvider } from '../providers';
-import { Suspense } from 'react';
-import { Footer, UpArrow, Header } from './blocks';
+import { Footer, Header, UpArrow } from './blocks';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',

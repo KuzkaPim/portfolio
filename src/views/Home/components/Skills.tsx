@@ -1,4 +1,4 @@
-import { SkillCatagory } from '../types';
+import type { SkillCatagory } from '../types';
 import { getSkills } from '../utils/getSkills';
 
 interface Props {

@@ -1,9 +1,9 @@
 'use client';
 
 import { Suspense } from 'react';
+import { usePathname, useRouter } from '@/src/i18n/navigation';
 import { DesktopHeader } from './DesktopHeader';
 import { MobileHeader } from './MobileHeader';
-import { usePathname, useRouter } from '@/src/i18n/navigation';
 
 export const Header = () => {
   const router = useRouter();

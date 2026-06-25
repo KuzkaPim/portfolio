@@ -3,9 +3,9 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
+import { FaArrowLeftLong } from 'react-icons/fa6';
 import { Container, Swithes } from '@/src/shared/ui';
 import { NAV_ITEMS } from '../constants';
-import { FaArrowLeftLong } from 'react-icons/fa6';
 
 interface DesktopHeaderProps {
   isHomePage: boolean;
@@ -63,6 +63,7 @@ export const DesktopHeader = ({ isHomePage, onBack }: DesktopHeaderProps) => {
           {!isHomePage && (
             <nav>
               <button
+                type="button"
                 onClick={onBack}
                 className={`
                 h-11 px-5 gap-2

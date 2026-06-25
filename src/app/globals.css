@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   --color-primary: var(--primary);
@@ -62,7 +62,7 @@
   --accent-hover: hsl(160, 85%, 27%);
 }
 
-@variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 html,
 body {

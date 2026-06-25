@@ -1,10 +1,10 @@
 'use client';
 
-import { useLocale } from 'next-intl';
-import { useTransition, useState, useEffect } from 'react';
-import { useRouter, usePathname } from '@/src/i18n/navigation';
-import { CiGlobe } from 'react-icons/ci';
 import { useSearchParams } from 'next/navigation';
+import { useLocale } from 'next-intl';
+import { useEffect, useState, useTransition } from 'react';
+import { CiGlobe } from 'react-icons/ci';
+import { usePathname, useRouter } from '@/src/i18n/navigation';
 
 export interface ToggleLocaleProps {
   keepMenuOpen?: boolean;
@@ -56,6 +56,7 @@ export const ToggleLocale = ({ keepMenuOpen = false }: ToggleLocaleProps) => {
 
   return (
     <button
+      type="button"
       onClick={toggleLocale}
       data-frozen={isFrozen}
       className={`

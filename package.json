@@ -6,9 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "check": "pnpm format:check && pnpm lint && pnpm build"
   },
   "dependencies": {
     "beasties": "^0.4.1",
@@ -17,20 +18,18 @@
     "next": "16.0.10",
     "next-intl": "^4.6.0",
     "next-themes": "^0.4.6",
-    "prettier": "^3.6.2",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-icons": "^5.5.0",
     "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.5.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "baseline-browser-mapping": "^2.9.19",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.10",
+    "baseline-browser-mapping": "^2.10.38",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

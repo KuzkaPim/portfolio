@@ -8,6 +8,7 @@ export const ThemeCookieSync = () => {
 
   useEffect(() => {
     if (resolvedTheme) {
+      // biome-ignore lint/suspicious/noDocumentCookie: Keep the selected theme available during SSR.
       document.cookie = `theme=${resolvedTheme}; path=/; max-age=31536000; SameSite=Lax`;
     }
   }, [resolvedTheme]);

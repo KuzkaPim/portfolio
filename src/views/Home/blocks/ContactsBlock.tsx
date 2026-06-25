@@ -7,7 +7,7 @@ import { HackerButton } from '../components';
 
 export const ContactsBlock = () => {
   const t = useTranslations('home.contactMe');
-  const locale = useLocale();
+  const _locale = useLocale();
 
   return (
     <section
