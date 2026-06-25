@@ -7,9 +7,13 @@ import { ProjectCard } from './ProjectCard';
 
 interface ProjectsBlockProps {
   projectsLimit?: number;
+  hasViewAllLink?: boolean;
 }
 
-export const ProjectsBlock = ({ projectsLimit }: ProjectsBlockProps) => {
+export const ProjectsBlock = ({
+  projectsLimit,
+  hasViewAllLink = false,
+}: ProjectsBlockProps) => {
   const t = useTranslations('home.projects');
 
   const projects = projectsLimit ? PROJECTS_INFO.slice(0, 2) : PROJECTS_INFO;
@@ -25,14 +29,16 @@ export const ProjectsBlock = ({ projectsLimit }: ProjectsBlockProps) => {
             {t('title')}
           </h2>
 
-          <Link
-            href="/projects"
-            className="font-mono text-accent flex items-center gap-2 group/projects"
-          >
-            {t('viewAll')}
+          {hasViewAllLink && (
+            <Link
+              href="/projects"
+              className="font-mono text-accent flex items-center gap-2 group/projects"
+            >
+              {t('viewAll')}
 
-            <FaArrowRightLong className="group-hover/projects:translate-x-1 transition duration-150" />
-          </Link>
+              <FaArrowRightLong className="group-hover/projects:translate-x-1 transition duration-150" />
+            </Link>
+          )}
         </header>
 
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">

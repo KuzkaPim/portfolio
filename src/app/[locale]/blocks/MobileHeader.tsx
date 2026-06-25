@@ -3,10 +3,17 @@
 import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useEffect, useRef, useState } from 'react';
+import { FaArrowLeftLong } from 'react-icons/fa6';
+import { cn } from '@/src/shared/lib';
 import { Swithes } from '@/src/shared/ui';
 import { NAV_ITEMS } from '../constants';
 
-export const MobileHeader = () => {
+interface MobileHeaderProps {
+  isHomePage: boolean;
+  onBack: () => void;
+}
+
+export const MobileHeader = ({ isHomePage, onBack }: MobileHeaderProps) => {
   const t = useTranslations('nav');
   const searchParams = useSearchParams();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(
@@ -47,7 +54,32 @@ export const MobileHeader = () => {
   const toggleMenu = (): void => setIsMenuOpen((prev) => !prev);
 
   return (
-    <header className="lg:hidden fixed z-20 right-2 top-2">
+    <header
+      className={cn(
+        'lg:hidden flex justify-between sticky z-20 p-2 top-0',
+        isHomePage && 'justify-end'
+      )}
+    >
+      {!isHomePage && (
+        <button
+          aria-label="Go to back"
+          onClick={onBack}
+          type="button"
+          className={`
+            size-11
+            relative flex items-center justify-center text-sm text-navigation rounded-full
+            backdrop-blur-md border border-navigation/10 cursor-pointer
+            transition-all duration-250
+            bg-accent/30
+            [@media(hover:hover)]:hover:bg-accent/50
+            data-[frozen=true]:[@media(hover:hover)]:bg-accent/50
+            active:scale-98
+          `}
+        >
+          <FaArrowLeftLong />
+        </button>
+      )}
+
       <div ref={ref} className="relative">
         <button
           type="button"
@@ -80,37 +112,39 @@ export const MobileHeader = () => {
           <Swithes keepMenuOpen />
         </div>
 
-        <div
-          className={`
-          absolute right-0 mt-2
-          transform
-          -z-10
-          transition duration-250 delay-50 ease-out
-          origin-top ${
-            isMenuOpen
-              ? 'translate-y-0 translate-x-0 scale-100 animate-bump-bottom pointer-events-auto'
-              : '-translate-y-8 translate-x-16 scale-0 pointer-events-none'
-          }`}
-        >
-          <ul
-            id="mobile-actions-menu"
-            aria-label="Quick links"
-            className="py-2 min-w-36 bg-accent/30 backdrop-blur-md border border-navigation/10 rounded-2xl shadow-md text-navigation"
+        {isHomePage && (
+          <div
+            className={`
+            absolute right-0 mt-2
+            transform
+            -z-10
+            transition duration-250 delay-50 ease-out
+            origin-top ${
+              isMenuOpen
+                ? 'translate-y-0 translate-x-0 scale-100 animate-bump-bottom pointer-events-auto'
+                : '-translate-y-8 translate-x-16 scale-0 pointer-events-none'
+            }`}
           >
-            {NAV_ITEMS.map((item) => (
-              <li key={item.id} role="none">
-                <a
-                  role="menuitem"
-                  href={`#${item.id}`}
-                  className="group flex items-center gap-2 px-4 py-2 hover:bg-accent/30 transition transform active:scale-95"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {t(item.label)}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+            <ul
+              id="mobile-actions-menu"
+              aria-label="Quick links"
+              className="py-2 min-w-36 bg-accent/30 backdrop-blur-md border border-navigation/10 rounded-2xl shadow-md text-navigation"
+            >
+              {NAV_ITEMS.map((item) => (
+                <li key={item.id} role="none">
+                  <a
+                    role="menuitem"
+                    href={`#${item.id}`}
+                    className="group flex items-center gap-2 px-4 py-2 hover:bg-accent/30 transition transform active:scale-95"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {t(item.label)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </header>
   );

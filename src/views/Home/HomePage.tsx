@@ -6,7 +6,7 @@ export const HomePage = () => {
     <>
       <PromoBlock />
       <AboutMeBlock />
-      <ProjectsBlock projectsLimit={2} />
+      <ProjectsBlock projectsLimit={2} hasViewAllLink />
       <SkillsBlock />
       <ContactsBlock />
     </>

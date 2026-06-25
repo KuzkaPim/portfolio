@@ -1,4 +1,4 @@
-import { ToggleLocale, ToggleLocaleProps } from './ToggleLocale';
+import { ToggleLocale, type ToggleLocaleProps } from './ToggleLocale';
 import { ToggleTheme } from './ToggleTheme';
 
 export const Swithes = ({ keepMenuOpen }: ToggleLocaleProps) => {

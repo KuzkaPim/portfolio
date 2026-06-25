@@ -1,4 +1,3 @@
-export { DesktopHeader } from './DesktopHeader';
+export { Header } from './Header';
 export { Footer } from './Footer';
-export { MobileHeader } from './MobileHeader';
 export { UpArrow } from './UpArrow';

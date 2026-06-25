@@ -9,7 +9,7 @@ import {
 } from 'next-intl/server';
 import { ThemeProvider } from '../providers';
 import { Suspense } from 'react';
-import { DesktopHeader, MobileHeader, Footer, UpArrow } from './blocks';
+import { Footer, UpArrow, Header } from './blocks';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -110,11 +110,10 @@ const RootLayout = async ({ children, params }: Readonly<Props>) => {
             enableSystem
             disableTransitionOnChange
           >
-            <Suspense>
-              <DesktopHeader />
-              <MobileHeader />
-            </Suspense>
+            <Header />
+
             <main className="flex-1 flex flex-col">{children}</main>
+
             <Footer />
             <UpArrow />
           </ThemeProvider>
