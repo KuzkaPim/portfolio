@@ -102,17 +102,16 @@ export const MobileHeader = ({ isHomePage, onBack }: MobileHeaderProps) => {
           transform-gpu will-change-transform
           transition duration-250 ease-out
           origin-center
-          ${
-            isMenuOpen
+          ${isMenuOpen
               ? '-translate-x-13 scale-100 animate-bump-left pointer-events-auto'
               : 'translate-x-16 scale-0 pointer-events-none'
-          }
+            }
         `}
         >
           <Swithes keepMenuOpen />
         </div>
 
-        {isHomePage && (
+        {/* {isHomePage && (
           <div
             className={`
             absolute right-0 mt-2
@@ -144,7 +143,7 @@ export const MobileHeader = ({ isHomePage, onBack }: MobileHeaderProps) => {
               ))}
             </ul>
           </div>
-        )}
+        )} */}
       </div>
     </header>
   );
