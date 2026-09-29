@@ -2,14 +2,14 @@ export const SKILLS = {
   languages: ['TypeScript', 'JavaScript'],
   frontend: [
     'React',
-    'Next js',
+    'Next.js',
     'Redux Toolkit',
     'Zustand',
     'Axios',
     'Fetch',
     'HTML',
   ],
-  backend: ['Nest js', 'TypeOrm', 'PostgreSQL', 'Express js', 'BCrypt'],
+  backend: ['NestJS', 'TypeORM', 'PostgreSQL', 'Express.js', 'bcrypt'],
   styling: ['Tailwind CSS', 'CSS', 'SCSS'],
-  tools: ['Git', 'Figma', 'Vite', 'NX (Monorepo)', 'PNPM', 'DevTools'],
+  tools: ['Git', 'Figma', 'Vite', 'Nx (Monorepo)', 'pnpm', 'DevTools'],
 };
