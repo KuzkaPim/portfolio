@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/src/shared/ui';
 import { Skills } from '../components';
-import { SKILLS, SKILLS_KEYS } from '../constants';
+import { SKILLS, SKILLS_CATEGORIES } from '../constants';
 
 export const SkillsBlock = () => {
   const t = useTranslations('home.technologies');
@@ -16,13 +16,13 @@ export const SkillsBlock = () => {
           {t('title')}
         </h2>
 
-        {SKILLS_KEYS.map((skill) => (
-          <div key={skill} className="mt-8">
-            <h3 className="font-bold text-md text-content-secondary bg-accent w-max px-2 rounded-md">
-              {t(skill)}
+        {SKILLS_CATEGORIES.map((category) => (
+          <div key={category} className="mt-8">
+            <h3 className="font-semibold text-xs text-content-secondary bg-accent w-max px-2 rounded-md">
+              {t(category)}
             </h3>
 
-            <Skills items={SKILLS[skill]} />
+            <Skills items={SKILLS[category]} />
           </div>
         ))}
       </Container>

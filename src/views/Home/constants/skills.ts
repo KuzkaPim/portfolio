@@ -58,5 +58,5 @@ export const SKILLS = {
   backend: ['NestJS', 'Node.js', 'PostgreSQL', 'TypeORM', 'JWT'],
 };
 
-export type SkillKey = keyof typeof SKILLS;
-export const SKILLS_KEYS = Object.keys(SKILLS) as SkillKey[];
+type SkillCategory = keyof typeof SKILLS;
+export const SKILLS_CATEGORIES = Object.keys(SKILLS) as SkillCategory[];

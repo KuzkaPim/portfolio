@@ -9,7 +9,8 @@
     "lint": "biome check .",
     "format": "biome format --write .",
     "format:check": "biome format .",
-    "check": "pnpm format:check && pnpm lint && pnpm build"
+    "tsc": "tsc --noEmit",
+    "check": "pnpm tsc && pnpm format:check && pnpm lint && pnpm build"
   },
   "dependencies": {
     "beasties": "^0.4.1",
