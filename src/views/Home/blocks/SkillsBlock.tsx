@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/src/shared/ui';
 import { Skills } from '../components';
+import { SKILLS, SKILLS_KEYS } from '../constants';
 
 export const SkillsBlock = () => {
   const t = useTranslations('home.technologies');
@@ -14,36 +15,16 @@ export const SkillsBlock = () => {
         <h2 className="text-3xl scale-y-150 font-mono uppercase">
           {t('title')}
         </h2>
-        <div className="mt-8">
-          <h3 className="font-bold text-md text-content-secondary bg-accent w-max px-2 rounded-md">
-            {t('languages')}
-          </h3>
-          <Skills catagory="languages" />
-        </div>
-        <div className="mt-8">
-          <h3 className="font-bold text-md text-content-secondary bg-accent w-max px-2 rounded-md">
-            {t('frontend')}
-          </h3>
-          <Skills catagory="frontend" />
-        </div>
-        <div className="mt-8">
-          <h3 className="font-bold text-md text-content-secondary bg-accent w-max px-2 rounded-md">
-            {t('backendAndDB')}
-          </h3>
-          <Skills catagory="backend" />
-        </div>
-        <div className="mt-8">
-          <h3 className="font-bold text-md text-content-secondary bg-accent w-max px-2 rounded-md">
-            {t('styles')}
-          </h3>
-          <Skills catagory="styling" />
-        </div>
-        <div className="mt-8">
-          <h3 className="font-bold text-md text-content-secondary bg-accent w-max px-2 rounded-md">
-            {t('toolsAndSystem')}
-          </h3>
-          <Skills catagory="tools" />
-        </div>
+
+        {SKILLS_KEYS.map((skill) => (
+          <div key={skill} className="mt-8">
+            <h3 className="font-bold text-md text-content-secondary bg-accent w-max px-2 rounded-md">
+              {t(skill)}
+            </h3>
+
+            <Skills items={SKILLS[skill]} />
+          </div>
+        ))}
       </Container>
     </section>
   );

@@ -27,17 +27,18 @@
     },
     "technologies": {
       "title": "Technologies",
-      "languages": "Languages",
-      "frontend": "Frontend",
-      "backendAndDB": "Backend and Databases",
-      "styles": "Styling",
-      "toolsAndSystem": "Tools and Ecosystem"
+      "core": "Core",
+      "stateData": "State & Data",
+      "ui": "UI",
+      "quality": "Quality & CI",
+      "tools": "Tooling",
+      "backend": "Backend"
     },
     "aboutMe": {
       "title": "About Me",
-      "paragraph1": "Hi! I'm Kuzma, a frontend developer. My specialization is creating complex interfaces with a focus on well-thought-out architecture (<tech>FSD</tech>), rather than just writing code.",
-      "paragraph2": "I have a Fullstack background: I wrote backend on <tech>Nest.js</tech>, worked with relational databases, and configured monorepositories (<tech>Nx</tech>). Because of this, I understand the entire development lifecycle and speak the same language as backend developers.",
-      "paragraph3": "I value when a product not only looks attractive but also works fast (<tech>Next.js</tech>, <tech>Core Web Vitals</tech>). For me, it's important to build a reliable foundation that is easy to maintain and scale with the team."
+      "paragraph1": "Hi! I'm Kuzma, a frontend developer with 1.5+ years of commercial experience in SaaS products. My stack is <tech>React</tech>, <tech>Next.js</tech> and <tech>TypeScript</tech>.",
+      "paragraph2": "At Hubnity I am the sole frontend developer: I built the client side of a B2B time-tracking platform from scratch and own it from architecture to release. Localized the product into 35+ languages (<tech>next-intl</tech>) and introduced automated checks that catch errors before they ship.",
+      "paragraph3": "Before that, at the InviteKZ startup, I ran the product end to end after part of the team left — the interface and the server side (<tech>NestJS</tech>, <tech>PostgreSQL</tech>, an <tech>Nx</tech> monorepo). That's why I understand the full development cycle and quickly find common ground with backend developers on APIs."
     },
     "projects": {
       "title": "Projects",
