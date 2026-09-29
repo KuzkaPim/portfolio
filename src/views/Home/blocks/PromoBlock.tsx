@@ -1,14 +1,16 @@
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { AiFillInstagram } from 'react-icons/ai';
 import { IoLogoGithub } from 'react-icons/io';
 import { RiTelegramFill } from 'react-icons/ri';
 import { Link } from '@/src/i18n/navigation';
+import { getCvPath } from '@/src/shared/lib';
 import { Container } from '@/src/shared/ui';
 import meImg from '../assets/kuzka.png';
 
 export const PromoBlock = () => {
   const t = useTranslations('home.promo');
+  const locale = useLocale();
 
   return (
     <section
@@ -37,7 +39,7 @@ export const PromoBlock = () => {
                 {t('btn.contactMe')}
               </a>
               <a
-                href="/assets/cv_kuzma_pimenov_frontend.pdf"
+                href={getCvPath(locale)}
                 target="_blank"
                 className="px-4 py-2 border border-accent/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 font-bold rounded-4xl text-accent dark:text-navigation transition sm:flex-1 lg:flex-initial text-center w-max hover:bg-accent/15 dark:hover:bg-accent/40"
                 rel="noopener"

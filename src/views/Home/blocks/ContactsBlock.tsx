@@ -2,12 +2,13 @@ import { useLocale, useTranslations } from 'next-intl';
 import { AiFillInstagram } from 'react-icons/ai';
 import { IoLogoGithub } from 'react-icons/io';
 import { RiTelegramFill } from 'react-icons/ri';
+import { getCvPath } from '@/src/shared/lib';
 import { Container } from '@/src/shared/ui';
 import { HackerButton } from '../components';
 
 export const ContactsBlock = () => {
   const t = useTranslations('home.contactMe');
-  const _locale = useLocale();
+  const locale = useLocale();
 
   return (
     <section
@@ -22,7 +23,7 @@ export const ContactsBlock = () => {
         <HackerButton />
         <div className="flex w-28 mx-auto flex-col mt-16 items-center">
           <a
-            href="/assets/cv_kuzma_pimenov_frontend.pdf"
+            href={getCvPath(locale)}
             target="_blank"
             className="cursor-pointer text-accent rounded-2xl duration-250 bg-content-secondary px-2 py-1 w-full hover:bg-content-secondary/85 text-center"
             rel="noopener"

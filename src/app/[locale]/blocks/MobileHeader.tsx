@@ -1,8 +1,9 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { FaArrowLeftLong } from 'react-icons/fa6';
+import { useToggle } from '@/src/shared/hooks';
 import { cn } from '@/src/shared/lib';
 import { Swithes } from '@/src/shared/ui';
 
@@ -13,7 +14,7 @@ interface MobileHeaderProps {
 
 export const MobileHeader = ({ isHomePage, onBack }: MobileHeaderProps) => {
   const searchParams = useSearchParams();
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(
+  const [isMenuOpen, toggleMenu, setIsMenuOpen] = useToggle(
     searchParams.get('menu') === 'open'
   );
   const ref = useRef<HTMLDivElement | null>(null);
@@ -47,8 +48,6 @@ export const MobileHeader = ({ isHomePage, onBack }: MobileHeaderProps) => {
       window.history.replaceState({}, '', location.pathname + location.hash);
     }
   }, [searchParams]);
-
-  const toggleMenu = (): void => setIsMenuOpen((prev) => !prev);
 
   return (
     <header
@@ -99,10 +98,11 @@ export const MobileHeader = ({ isHomePage, onBack }: MobileHeaderProps) => {
           transform-gpu will-change-transform
           transition duration-250 ease-out
           origin-center
-          ${isMenuOpen
+          ${
+            isMenuOpen
               ? '-translate-x-13 scale-100 animate-bump-left pointer-events-auto'
               : 'translate-x-16 scale-0 pointer-events-none'
-            }
+          }
         `}
         >
           <Swithes keepMenuOpen />

@@ -43,6 +43,8 @@
       "title": "Проекты",
       "viewAll": "Все проекты",
       "codeLinkLabel": "Посмотреть код",
+      "websiteLinkLabel": "Посмотреть сайт",
+      "emptyLinkLabel": "Ссылки нет",
       "projects": {
         "hubnity": {
           "title": "Hubnity (SaaS Платформа)",

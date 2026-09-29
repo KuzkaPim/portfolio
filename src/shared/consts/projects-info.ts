@@ -1,7 +1,10 @@
+type TypeLink = 'website' | 'code';
+
 export interface ProjectInfo {
   id: string;
   technologies: string[];
-  link: string;
+  link?: string;
+  typeLink?: TypeLink;
 }
 
 export const PROJECTS_INFO: ProjectInfo[] = [
@@ -18,11 +21,11 @@ export const PROJECTS_INFO: ProjectInfo[] = [
       'Tailwind CSS',
     ],
     link: 'https://hubnity.eu',
+    typeLink: 'website',
   },
   {
     id: 'inviteKz',
     technologies: ['Next js', 'React', 'Nest JS', 'PostgreSQL', 'Nx', 'Docker'],
-    link: 'https://gitlab.com/esdp-ajs-22-1/invitekz',
   },
   {
     id: 'portfolio',
@@ -34,5 +37,6 @@ export const PROJECTS_INFO: ProjectInfo[] = [
       'TypeScript',
     ],
     link: 'https://github.com/KuzkaPim/portfolio',
+    typeLink: 'code',
   },
 ];

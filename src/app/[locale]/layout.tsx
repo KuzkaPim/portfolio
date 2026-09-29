@@ -7,6 +7,8 @@ import {
   getTranslations,
   setRequestLocale,
 } from 'next-intl/server';
+import { parseLocaleOrNotFound } from '@/src/i18n/parseLocaleOrNotFound';
+import { routing } from '@/src/i18n/routing';
 import { ThemeProvider } from '../providers';
 import { Footer, Header, UpArrow } from './blocks';
 
@@ -23,22 +25,31 @@ const geistMono = Geist_Mono({
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return [{ locale: 'ru' }, { locale: 'en' }];
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({
   params,
 }: Omit<Props, 'children'>): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata' });
+  const { locale: rawLocale } = await params;
+  const locale = parseLocaleOrNotFound(rawLocale);
+
+  const t = await getTranslations({
+    locale,
+    namespace: 'metadata',
+  });
+
+  const languages = Object.fromEntries(
+    routing.locales.map((locale) => [locale, `/${locale}`])
+  );
 
   return {
     metadataBase: new URL('https://kuzmadev.vercel.app'),
     title: t('title'),
     description: t('description'),
     alternates: {
-      canonical: locale === 'ru' ? '/ru' : '/en',
-      languages: { ru: '/ru', en: '/en' },
+      canonical: `/${locale}`,
+      languages,
     },
     robots: {
       index: true,
@@ -74,7 +85,9 @@ interface Props {
 }
 
 const RootLayout = async ({ children, params }: Readonly<Props>) => {
-  const { locale } = await params;
+  const { locale: rawLocale } = await params;
+  const locale = parseLocaleOrNotFound(rawLocale);
+
   setRequestLocale(locale);
   const messages = await getMessages();
 
