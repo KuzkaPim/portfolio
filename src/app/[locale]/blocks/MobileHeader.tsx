@@ -1,6 +1,7 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { useEffect, useRef } from 'react';
 import { FaArrowLeftLong } from 'react-icons/fa6';
 import { useToggle } from '@/src/shared/hooks';
@@ -13,6 +14,8 @@ interface MobileHeaderProps {
 }
 
 export const MobileHeader = ({ isHomePage, onBack }: MobileHeaderProps) => {
+  const t = useTranslations('nav');
+
   const searchParams = useSearchParams();
   const [isMenuOpen, toggleMenu, setIsMenuOpen] = useToggle(
     searchParams.get('menu') === 'open'
@@ -58,7 +61,7 @@ export const MobileHeader = ({ isHomePage, onBack }: MobileHeaderProps) => {
     >
       {!isHomePage && (
         <button
-          aria-label="Go to back"
+          aria-label={t('back')}
           onClick={onBack}
           type="button"
           className={`
@@ -72,7 +75,7 @@ export const MobileHeader = ({ isHomePage, onBack }: MobileHeaderProps) => {
             active:scale-98
           `}
         >
-          <FaArrowLeftLong />
+          <FaArrowLeftLong aria-hidden />
         </button>
       )}
 

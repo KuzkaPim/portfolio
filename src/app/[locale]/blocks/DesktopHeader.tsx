@@ -76,8 +76,11 @@ export const DesktopHeader = ({ isHomePage, onBack }: DesktopHeaderProps) => {
                 active:scale-98
               `}
               >
-                <FaArrowLeftLong className="group-hover:-translate-x-1 transition duration-150" />
-                Go to back
+                <FaArrowLeftLong
+                  aria-hidden
+                  className="group-hover:-translate-x-1 transition duration-150"
+                />
+                {t('back')}
               </button>
             </nav>
           )}
