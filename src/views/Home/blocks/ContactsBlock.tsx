@@ -19,17 +19,21 @@ export const ContactsBlock = () => {
         <h2 className="text-3xl sm:text-4xl font-bold text-center">
           {t('title')}
         </h2>
+
         <p className="mt-8 text-center">{t('description')}</p>
+
         <HackerButton />
+
         <div className="flex w-28 mx-auto flex-col mt-16 items-center">
           <a
             href={getCvPath(locale)}
             target="_blank"
-            className="cursor-pointer text-accent rounded-2xl duration-250 bg-content-secondary px-2 py-1 w-full hover:bg-content-secondary/85 text-center"
+            className="cursor-pointer border-2 border-content-secondary text-accent rounded-2xl duration-250 bg-content-secondary px-2 py-1 w-full hover:bg-accent hover:text-content-secondary font-semibold text-center"
             rel="noopener"
           >
             {t('resume')}
           </a>
+
           <div className="flex mt-2 w-full justify-between">
             <a
               href="https://github.com/KuzkaPim"
@@ -39,6 +43,7 @@ export const ContactsBlock = () => {
             >
               <IoLogoGithub className="size-8 hover:scale-107 transition" />
             </a>
+
             <a
               href="https://t.me/KuzKen"
               target="_blank"
@@ -47,6 +52,7 @@ export const ContactsBlock = () => {
             >
               <RiTelegramFill className="size-8 hover:scale-107 transition" />
             </a>
+
             <a
               href="https://www.instagram.com/_kuzken_?igsh=ZmZoMjNhbjVub2g3&utm_source=qr"
               target="_blank"

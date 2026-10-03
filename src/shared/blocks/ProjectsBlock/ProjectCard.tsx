@@ -42,7 +42,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         {project.technologies.map((tech) => (
           <li
             key={tech}
-            className="bg-accent text-sm text-content-secondary px-1.5 py-px rounded-md font-mono uppercase shadow-sm shadow-accent/50"
+            className="bg-content-primary/10 text-sm text-content-primary px-1.5 py-px rounded-md font-mono uppercase"
           >
             {tech}
           </li>

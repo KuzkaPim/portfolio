@@ -18,7 +18,7 @@ export const SkillsBlock = () => {
 
         {SKILLS_CATEGORIES.map((category) => (
           <div key={category} className="mt-8">
-            <h3 className="font-semibold text-xs text-content-secondary bg-accent w-max px-2 rounded-md">
+            <h3 className="font-semibold text-sm text-content-secondary bg-accent w-max px-2 rounded-md">
               {t(category)}
             </h3>
 

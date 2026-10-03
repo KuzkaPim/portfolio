@@ -9,7 +9,7 @@ export const ProjectLink = ({ link, typeLink }: ProjectLinkProps) => {
   if (typeLink) {
     return (
       <a
-        className="mt-6 text-center text-sm uppercase px-4 py-2 border border-accent/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 hover:bg-accent/20 dark:hover:bg-accent/40 rounded-xl text-accent dark:text-navigation font-bold transition"
+        className="mt-6 text-center text-sm uppercase px-4 py-2 bg-accent hover:bg-accent-hover rounded-xl text-white font-bold transition"
         href={link}
         target="_blank"
         rel="noopener"
@@ -20,7 +20,7 @@ export const ProjectLink = ({ link, typeLink }: ProjectLinkProps) => {
   }
 
   return (
-    <span className="mt-6 text-center text-sm uppercase px-4 py-2 border border-accent/10 dark:border-accent/30 bg-accent/10 dark:bg-accent/30 rounded-xl text-accent dark:text-navigation font-bold transition">
+    <span className="mt-6 text-center text-sm uppercase px-4 py-2 bg-accent/20 select-none rounded-xl text-accent font-bold transition">
       {t('emptyLinkLabel')}
     </span>
   );
