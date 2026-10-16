@@ -92,7 +92,7 @@ const RootLayout = async ({ children, params }: Readonly<Props>) => {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"

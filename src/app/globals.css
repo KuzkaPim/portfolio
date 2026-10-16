@@ -66,6 +66,11 @@
 
 html,
 body {
-  scroll-behavior: smooth;
   background: var(--primary);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }

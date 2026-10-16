@@ -14,6 +14,12 @@
   "footer": {
     "copyright": "© 2026 Kuzma. All rights reserved."
   },
+  "theme": {
+    "menuButton": "Theme menu",
+    "system": "System theme",
+    "light": "Light theme",
+    "dark": "Dark theme"
+  },
   "home": {
     "promo": {
       "title": "Hi, I'm Kuzma",

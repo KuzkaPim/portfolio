@@ -17,7 +17,7 @@ export const DesktopHeader = ({ isHomePage, onBack }: DesktopHeaderProps) => {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   return (
-    <header className="text-navigation text-md hidden lg:block sticky top-2 z-20">
+    <header className="text-navigation text-md hidden lg:block sticky my-2 top-2 z-20">
       <Container>
         <div className="flex justify-between items-center">
           {isHomePage && (

@@ -1,18 +1,32 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
 import { useEffect, useRef, useState } from 'react';
 import { CgDarkMode } from 'react-icons/cg';
-import { GoMoon, GoSun } from 'react-icons/go';
 import { HiOutlineComputerDesktop } from 'react-icons/hi2';
+import {
+  IoMoonOutline,
+  IoMoonSharp,
+  IoSunny,
+  IoSunnyOutline,
+} from 'react-icons/io5';
 import { useToggle } from '../hooks';
 import { cn } from '../lib';
 
+type Theme = 'system' | 'light' | 'dark';
+
 export const ToggleTheme = () => {
-  const { setTheme, theme } = useTheme();
+  const { setTheme, resolvedTheme, theme } = useTheme();
+  const t = useTranslations('theme');
 
   const [isMounted, setIsMounted] = useState(false);
   const [isThemeOpen, toggleThemeOpen, setIsThemeOpen] = useToggle(false);
+
+  const selectTheme = (theme: Theme) => {
+    setTheme(theme);
+    setIsThemeOpen(false);
+  };
 
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -50,12 +64,23 @@ export const ToggleTheme = () => {
         type="button"
         onClick={toggleThemeOpen}
         className="text-navigation relative flex items-center justify-center size-11 rounded-full bg-accent/30 hover:bg-accent/50 border border-navigation/10 cursor-pointer backdrop-blur-md transition-colors duration-250"
-        aria-label="Toggle theme"
+        aria-label={t('menuButton')}
       >
-        <CgDarkMode className="size-11 p-3" />
+        <CgDarkMode aria-hidden className="size-11 p-3" />
+
+        {isMounted && resolvedTheme === 'dark' && (
+          <IoMoonSharp
+            aria-hidden
+            className="absolute -top-0.5 -right-0.5 size-3.5"
+          />
+        )}
+        {isMounted && resolvedTheme === 'light' && (
+          <IoSunny aria-hidden className="absolute top-0 right-0 size-3.5" />
+        )}
       </button>
 
       <div
+        inert={!isThemeOpen}
         className={cn(
           'absolute w-11 bg-accent/30 right-0 top-13 backdrop-blur-md border border-navigation/10 rounded-full shadow-md text-navigation flex flex-col',
           isThemeOpen
@@ -69,9 +94,10 @@ export const ToggleTheme = () => {
             isMounted && theme === 'system' && 'bg-accent/15'
           )}
           type="button"
-          onClick={() => setTheme('system')}
+          onClick={() => selectTheme('system')}
+          aria-label={t('system')}
         >
-          <HiOutlineComputerDesktop className="size-11 p-3" />
+          <HiOutlineComputerDesktop aria-hidden className="size-11 p-3" />
         </button>
 
         <button
@@ -80,9 +106,10 @@ export const ToggleTheme = () => {
             isMounted && theme === 'light' && 'bg-accent/15'
           )}
           type="button"
-          onClick={() => setTheme('light')}
+          onClick={() => selectTheme('light')}
+          aria-label={t('light')}
         >
-          <GoSun className="size-11 p-3" />
+          <IoSunnyOutline aria-hidden className="size-11 p-3" />
         </button>
 
         <button
@@ -91,9 +118,10 @@ export const ToggleTheme = () => {
             isMounted && theme === 'dark' && 'bg-accent/15'
           )}
           type="button"
-          onClick={() => setTheme('dark')}
+          onClick={() => selectTheme('dark')}
+          aria-label={t('dark')}
         >
-          <GoMoon className="size-11 p-3" />
+          <IoMoonOutline aria-hidden className="size-11 p-3" />
         </button>
       </div>
     </div>

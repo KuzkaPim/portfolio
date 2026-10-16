@@ -24,7 +24,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 
   return (
     <li className="bg-secondary p-4 rounded-3xl flex flex-col shadow-sm shadow-layer/80 group">
-      <div className="relative rounded-2xl overflow-hidden w-full h-48 sm:h-56 mx-auto">
+      <div className="relative select-none rounded-2xl overflow-hidden w-full h-48 sm:h-56 mx-auto">
         {PREVIEWS[project.id]}
       </div>
 

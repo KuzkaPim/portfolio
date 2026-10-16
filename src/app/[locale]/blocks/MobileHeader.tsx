@@ -55,7 +55,7 @@ export const MobileHeader = ({ isHomePage, onBack }: MobileHeaderProps) => {
   return (
     <header
       className={cn(
-        'lg:hidden flex justify-between sticky z-20 p-2 top-0',
+        'lg:hidden flex justify-between sticky z-20 my-2 px-2 top-2',
         isHomePage && 'justify-end'
       )}
     >
