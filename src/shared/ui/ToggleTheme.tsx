@@ -56,7 +56,7 @@ export const ToggleTheme = () => {
       document.removeEventListener('click', onClick);
       window.removeEventListener('scroll', onScroll);
     };
-  }, []);
+  }, [setIsThemeOpen]);
 
   return (
     <div className="relative" ref={containerRef}>
@@ -65,6 +65,7 @@ export const ToggleTheme = () => {
         onClick={toggleThemeOpen}
         className="text-navigation relative flex items-center justify-center size-11 rounded-full bg-accent/30 hover:bg-accent/50 border border-navigation/10 cursor-pointer backdrop-blur-md transition-colors duration-250"
         aria-label={t('menuButton')}
+        aria-expanded={isThemeOpen}
       >
         <CgDarkMode aria-hidden className="size-11 p-3" />
 
